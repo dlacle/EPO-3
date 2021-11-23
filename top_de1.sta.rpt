@@ -1,0 +1,1346 @@
+TimeQuest Timing Analyzer report for top_de1
+Tue Nov 23 12:26:35 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'gen25mhz:inst1|count[0]'
+ 12. Slow Model Setup: 'clock_50mhz'
+ 13. Slow Model Hold: 'clock_50mhz'
+ 14. Slow Model Hold: 'gen25mhz:inst1|count[0]'
+ 15. Slow Model Minimum Pulse Width: 'clock_50mhz'
+ 16. Slow Model Minimum Pulse Width: 'gen25mhz:inst1|count[0]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'gen25mhz:inst1|count[0]'
+ 27. Fast Model Setup: 'clock_50mhz'
+ 28. Fast Model Hold: 'clock_50mhz'
+ 29. Fast Model Hold: 'gen25mhz:inst1|count[0]'
+ 30. Fast Model Minimum Pulse Width: 'clock_50mhz'
+ 31. Fast Model Minimum Pulse Width: 'gen25mhz:inst1|count[0]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; top_de1                                                            ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C20F484C7                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                           ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; Clock Name              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                     ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; clock_50mhz             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_50mhz }             ;
+; gen25mhz:inst1|count[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { gen25mhz:inst1|count[0] } ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+
+
++---------------------------------------------------------------+
+; Slow Model Fmax Summary                                       ;
++------------+-----------------+-------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note ;
++------------+-----------------+-------------------------+------+
+; 231.27 MHz ; 231.27 MHz      ; gen25mhz:inst1|count[0] ;      ;
++------------+-----------------+-------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------+
+; Slow Model Setup Summary                         ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; gen25mhz:inst1|count[0] ; -2.372 ; -92.992       ;
+; clock_50mhz             ; 2.116  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow Model Hold Summary                          ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock_50mhz             ; -1.864 ; -1.864        ;
+; gen25mhz:inst1|count[0] ; 0.445  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary           ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock_50mhz             ; -1.631 ; -2.853        ;
+; gen25mhz:inst1|count[0] ; -0.611 ; -53.768       ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'gen25mhz:inst1|count[0]'                                                                                                                        ;
++--------+----------------------------+---------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                         ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+---------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.372 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|clkcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.410      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.325 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|hcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.363      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.279 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|hcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.317      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.268 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|vcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.305      ;
+; -2.265 ; vga_driver:inst2|hcount[2] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.304      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.257 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|hcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.295      ;
+; -2.255 ; vga_driver:inst2|hcount[5] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.294      ;
+; -2.225 ; mem_test:inst4|clkcount[4] ; mem_test:inst4|state.data_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.263      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.222 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|vcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.259      ;
+; -2.215 ; vga_driver:inst2|hcount[3] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.254      ;
+; -2.211 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|in_red         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.250      ;
+; -2.202 ; vga_driver:inst2|hcount[4] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.241      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.200 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|vcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 3.237      ;
+; -2.184 ; vga_driver:inst2|hcount[6] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.223      ;
+; -2.137 ; vga_driver:inst2|hcount[7] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 3.176      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.112 ; vga_driver:inst2|hcount[0] ; vga_driver:inst2|hcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.150      ;
+; -2.101 ; mem_test:inst4|clkcount[1] ; mem_test:inst4|state.data_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.139      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[0]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[1]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[2]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[3]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[4]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[5]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[6]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[8]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[9]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.070 ; vga_driver:inst2|hcount[1] ; vga_driver:inst2|hcount[7]      ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.108      ;
+; -2.061 ; mem_test:inst4|clkcount[2] ; mem_test:inst4|state.data_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 3.099      ;
+; -2.060 ; vga_driver:inst2|vcount[7] ; vga_driver:inst2|in_blue        ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.002      ; 3.100      ;
+; -2.059 ; vga_driver:inst2|vcount[7] ; vga_driver:inst2|in_red         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.002      ; 3.099      ;
++--------+----------------------------+---------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock_50mhz'                                                                                                            ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 2.116 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 0.500        ; 2.032      ; 0.731      ;
+; 2.616 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 1.000        ; 2.032      ; 0.731      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock_50mhz'                                                                                                              ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -1.864 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 0.000        ; 2.032      ; 0.731      ;
+; -1.364 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; -0.500       ; 2.032      ; 0.731      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'gen25mhz:inst1|count[0]'                                                                                                                                   ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.445 ; mem_test:inst4|state.idle_state    ; mem_test:inst4|state.idle_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|state.opcode_state  ; mem_test:inst4|state.opcode_state  ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|state.data_state    ; mem_test:inst4|state.data_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; vga_driver:inst2|in_v_sync         ; vga_driver:inst2|in_v_sync         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[7]            ; mem_test:inst4|inbuf[7]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[6]            ; mem_test:inst4|inbuf[6]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[5]            ; mem_test:inst4|inbuf[5]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[4]            ; mem_test:inst4|inbuf[4]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[3]            ; mem_test:inst4|inbuf[3]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[2]            ; mem_test:inst4|inbuf[2]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[1]            ; mem_test:inst4|inbuf[1]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; mem_test:inst4|inbuf[0]            ; mem_test:inst4|inbuf[0]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.637 ; mem_test:inst4|clkcount[7]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.923      ;
+; 0.641 ; vga_driver:inst2|hcount[9]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.927      ;
+; 0.641 ; vga_driver:inst2|vcount[9]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.927      ;
+; 0.968 ; mem_test:inst4|state.opcode_state  ; mem_test:inst4|state.address_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.254      ;
+; 0.984 ; mem_test:inst4|clkcount[6]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.270      ;
+; 0.984 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.270      ;
+; 0.988 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.274      ;
+; 0.988 ; vga_driver:inst2|hcount[8]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.274      ;
+; 0.988 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.274      ;
+; 0.988 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.274      ;
+; 0.989 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.275      ;
+; 0.990 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.276      ;
+; 0.994 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.280      ;
+; 1.002 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.288      ;
+; 1.009 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.295      ;
+; 1.026 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.312      ;
+; 1.026 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.312      ;
+; 1.027 ; vga_driver:inst2|vcount[8]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.313      ;
+; 1.030 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.316      ;
+; 1.031 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.317      ;
+; 1.034 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.320      ;
+; 1.034 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.320      ;
+; 1.036 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.322      ;
+; 1.036 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.322      ;
+; 1.036 ; vga_driver:inst2|vcount[4]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.322      ;
+; 1.040 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.326      ;
+; 1.192 ; vga_driver:inst2|vcount[5]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.478      ;
+; 1.212 ; mem_test:inst4|clkcount[0]         ; mem_test:inst4|clkcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.498      ;
+; 1.223 ; mem_test:inst4|clkcount[1]         ; mem_test:inst4|clkcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.509      ;
+; 1.267 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|state.idle_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.553      ;
+; 1.353 ; mem_test:inst4|state.idle_state    ; mem_test:inst4|state.opcode_state  ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.639      ;
+; 1.416 ; mem_test:inst4|clkcount[6]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.702      ;
+; 1.420 ; vga_driver:inst2|hcount[8]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.706      ;
+; 1.420 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.706      ;
+; 1.420 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.706      ;
+; 1.420 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.706      ;
+; 1.421 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.707      ;
+; 1.422 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.708      ;
+; 1.426 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.712      ;
+; 1.434 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.720      ;
+; 1.438 ; vga_driver:inst2|vcount[9]         ; vga_driver:inst2|in_blue           ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.002      ; 1.726      ;
+; 1.441 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.727      ;
+; 1.456 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.742      ;
+; 1.459 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.745      ;
+; 1.460 ; vga_driver:inst2|vcount[8]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.746      ;
+; 1.463 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.749      ;
+; 1.464 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.750      ;
+; 1.467 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.753      ;
+; 1.467 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.753      ;
+; 1.469 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.755      ;
+; 1.469 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.755      ;
+; 1.469 ; vga_driver:inst2|vcount[4]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.755      ;
+; 1.473 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.759      ;
+; 1.481 ; mem_test:inst4|state.address_state ; mem_test:inst4|state.address_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.767      ;
+; 1.500 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.786      ;
+; 1.500 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.786      ;
+; 1.500 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.786      ;
+; 1.501 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.787      ;
+; 1.502 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.788      ;
+; 1.506 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.792      ;
+; 1.514 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.800      ;
+; 1.517 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.803      ;
+; 1.521 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.807      ;
+; 1.539 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.825      ;
+; 1.543 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.829      ;
+; 1.544 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.830      ;
+; 1.547 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.833      ;
+; 1.547 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.833      ;
+; 1.549 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.835      ;
+; 1.549 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.835      ;
+; 1.553 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.839      ;
+; 1.580 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.866      ;
+; 1.580 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.866      ;
+; 1.581 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.867      ;
+; 1.582 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.868      ;
+; 1.594 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.880      ;
+; 1.597 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.883      ;
+; 1.601 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.887      ;
+; 1.619 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.905      ;
+; 1.623 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.909      ;
+; 1.626 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|in_h_sync         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.001      ; 1.913      ;
+; 1.627 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.913      ;
+; 1.627 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.913      ;
+; 1.629 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.915      ;
+; 1.630 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.916      ;
+; 1.633 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 1.919      ;
+; 1.637 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|inbuf[1]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; -0.500       ; 0.000      ; 1.423      ;
+; 1.637 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|inbuf[0]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; -0.500       ; 0.000      ; 1.423      ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock_50mhz'                                                                  ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock_50mhz ; Rise       ; clock_50mhz             ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50mhz ; Rise       ; gen25mhz:inst1|count[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50mhz ; Rise       ; gen25mhz:inst1|count[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50mhz ; Rise       ; clock_50mhz|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50mhz ; Rise       ; clock_50mhz|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50mhz ; Rise       ; inst1|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50mhz ; Rise       ; inst1|count[0]|clk      ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'gen25mhz:inst1|count[0]'                                                                             ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[0]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[1]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[2]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[2]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[3]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[3]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[4]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[4]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[5]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[5]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[6]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[6]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[7]            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[7]            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.address_state ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.address_state ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.data_state    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.data_state    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.idle_state    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.idle_state    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.opcode_state  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.opcode_state  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[8]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[8]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[9]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[9]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_blue           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_blue           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_h_sync         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_h_sync         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_red            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_red            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_v_sync         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_v_sync         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[0]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[1]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[2]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[3]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[4]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[5]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[6]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[7]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[8]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[8]         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[9]         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[9]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[2]|clk                ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Setup Times                                                                                ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 1.833 ; 1.833 ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; 5.348 ; 5.348 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Hold Times                                                                                   ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 0.192  ; 0.192  ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; -4.899 ; -4.899 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 6.646  ; 6.646  ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 6.755  ;        ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 8.977  ; 8.977  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 10.592 ; 10.592 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 9.679  ; 9.679  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 10.592 ; 10.592 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 10.342 ; 10.342 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 10.302 ; 10.302 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 10.173 ; 10.173 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 9.573  ; 9.573  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 10.173 ; 10.173 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 7.470  ; 7.470  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 10.209 ; 10.209 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 9.588  ; 9.588  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 10.182 ; 10.182 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 10.209 ; 10.209 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 10.179 ; 10.179 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 9.161  ; 9.161  ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 7.345  ; 7.345  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 7.013  ; 7.013  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 6.956  ; 6.956  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 7.326  ; 7.326  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 7.345  ; 7.345  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 6.984  ; 6.984  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 7.010  ; 7.010  ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;        ; 6.755  ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 6.646  ; 6.646  ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 6.755  ;        ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 8.038  ; 8.038  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 9.679  ; 9.679  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 9.679  ; 9.679  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 10.592 ; 10.592 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 10.342 ; 10.342 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 10.302 ; 10.302 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 9.573  ; 9.573  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 9.573  ; 9.573  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 10.173 ; 10.173 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 7.470  ; 7.470  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 9.588  ; 9.588  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 9.588  ; 9.588  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 10.182 ; 10.182 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 10.209 ; 10.209 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 10.179 ; 10.179 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 9.161  ; 9.161  ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 6.956  ; 6.956  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 7.013  ; 7.013  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 6.956  ; 6.956  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 7.326  ; 7.326  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 7.345  ; 7.345  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 6.984  ; 6.984  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 7.010  ; 7.010  ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;        ; 6.755  ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++--------------------------------------------------+
+; Fast Model Setup Summary                         ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; gen25mhz:inst1|count[0] ; -0.360 ; -12.411       ;
+; clock_50mhz             ; 1.343  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast Model Hold Summary                          ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock_50mhz             ; -0.963 ; -0.963        ;
+; gen25mhz:inst1|count[0] ; 0.215  ; 0.000         ;
++-------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary           ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clock_50mhz             ; -1.380 ; -2.380        ;
+; gen25mhz:inst1|count[0] ; -0.500 ; -44.000       ;
++-------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'gen25mhz:inst1|count[0]'                                                                                                                        ;
++--------+---------------------------------+----------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                    ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+----------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.360 ; mem_test:inst4|clkcount[4]      ; mem_test:inst4|clkcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.392      ;
+; -0.327 ; mem_test:inst4|state.data_state ; mem_test:inst4|inbuf[5]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.859      ;
+; -0.324 ; mem_test:inst4|state.data_state ; mem_test:inst4|inbuf[4]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.856      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|vcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.337      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.303 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|hcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.335      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.299 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|vcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.330      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.296 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|hcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.328      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.292 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|vcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.323      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[8] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[9] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.289 ; vga_driver:inst2|hcount[3]      ; vga_driver:inst2|hcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.321      ;
+; -0.277 ; mem_test:inst4|clkcount[0]      ; mem_test:inst4|inbuf[7]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.809      ;
+; -0.275 ; mem_test:inst4|clkcount[0]      ; mem_test:inst4|inbuf[6]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.807      ;
+; -0.275 ; mem_test:inst4|clkcount[0]      ; mem_test:inst4|inbuf[2]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.807      ;
+; -0.272 ; mem_test:inst4|clkcount[0]      ; mem_test:inst4|inbuf[3]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.804      ;
+; -0.254 ; vga_driver:inst2|hcount[4]      ; vga_driver:inst2|in_blue   ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 1.287      ;
+; -0.251 ; mem_test:inst4|clkcount[2]      ; mem_test:inst4|inbuf[4]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.783      ;
+; -0.250 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|inbuf[7]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.782      ;
+; -0.246 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|inbuf[2]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.778      ;
+; -0.244 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|inbuf[3]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.776      ;
+; -0.242 ; mem_test:inst4|clkcount[0]      ; mem_test:inst4|inbuf[5]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.774      ;
+; -0.242 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|inbuf[6]    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.500        ; 0.000      ; 0.774      ;
+; -0.241 ; vga_driver:inst2|hcount[6]      ; vga_driver:inst2|in_blue   ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 1.274      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[7] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.237 ; mem_test:inst4|clkcount[1]      ; mem_test:inst4|clkcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.000      ; 1.269      ;
+; -0.234 ; vga_driver:inst2|hcount[2]      ; vga_driver:inst2|in_blue   ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 1.267      ;
+; -0.232 ; vga_driver:inst2|hcount[7]      ; vga_driver:inst2|in_blue   ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 1.265      ;
+; -0.228 ; vga_driver:inst2|hcount[5]      ; vga_driver:inst2|in_blue   ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; 0.001      ; 1.261      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[1] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[2] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[3] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[4] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[5] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
+; -0.225 ; vga_driver:inst2|hcount[0]      ; vga_driver:inst2|vcount[6] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 1.000        ; -0.001     ; 1.256      ;
++--------+---------------------------------+----------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock_50mhz'                                                                                                            ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 1.343 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 0.500        ; 1.037      ; 0.367      ;
+; 1.843 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 1.000        ; 1.037      ; 0.367      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock_50mhz'                                                                                                              ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.963 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; 0.000        ; 1.037      ; 0.367      ;
+; -0.463 ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; clock_50mhz ; -0.500       ; 1.037      ; 0.367      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'gen25mhz:inst1|count[0]'                                                                                                                                   ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.215 ; mem_test:inst4|state.idle_state    ; mem_test:inst4|state.idle_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|state.opcode_state  ; mem_test:inst4|state.opcode_state  ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|state.data_state    ; mem_test:inst4|state.data_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; vga_driver:inst2|in_v_sync         ; vga_driver:inst2|in_v_sync         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[7]            ; mem_test:inst4|inbuf[7]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[6]            ; mem_test:inst4|inbuf[6]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[5]            ; mem_test:inst4|inbuf[5]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[4]            ; mem_test:inst4|inbuf[4]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[3]            ; mem_test:inst4|inbuf[3]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[2]            ; mem_test:inst4|inbuf[2]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[1]            ; mem_test:inst4|inbuf[1]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; mem_test:inst4|inbuf[0]            ; mem_test:inst4|inbuf[0]            ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.249 ; mem_test:inst4|clkcount[7]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.401      ;
+; 0.249 ; vga_driver:inst2|hcount[9]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.401      ;
+; 0.249 ; vga_driver:inst2|vcount[9]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.401      ;
+; 0.357 ; mem_test:inst4|state.opcode_state  ; mem_test:inst4|state.address_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.509      ;
+; 0.365 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; mem_test:inst4|clkcount[6]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; vga_driver:inst2|hcount[8]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.373 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.375 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.529      ;
+; 0.379 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.531      ;
+; 0.379 ; vga_driver:inst2|vcount[8]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.534      ;
+; 0.382 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.534      ;
+; 0.382 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.534      ;
+; 0.385 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.537      ;
+; 0.385 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.537      ;
+; 0.385 ; vga_driver:inst2|vcount[4]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.537      ;
+; 0.443 ; vga_driver:inst2|vcount[5]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.595      ;
+; 0.449 ; mem_test:inst4|clkcount[1]         ; mem_test:inst4|clkcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.601      ;
+; 0.452 ; mem_test:inst4|clkcount[0]         ; mem_test:inst4|clkcount[0]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.604      ;
+; 0.482 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|state.idle_state    ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.634      ;
+; 0.504 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.656      ;
+; 0.504 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.656      ;
+; 0.505 ; mem_test:inst4|clkcount[6]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.505 ; vga_driver:inst2|hcount[8]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.505 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.505 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.657      ;
+; 0.506 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.658      ;
+; 0.507 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.659      ;
+; 0.511 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.663      ;
+; 0.513 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.665      ;
+; 0.515 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[1]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.667      ;
+; 0.517 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.669      ;
+; 0.519 ; vga_driver:inst2|vcount[8]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.671      ;
+; 0.519 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.671      ;
+; 0.520 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.672      ;
+; 0.522 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.674      ;
+; 0.522 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.674      ;
+; 0.522 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.674      ;
+; 0.525 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; vga_driver:inst2|vcount[4]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.677      ;
+; 0.529 ; mem_test:inst4|state.idle_state    ; mem_test:inst4|state.opcode_state  ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.681      ;
+; 0.539 ; vga_driver:inst2|vcount[7]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.691      ;
+; 0.539 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.691      ;
+; 0.540 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.692      ;
+; 0.540 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.692      ;
+; 0.541 ; vga_driver:inst2|hcount[7]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.693      ;
+; 0.542 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.694      ;
+; 0.546 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.698      ;
+; 0.548 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.700      ;
+; 0.552 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.704      ;
+; 0.554 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.706      ;
+; 0.555 ; mem_test:inst4|clkcount[5]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.707      ;
+; 0.557 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.709      ;
+; 0.557 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.709      ;
+; 0.557 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.709      ;
+; 0.558 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.710      ;
+; 0.560 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.712      ;
+; 0.560 ; vga_driver:inst2|vcount[3]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.712      ;
+; 0.561 ; vga_driver:inst2|vcount[9]         ; vga_driver:inst2|in_blue           ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.002      ; 0.715      ;
+; 0.571 ; mem_test:inst4|state.address_state ; mem_test:inst4|state.address_state ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.723      ;
+; 0.574 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[8]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.726      ;
+; 0.575 ; mem_test:inst4|clkcount[4]         ; mem_test:inst4|clkcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.727      ;
+; 0.575 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|hcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.727      ;
+; 0.577 ; vga_driver:inst2|vcount[2]         ; vga_driver:inst2|vcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.729      ;
+; 0.581 ; vga_driver:inst2|vcount[0]         ; vga_driver:inst2|vcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.733      ;
+; 0.583 ; mem_test:inst4|clkcount[2]         ; mem_test:inst4|clkcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.735      ;
+; 0.587 ; mem_test:inst4|clkcount[1]         ; mem_test:inst4|clkcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.739      ;
+; 0.587 ; vga_driver:inst2|vcount[6]         ; vga_driver:inst2|vcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.739      ;
+; 0.589 ; mem_test:inst4|clkcount[3]         ; mem_test:inst4|clkcount[6]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.741      ;
+; 0.592 ; vga_driver:inst2|hcount[4]         ; vga_driver:inst2|hcount[7]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; vga_driver:inst2|hcount[2]         ; vga_driver:inst2|hcount[5]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.744      ;
+; 0.592 ; vga_driver:inst2|hcount[6]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.744      ;
+; 0.593 ; vga_driver:inst2|hcount[1]         ; vga_driver:inst2|hcount[3]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.745      ;
+; 0.595 ; vga_driver:inst2|vcount[1]         ; vga_driver:inst2|vcount[4]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.747      ;
+; 0.609 ; vga_driver:inst2|hcount[3]         ; vga_driver:inst2|in_h_sync         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.001      ; 0.762      ;
+; 0.609 ; vga_driver:inst2|hcount[0]         ; vga_driver:inst2|hcount[2]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.761      ;
+; 0.609 ; vga_driver:inst2|hcount[5]         ; vga_driver:inst2|hcount[9]         ; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 0.000        ; 0.000      ; 0.761      ;
++-------+------------------------------------+------------------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock_50mhz'                                                                  ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                  ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50mhz ; Rise       ; clock_50mhz             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50mhz ; Rise       ; gen25mhz:inst1|count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50mhz ; Rise       ; gen25mhz:inst1|count[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50mhz ; Rise       ; clock_50mhz|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50mhz ; Rise       ; clock_50mhz|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock_50mhz ; Rise       ; inst1|count[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock_50mhz ; Rise       ; inst1|count[0]|clk      ;
++--------+--------------+----------------+------------------+-------------+------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'gen25mhz:inst1|count[0]'                                                                             ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                   ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|clkcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Fall       ; mem_test:inst4|inbuf[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.address_state ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.address_state ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.data_state    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.data_state    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.idle_state    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.idle_state    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.opcode_state  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; mem_test:inst4|state.opcode_state  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|hcount[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_blue           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_blue           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_h_sync         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_h_sync         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_red            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_red            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_v_sync         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|in_v_sync         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[8]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[9]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; vga_driver:inst2|vcount[9]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst1|count[0]~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[0]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[1]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[2]|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; gen25mhz:inst1|count[0] ; Rise       ; inst2|hcount[2]|clk                ;
++--------+--------------+----------------+------------------+-------------------------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Setup Times                                                                                ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 0.284 ; 0.284 ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; 2.489 ; 2.489 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Hold Times                                                                                   ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 0.589  ; 0.589  ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; -2.271 ; -2.271 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                      ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 3.549 ; 3.549 ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 3.056 ;       ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 4.370 ; 4.370 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 5.290 ; 5.290 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 4.944 ; 4.944 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 5.290 ; 5.290 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 5.212 ; 5.212 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 5.172 ; 5.172 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 5.097 ; 5.097 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 4.858 ; 4.858 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 5.097 ; 5.097 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 4.017 ; 4.017 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 5.117 ; 5.117 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 4.871 ; 4.871 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 5.094 ; 5.094 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 5.117 ; 5.117 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 5.087 ; 5.087 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 4.574 ; 4.574 ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 3.849 ; 3.849 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 3.713 ; 3.713 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 3.679 ; 3.679 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 3.837 ; 3.837 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 3.849 ; 3.849 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 3.705 ; 3.705 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 3.718 ; 3.718 ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;       ; 3.056 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                              ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 3.549 ; 3.549 ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 3.056 ;       ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 4.046 ; 4.046 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 4.944 ; 4.944 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 4.944 ; 4.944 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 5.290 ; 5.290 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 5.212 ; 5.212 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 5.172 ; 5.172 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 4.858 ; 4.858 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 4.858 ; 4.858 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 5.097 ; 5.097 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 4.017 ; 4.017 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 4.871 ; 4.871 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 4.871 ; 4.871 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 5.094 ; 5.094 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 5.117 ; 5.117 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 5.087 ; 5.087 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 4.574 ; 4.574 ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 3.679 ; 3.679 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 3.713 ; 3.713 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 3.679 ; 3.679 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 3.837 ; 3.837 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 3.849 ; 3.849 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 3.705 ; 3.705 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 3.718 ; 3.718 ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;       ; 3.056 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                    ;
++--------------------------+---------+--------+----------+---------+---------------------+
+; Clock                    ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack         ; -2.372  ; -1.864 ; N/A      ; N/A     ; -1.631              ;
+;  clock_50mhz             ; 1.343   ; -1.864 ; N/A      ; N/A     ; -1.631              ;
+;  gen25mhz:inst1|count[0] ; -2.372  ; 0.215  ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS          ; -92.992 ; -1.864 ; 0.0      ; 0.0     ; -56.621             ;
+;  clock_50mhz             ; 0.000   ; -1.864 ; N/A      ; N/A     ; -2.853              ;
+;  gen25mhz:inst1|count[0] ; -92.992 ; 0.000  ; N/A      ; N/A     ; -53.768             ;
++--------------------------+---------+--------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Setup Times                                                                                ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 1.833 ; 1.833 ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; 5.348 ; 5.348 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Hold Times                                                                                   ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; reset     ; gen25mhz:inst1|count[0] ; 0.589  ; 0.589  ; Rise       ; gen25mhz:inst1|count[0] ;
+; so        ; gen25mhz:inst1|count[0] ; -2.271 ; -2.271 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise   ; Fall   ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 6.646  ; 6.646  ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 6.755  ;        ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 8.977  ; 8.977  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 10.592 ; 10.592 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 9.679  ; 9.679  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 10.592 ; 10.592 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 10.342 ; 10.342 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 10.302 ; 10.302 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 10.173 ; 10.173 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 9.573  ; 9.573  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 10.173 ; 10.173 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 9.608  ; 9.608  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 7.470  ; 7.470  ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 10.209 ; 10.209 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 9.588  ; 9.588  ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 10.182 ; 10.182 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 10.209 ; 10.209 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 10.179 ; 10.179 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 9.161  ; 9.161  ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 7.345  ; 7.345  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 7.013  ; 7.013  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 6.968  ; 6.968  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 6.956  ; 6.956  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 7.326  ; 7.326  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 7.345  ; 7.345  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 6.984  ; 6.984  ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 7.010  ; 7.010  ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;        ; 6.755  ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+--------+--------+------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                              ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; Data Port ; Clock Port              ; Rise  ; Fall  ; Clock Edge ; Clock Reference         ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+; cs        ; gen25mhz:inst1|count[0] ; 3.549 ; 3.549 ; Rise       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ; 3.056 ;       ; Rise       ; gen25mhz:inst1|count[0] ;
+; si        ; gen25mhz:inst1|count[0] ; 4.046 ; 4.046 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_b[*]  ; gen25mhz:inst1|count[0] ; 4.944 ; 4.944 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[0] ; gen25mhz:inst1|count[0] ; 4.944 ; 4.944 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[1] ; gen25mhz:inst1|count[0] ; 5.290 ; 5.290 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[2] ; gen25mhz:inst1|count[0] ; 5.212 ; 5.212 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_b[3] ; gen25mhz:inst1|count[0] ; 5.172 ; 5.172 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_g[*]  ; gen25mhz:inst1|count[0] ; 4.858 ; 4.858 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[0] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[1] ; gen25mhz:inst1|count[0] ; 4.858 ; 4.858 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[2] ; gen25mhz:inst1|count[0] ; 5.097 ; 5.097 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_g[3] ; gen25mhz:inst1|count[0] ; 4.891 ; 4.891 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_hsync ; gen25mhz:inst1|count[0] ; 4.017 ; 4.017 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_r[*]  ; gen25mhz:inst1|count[0] ; 4.871 ; 4.871 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[0] ; gen25mhz:inst1|count[0] ; 4.871 ; 4.871 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[1] ; gen25mhz:inst1|count[0] ; 5.094 ; 5.094 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[2] ; gen25mhz:inst1|count[0] ; 5.117 ; 5.117 ; Rise       ; gen25mhz:inst1|count[0] ;
+;  vga_r[3] ; gen25mhz:inst1|count[0] ; 5.087 ; 5.087 ; Rise       ; gen25mhz:inst1|count[0] ;
+; vga_vsync ; gen25mhz:inst1|count[0] ; 4.574 ; 4.574 ; Rise       ; gen25mhz:inst1|count[0] ;
+; buf[*]    ; gen25mhz:inst1|count[0] ; 3.679 ; 3.679 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[0]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[1]   ; gen25mhz:inst1|count[0] ; 3.713 ; 3.713 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[2]   ; gen25mhz:inst1|count[0] ; 3.684 ; 3.684 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[3]   ; gen25mhz:inst1|count[0] ; 3.679 ; 3.679 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[4]   ; gen25mhz:inst1|count[0] ; 3.837 ; 3.837 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[5]   ; gen25mhz:inst1|count[0] ; 3.849 ; 3.849 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[6]   ; gen25mhz:inst1|count[0] ; 3.705 ; 3.705 ; Fall       ; gen25mhz:inst1|count[0] ;
+;  buf[7]   ; gen25mhz:inst1|count[0] ; 3.718 ; 3.718 ; Fall       ; gen25mhz:inst1|count[0] ;
+; sck       ; gen25mhz:inst1|count[0] ;       ; 3.056 ; Fall       ; gen25mhz:inst1|count[0] ;
++-----------+-------------------------+-------+-------+------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; gen25mhz:inst1|count[0] ; clock_50mhz             ; 1        ; 1        ; 0        ; 0        ;
+; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 679      ; 0        ; 32       ; 8        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; gen25mhz:inst1|count[0] ; clock_50mhz             ; 1        ; 1        ; 0        ; 0        ;
+; gen25mhz:inst1|count[0] ; gen25mhz:inst1|count[0] ; 679      ; 0        ; 32       ; 8        ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 44    ; 44   ;
+; Unconstrained Output Ports      ; 25    ; 25   ;
+; Unconstrained Output Port Paths ; 29    ; 29   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Nov 23 12:26:32 2021
+Info: Command: quartus_sta de1 -c top_de1
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_de1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name gen25mhz:inst1|count[0] gen25mhz:inst1|count[0]
+    Info (332105): create_clock -period 1.000 -name clock_50mhz clock_50mhz
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.372
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.372       -92.992 gen25mhz:inst1|count[0] 
+    Info (332119):     2.116         0.000 clock_50mhz 
+Info (332146): Worst-case hold slack is -1.864
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.864        -1.864 clock_50mhz 
+    Info (332119):     0.445         0.000 gen25mhz:inst1|count[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -2.853 clock_50mhz 
+    Info (332119):    -0.611       -53.768 gen25mhz:inst1|count[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.360
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.360       -12.411 gen25mhz:inst1|count[0] 
+    Info (332119):     1.343         0.000 clock_50mhz 
+Info (332146): Worst-case hold slack is -0.963
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.963        -0.963 clock_50mhz 
+    Info (332119):     0.215         0.000 gen25mhz:inst1|count[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 clock_50mhz 
+    Info (332119):    -0.500       -44.000 gen25mhz:inst1|count[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 550 megabytes
+    Info: Processing ended: Tue Nov 23 12:26:35 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+
