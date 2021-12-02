@@ -1,0 +1,7 @@
+
+State Machine - |top_de1|mem_test:inst5|state
+Name state.data_state state.address_state state.opcode_state state.idle_state 
+state.idle_state 0 0 0 0 
+state.opcode_state 0 0 1 1 
+state.address_state 0 1 0 1 
+state.data_state 1 0 0 1 

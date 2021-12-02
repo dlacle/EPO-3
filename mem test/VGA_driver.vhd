@@ -94,7 +94,7 @@ L31:		process( hcount, vcount, in_h_sync, in_v_sync)
 			end if;
 		end process;
 
-L4:		process(hcount,vcount)
+L4:		process(hcount,vcount,color,in_sync)
 		begin
 			if ( in_sync='1') then
 				new_red <= color(0);

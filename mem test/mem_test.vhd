@@ -6,15 +6,14 @@ entity mem_test is
     port (
         clk25       : in  std_logic;
         reset     : in  std_logic;
-
+			temp_color :in std_logic_vector(2 downto 0);
         cs        : out std_logic;
         sck       : out std_logic;
         mosi      : out std_logic;
         miso      : in  std_logic;
         
         start_read : in std_logic;
-        color     : out std_logic_vector(2 downto 0);
-		     led     : out std_logic_vector(3 downto 0)
+        color     : out std_logic_vector(2 downto 0)
     );
 end entity mem_test;
 
@@ -26,9 +25,9 @@ architecture behavioural of mem_test is
     signal clkcount, new_clkcount : integer range 0 to 800;
     signal bitcount, new_bitcount : integer range 0 to 2;
     signal opcode : std_logic_vector(8 downto 0) := "000000011";
-    signal buf, new_buf : std_logic := '1'; 
-    signal inbuf0, inbuf1     :  std_logic_vector(2 downto 0) := "000";
-  
+   
+    signal inbuf0, inbuf1,new_inbuf,inbuf  :  std_logic_vector(2 downto 0) := "000";
+
 
 begin
 
@@ -38,26 +37,28 @@ reg: process (clk25)
             if reset = '1' then
                 state    <= idle_state;
                 clkcount <= 0;
-                buf <= '0';
-					 inbuf0<="000";
-					  inbuf1<="000";
+					 bitcount<=0;
+					 inbuf<="010";
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
                 bitcount <= new_bitcount;
-                buf      <= new_buf;
+                inbuf      <= new_inbuf;
             end if;
         end if;
     end process;
 
-comb: process (state, clkcount, clk25, start_read, miso, opcode)
+comb: process (state, clkcount, clk25, start_read, miso, opcode,temp_color,bitcount,inbuf,inbuf0)
     begin
         case state is
         when idle_state =>
+				inbuf0	<= "000";
+				new_inbuf <="010";
+				new_bitcount<=0;
             cs      <= '1';
             sck     <= '0';
             mosi    <= '0';
-				led <= "0001";
+				new_clkcount<=0;
             if start_read = '1' then
                 new_state <= opcode_state;
             else
@@ -65,13 +66,15 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode)
             end if;
 
         when opcode_state =>
-		  led <= "0010";
+		  			inbuf0	<= "000";
+			new_inbuf <= inbuf;
+			new_bitcount<= bitcount;
             cs      <= '0';
             sck     <= not(clk25);
-            mosi    <= opcode(7-clkcount);
+            mosi    <= opcode(6-clkcount);
             
             new_clkcount <= clkcount + 1;
-            if clkcount = 7 then
+            if clkcount = 6 then
                 new_state <= address_state;
                 new_clkcount <= 0;
             else
@@ -79,13 +82,15 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode)
             end if;
 
         when address_state =>
-		  led <= "0100";
+		  new_bitcount<= bitcount;
+		  			inbuf0	<= "000";
+		  new_inbuf <= inbuf;
             cs      <= '0';
             sck     <= not(clk25);
             mosi    <= '0';
 				
             new_clkcount <= clkcount + 1;
-            if clkcount = 24 then
+            if clkcount = 23 then
                 new_state <= data_state;
                 new_clkcount <= 0;
             else
@@ -93,39 +98,32 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode)
             end if;
 
         when data_state =>
-		  led <= "1000";
+
             cs      <= '0';
             sck     <= clk25;
             mosi    <= '0';
-				
-				    if buf = '0' then
-				      inbuf0(bitcount) <= miso;
-				      color <= inbuf1;
-				    else
-				      inbuf1(bitcount) <= miso;
-				      color <= inbuf0;
-				    end if;
+				inbuf0(bitcount) <= miso;
+		      new_clkcount <= clkcount + 1;		    
+
 				
 				    
 				    if bitcount = 2 then
+					 new_inbuf<=inbuf0;
 				      new_bitcount <= 0;
-				      if buf = '1' then
-				        new_buf <= '0';
-				      elsif buf = '0' then
-				        new_buf <= '1';
-				      end if; 
 				    else
+					 new_inbuf <= inbuf;
 				      new_bitcount <= bitcount + 1;
 				    end if; 
 				    
-            new_clkcount <= clkcount + 1;
-            if clkcount = 640 then
+            if clkcount = 672 then
                 new_clkcount <= 0;
                 new_state    <= idle_state;
             else
                 new_state    <= data_state;
             end if;
+	
         end case;
     end process;
-
+	 
+color<=inbuf;
 end architecture behavioural;
