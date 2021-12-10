@@ -1,0 +1,172 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/David/Desktop/TU delft/mem
+Eerase_test
+Z0 w1639168448
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/David/Documents/GitHub/EPO-3/questa sim
+Z5 8C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\erase_mem.vhd
+Z6 FC:\Users\David\Documents\GitHub\EPO-3\erase_fsm\erase_mem.vhd
+l0
+L5
+V<`=zMQ73];7zcJAJ^D@`d3
+!s100 _?SF1aSLHURWSYU?]LKFJ0
+Z7 OL;C;10.6g;65
+32
+Z8 !s110 1639168452
+!i10b 1
+Z9 !s108 1639168452.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\erase_mem.vhd|
+Z11 !s107 C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\erase_mem.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioural
+R1
+R2
+R3
+DEx4 work 10 erase_test 0 22 <`=zMQ73];7zcJAJ^D@`d3
+32
+R8
+l28
+L17
+VEB@Ki8TYGl^k>TdDgJBVo1
+!s100 4AGJ;NS?2;5zVcWo4Ta>l3
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Emem_test_top_tb
+Z14 w1639165925
+R2
+R3
+R4
+Z15 8C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_tb.vhd
+Z16 FC:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_tb.vhd
+l0
+L4
+VK@9ah;`i]0YY[D57zHW6n1
+!s100 I_MHS4MEW_73OY5cnCZHL2
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_tb.vhd|
+Z18 !s107 C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_tb.vhd|
+!i113 0
+R12
+R13
+Astructural
+R2
+R3
+DEx4 work 15 mem_test_top_tb 0 22 K@9ah;`i]0YY[D57zHW6n1
+32
+R8
+l31
+L8
+VZJR^WZ;3mhIH[AIOa:L?W0
+!s100 89:>ZCILDW6OYE;oXGJl;3
+R7
+!i10b 1
+R9
+R17
+R18
+!i113 0
+R12
+R13
+Etop_m
+Z19 w1639156231
+R1
+R2
+R3
+R4
+Z20 8C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd
+Z21 FC:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd
+l0
+L5
+V;[A=jNZCF2K1O;I`[BJJE0
+!s100 <2Wk4=o7^5i07ISEmRX:L3
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd|
+Z23 !s107 C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd|
+!i113 0
+R12
+R13
+Abehave
+R1
+R2
+R3
+DEx4 work 5 top_m 0 22 ;[A=jNZCF2K1O;I`[BJJE0
+32
+R8
+l51
+L23
+VB@nAa3UOMOVXL0aUlZ[]91
+!s100 f_0lfBhfibm5Y[b1oIGJ;0
+R7
+!i10b 1
+R9
+R22
+R23
+!i113 0
+R12
+R13
+Evga_driver
+Z24 w1639165977
+R1
+R2
+R3
+R4
+Z25 8C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\vga_d.vhd
+Z26 FC:\Users\David\Documents\GitHub\EPO-3\erase_fsm\vga_d.vhd
+l0
+L5
+Vb><0=jEl<ioRA6O:KJG1<2
+!s100 ?B=7fVeYfU:lbY]VQK9dH0
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\vga_d.vhd|
+Z28 !s107 C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\vga_d.vhd|
+!i113 0
+R12
+R13
+Avga_behavioral
+R1
+R2
+R3
+DEx4 work 10 vga_driver 0 22 b><0=jEl<ioRA6O:KJG1<2
+32
+R8
+l24
+L19
+V83n?5^TK7[N1M0W0JJMJ=2
+!s100 83GhkCe@;bhbkPC`<3cQz3
+R7
+!i10b 1
+R9
+R27
+R28
+!i113 0
+R12
+R13

@@ -39,7 +39,7 @@ reg: process (clk25)
                 state    <= new_state;
                 clkcount <= new_clkcount;
 		opcode <= new_opcode;
-		address <= new_address;
+		new_address <= address;
             end if;
         end if;
     end process;

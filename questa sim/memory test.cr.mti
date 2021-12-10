@@ -1,0 +1,27 @@
+C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top_m
+-- Compiling architecture behave of top_m
+
+} {} {}} C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_tb.vhd}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mem_test_top_tb
+-- Compiling architecture structural of mem_test_top_tb
+
+} {} {}} C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\vga_d.vhd}
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity vga_driver
+-- Compiling architecture vga_behavioral of vga_driver
+
+} {} {}}

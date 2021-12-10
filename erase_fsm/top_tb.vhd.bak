@@ -4,7 +4,6 @@ use IEEE.std_logic_1164.all;
 entity mem_test_top_tb is
 end entity mem_test_top_tb;
 
-
 architecture structural of mem_test_top_tb  is
 
 	component top_m is
