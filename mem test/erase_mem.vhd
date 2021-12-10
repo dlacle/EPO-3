@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity erase_test is
     port (
@@ -15,14 +16,14 @@ end entity erase_test;
 
 architecture behavioural of erase_test is
 
-    type state_type is (idle_state, opcode_state,address_state, data_state);
+    type state_type is (idle_state, opcode_state,address_state, w_state);
 
     signal state, new_state       : state_type;
     signal clkcount, new_clkcount : integer range 0 to 800;
     signal bitcount, new_bitcount : integer range 0 to 2;
-    signal opcode : std_logic_vector(8 downto 0) := "11011000";
+    signal opcode : std_logic_vector(7 downto 0) := "11011000";
     signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
-   
+    signal frame_count, new_frame_count: integer range 0 to 70;
 
 
 begin
@@ -33,21 +34,25 @@ reg: process (clk25)
             if reset = '1' then
                 state    <= idle_state;
                 clkcount <= 0;
+		frame_count<= 0;
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
+		frame_count <=new_frame_count;
             end if;
         end if;
     end process;
 
-comb: process (state, clkcount, clk25, start_read, miso, opcode,temp_color,bitcount,inbuf,inbuf0)
+comb: process (state, clkcount, clk25, miso, opcode,frame_count,start_erase)
     begin
         case state is
         when idle_state =>
             cs      <= '1';
             mosi    <= '0';
             sck<='0';
-			new_clkcount<=0;
+		new_clkcount<=0;
+        new_frame_count<=0;
+
             if start_erase = '1' then
                 new_state <= opcode_state;
             else
@@ -55,6 +60,7 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode,temp_color,bitco
             end if;
 
         when opcode_state =>
+        new_frame_count<=frame_count;
               cs      <= '0';
          sck     <= not(clk25);
         mosi    <= opcode(7-clkcount);
@@ -68,33 +74,34 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode,temp_color,bitco
         end if;
 
         when address_state =>
-        new_bitcount<= bitcount;
-        inbuf0	<= "000";
-        new_inbuf <= inbuf;
+        new_frame_count<=frame_count;
         cs      <= '0';
         sck     <= not(clk25);
         mosi    <= address(23-clkcount);
-        new_address <= address;
-    
         new_clkcount <= clkcount + 1;
         if clkcount = 23 then
-        new_state <= wait_state;
+        new_state <= w_state;
         new_clkcount <= 0;
         else
         new_state <= address_state;
         end if;
 
-        when wait_state =>
-        if frame_count='1' then
+        when w_state =>
+	cs      <= '0';
+        sck     <= not(clk25);
+
+        if start_erase = '1' then
         new_frame_count<=frame_count+1;
         else 
         new_frame_count<=frame_count;
         end if;
-        if frame count>=60 then
+
+        if frame_count>=60 then
         new_state<= idle_state;
         else
-        new_state<=wait_state;
+        new_state<=w_state;
         end if;
-        end case;
+
+       end case;
     end process;
-        end behavioural;
+    end architecture behavioural;
