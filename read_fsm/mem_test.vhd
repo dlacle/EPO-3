@@ -63,13 +63,9 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode,bitcount,inbuf,i
 				    new_address <= address;
 				    
             if start_read = '1' then
-                new_state <= opcode_read_state;
+                new_state <= opcode_state;
             else
-                if start_write = '1' then
-                  new_state <= write_begin_state;
-                else
-                  new_state <= idle_state;
-                end if;
+                new_state <= idle_state;
             end if;
 
         when opcode_state =>
@@ -136,9 +132,9 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode,bitcount,inbuf,i
             end if;
 	
         end case;
-		        
     end process;
 	 
     color<=inbuf;
     
 end architecture behavioural;
+
