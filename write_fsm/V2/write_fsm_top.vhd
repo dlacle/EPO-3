@@ -9,8 +9,9 @@ entity write_fsm_top is
         sck       : out std_logic;
         mosi      : out std_logic;
         miso      : in  std_logic;
-        debug_leds : out std_logic_vector(7 downto 0)
-        
+        debug_leds : out std_logic_vector(7 downto 0);
+        frame_full : out std_logic;
+        frame_begin : in std_logic
       );
 end entity write_fsm_top;
 
@@ -33,7 +34,9 @@ architecture structural of write_fsm_top is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
-        debug_leds : out std_logic_vector(7 downto 0)
+        debug_leds : out std_logic_vector(7 downto 0);
+        frame_full : out std_logic;
+        frame_begin : in std_logic
     );
   end component write_fsm;
   
@@ -51,7 +54,9 @@ begin
                         sck => sck,
                         mosi => mosi,
                         miso => miso,
-								        debug_leds => debug_leds
+								        debug_leds => debug_leds,
+								        frame_full => frame_full,
+								        frame_begin => frame_begin
                         );
 
 
