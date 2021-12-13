@@ -122,7 +122,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
         end if;
 
         when idle_erase =>--
-	      cs      <= '0';
+	      cs      <= '1';
         sck     <= not(clk25);
 
         if start_erase = '1' then
