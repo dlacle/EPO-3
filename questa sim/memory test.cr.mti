@@ -1,13 +1,4 @@
-C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\erase_mem.vhd}
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity erase_test
--- Compiling architecture behavioural of erase_test
-
-} {} {}} C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd}
+C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:\Users\David\Documents\GitHub\EPO-3\erase_fsm\top_m.vhd}
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
 -- Loading package TEXTIO

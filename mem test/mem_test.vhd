@@ -25,7 +25,7 @@ architecture behavioural of mem_test is
     signal clkcount, new_clkcount : integer range 0 to 800;
     signal bitcount, new_bitcount : integer range 0 to 2;
     signal opcode : std_logic_vector(8 downto 0) := "000000011";
-   
+
     signal inbuf0, inbuf1,new_inbuf,inbuf  :  std_logic_vector(2 downto 0) := "000";
 
 

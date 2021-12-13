@@ -129,12 +129,13 @@ comb: process (state, clkcount, clk25, start_read, miso, opcode,bitcount,inbuf,i
                 new_state    <= idle_state;
             else
                 new_state    <= data_state;
+				new_address <= address;
             end if;
 	
         end case;
+		        
     end process;
 	 
     color<=inbuf;
     
 end architecture behavioural;
-

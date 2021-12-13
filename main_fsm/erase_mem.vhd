@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity erase_test is
+entity erase_fsm is
     port (
         clk25       : in  std_logic;
         reset     : in  std_logic;
@@ -12,9 +12,9 @@ entity erase_test is
         miso      : in  std_logic;
         start_erase : in std_logic
     );
-end entity erase_test;
+end entity erase_fsm;
 
-architecture behavioural of erase_test is
+architecture behavioural of erase_fsm is
 
     type state_type is (idle_state,address_opcode,opcode_wel_e,idle_wel_e,opcode_erase,idle_erase);
 
@@ -33,13 +33,13 @@ reg: process (clk25)
             if reset = '1' then
                 state    <= idle_state;
                 clkcount <= 0;
-		            opcode	<= (others => '0');
-		            address <= (others => '0');
+		opcode	<= (others => '0');
+		address <= (others => '0');
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
-		            opcode <= new_opcode;
-		            address <= new_address;
+		opcode <= new_opcode;
+		address <= new_address;
             end if;
         end if;
     end process;
@@ -52,8 +52,8 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
             mosi    <= '0';
             sck<='0';
         new_opcode <= "00000110";
-	      new_address <= address;
-		    new_clkcount<=0;
+	new_address <= address;
+		new_clkcount<=0;
 
             if start_erase = '1' then
                 new_state <= opcode_wel_e;
@@ -66,7 +66,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
       sck <= not(clk25);
       mosi <= opcode(7-clkcount);
       new_opcode <= opcode;
-	    new_address <= address;
+	new_address <= address;
       if (clkcount = 7) then
         new_state <= idle_wel_e;
         new_clkcount <= 0;
@@ -74,12 +74,12 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
         new_state <= opcode_wel_e;
         new_clkcount <= clkcount + 1;
       end if;
-
+    
     when idle_wel_e =>
       cs <=  '1';
       sck <= '0';
       mosi <= '0';
-	    new_address <= address;
+	new_address <= address;
       if (clkcount = 10) then
         new_opcode <= "11011000";
         new_state <= opcode_erase;
@@ -93,11 +93,11 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
 
 
         when opcode_erase =>
-          cs      <= '0';
-          sck     <= not(clk25);
-          mosi    <= opcode(7-clkcount);
- 	        new_opcode <= opcode;
-	        new_address <= address;
+              cs      <= '0';
+         sck     <= not(clk25);
+        mosi    <= opcode(7-clkcount);
+ 	new_opcode <= opcode;
+	new_address <= address;
           new_clkcount <= clkcount + 1;
          if clkcount = 7 then
             new_state <= address_opcode;
@@ -107,38 +107,38 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
         end if;
 
         when address_opcode =>
-          cs      <= '0';
-          sck     <= not(clk25);
-          mosi    <= address(23-clkcount);
-          new_clkcount <= clkcount + 1;
-	        new_opcode <= opcode;
-	        new_address <= address;
-
+        cs      <= '0';
+        sck     <= not(clk25);
+        mosi    <= address(23-clkcount);
+        new_clkcount <= clkcount + 1;
+	new_opcode <= opcode;
+	new_address <= address;
+  
         if clkcount = 23 then
-          new_state <= idle_erase;
-          new_clkcount <= 0;
+        new_state <= idle_erase;
+        new_clkcount <= 0;
         else
-          new_state <= address_opcode;
+        new_state <= address_opcode;
         end if;
 
         when idle_erase =>--
-	       cs      <= '1';
-          sck     <= not(clk25);
+	      cs      <= '1';
+        sck     <= not(clk25);
 
         if start_erase = '1' then
-          new_clkcount <= clkcount + 1;
-        else
-          new_clkcount <= clkcount;
+        new_clkcount <= clkcount + 1;
+        else 
+        new_clkcount <= clkcount;
         end if;
 
         if clkcount >= 60 then
-            new_state<= idle_state;
-            new_address<=std_logic_vector(unsigned(address) + 64000);
+        new_state<= idle_state;
+        new_address<=std_logic_vector(unsigned(address) + 64000);
         else
-	          new_address <= address;
-            new_state<=idle_erase;
+	new_address <= address;
+        new_state<=idle_erase;
         end if;
 
        end case;
     end process;
-    end architecture behavioural;
+end architecture behavioural;
