@@ -11,7 +11,7 @@ entity startup_fsm is
         sck       : out std_logic;
         mosi      : out std_logic;
         miso      : in  std_logic;
-        
+        start_startup : in std_logic;
         debug_leds : out std_logic_vector(7 downto 0)
     );
 end startup_fsm;
@@ -51,13 +51,12 @@ begin
       mosi <= '0';
       new_debug <= "10000000";
       new_clkcount <= 0;
-      if (clkcount = 10) then
+      if (start_startup = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
       else
         new_opcode <= "00000000";
         new_state <= idle_startup;
-        new_clkcount <= clkcount + 1;
       end if;
       
     

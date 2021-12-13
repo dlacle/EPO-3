@@ -10,6 +10,8 @@ entity main_fsm is
             mosi            : out std_logic;
             miso            : in std_logic;
             start_read      : in std_logic;
+            start_startup   : out std_logic; 
+            start_erase     : out std_logic;
             frame_full      : in std_logic;   
             frame_begin     : out std_logic
     );
