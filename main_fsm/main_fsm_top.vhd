@@ -11,6 +11,8 @@ entity mem_test_top is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
+        debug_leds : out std_logic_vector(7 downto 0);
+
         h_sync     : out std_logic;
         v_sync     : out std_logic;
         red       : out std_logic;
@@ -18,6 +20,7 @@ entity mem_test_top is
         blue      : out std_logic
       );
 end entity mem_test_top;
+
 
 
 architecture structural of mem_test_top is
@@ -35,12 +38,28 @@ architecture structural of mem_test_top is
                 mosi            : out std_logic;
                 miso            : in std_logic;
                 start_read      : in std_logic;
-                color           : out std_logic_vector(2 downto 0);
                 frame_full      : in std_logic;   
                 frame_begin     : out std_logic
         );
     end component main_fsm;
   
+
+    entity startup_fsm is
+    port (
+            clk25       : in  std_logic;
+            reset     : in  std_logic;
+            cs        : out std_logic;
+            sck       : out std_logic;
+            mosi      : out std_logic;
+            miso      : in  std_logic;
+            start_startup : in std_logic; 
+            debug_leds : out std_logic_vector(7 downto 0)
+        );
+    end startup_fsm;
+
+
+
+
     component write_fsm is
     port (
             clk25       : in  std_logic;
@@ -82,17 +101,28 @@ begin
                             
     u2: main_fsm port map(clk25 => clk,
                             reset => reset,
-                            temp_color => 
                             cs => cs,
                             sck => sck,
                             mosi => mosi,
                             miso => miso,
                                             
                             start_read => start_read,
-                            color => color
+                            frame_full => frame_full,
+                            frame_begin => frame_begin
                             );
 
-    u3: vga_driver port map(clk => clk,
+    u3: write_fsm port map(clk25 => clk,
+                            reset => reset,
+                            cs => cs, 
+                            sck => sck, 
+                            mosi => mosi, 
+                            miso => miso, 
+                            debug_leds => debug_leds, 
+                            frame_full => frame_full,
+                            frame_begin => frame_begin
+                            );
+
+    u4: vga_driver port map(clk => clk,
                             reset => reset,
                             pixel_sync => start_read,
                             color => color,

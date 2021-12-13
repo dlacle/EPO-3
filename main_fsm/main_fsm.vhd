@@ -10,7 +10,6 @@ entity main_fsm is
             mosi            : out std_logic;
             miso            : in std_logic;
             start_read      : in std_logic;
-            color           : out std_logic_vector(2 downto 0);
             frame_full      : in std_logic;   
             frame_begin     : out std_logic
     );
@@ -141,6 +140,7 @@ begin
             new_clkcount    <= clkcount + 1;
         end if;
 
+        when read_state =>
         
 
       end case;
