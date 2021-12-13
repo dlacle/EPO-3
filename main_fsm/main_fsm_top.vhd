@@ -103,7 +103,7 @@ architecture structural of mem_test_top is
 
 
     signal clk : std_logic;
-    signal start_read : std_logic;
+    signal start_read, start_startup, start_erase, frame_full, frame_begin : std_logic;
     signal color : std_logic_vector(2 downto 0);
   
 begin
