@@ -12,6 +12,7 @@ entity startup_fsm is
         mosi      : out std_logic;
         miso      : in  std_logic;
         start_startup : in std_logic;
+        startup_done : out std_logic;
         debug_leds : out std_logic_vector(7 downto 0)
     );
 end startup_fsm;
@@ -23,6 +24,7 @@ architecture behavioural of startup_fsm is
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
   signal debug, new_debug : std_logic_vector(7 downto 0) := "00000000";
+  signal cs_in, sck_in, mosi_in : std_logic;
   
 begin
   statereg: process (clk25)
@@ -33,6 +35,7 @@ begin
         clkcount <= 0;
         opcode <= "00000000";
         debug <= "00000000";
+        startup_done <= '0';
       else
         clkcount <= new_clkcount;
         state <= new_state;
@@ -42,15 +45,32 @@ begin
     end if;
   end process;
 
-  combinatorial: process (state, clk25, clkcount, opcode, debug)
+  
+  process (start_startup, cs_in, sck_in, mosi_in)
+    begin
+       if (start_startup = '1') then
+          cs <= cs_in;
+          sck <= sck_in;
+          mosi <= mosi_in;
+       else
+          cs <= 'Z';
+          sck <= 'Z';
+          mosi <= 'Z';
+       end if;
+  end process;
+
+
+
+  combinatorial: process (state, clk25, clkcount, opcode, debug, start_startup)
   begin
     case state is
     when idle_startup =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in <= '0';
+      mosi_in <= '0';
       new_debug <= "10000000";
       new_clkcount <= 0;
+      startup_done <= '1';
       if (start_startup = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
@@ -61,11 +81,12 @@ begin
       
     
     when opcode_wel =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= opcode(7-clkcount);
+      cs_in <=  '0';
+      sck_in <= not(clk25);
+      mosi_in <= opcode(7-clkcount);
       new_debug <= "10000001";
       new_opcode <= opcode;
+      startup_done <= '0';
       
       if (clkcount = 7) then
         new_state <= idle_wel;
@@ -76,10 +97,11 @@ begin
       end if;
     
     when idle_wel =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in <= '0';
+      mosi_in <= '0';
       new_debug <= "10000010";
+      startup_done <= '0';
       
       if (clkcount = 10) then
         new_opcode <= "00000001";
@@ -92,11 +114,12 @@ begin
       end if;
     
     when opcode_unprotect =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= opcode(7-clkcount);
+      cs_in <=  '0';
+      sck_in <= not(clk25);
+      mosi_in <= opcode(7-clkcount);
       new_debug <= "10000100";
       new_opcode <= opcode;
+      startup_done <= '0';
       
       if (clkcount = 7) then
         new_state <= data_unprotect;
@@ -107,11 +130,12 @@ begin
       end if;
     
     when data_unprotect =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= '0';
+      cs_in <=  '0';
+      sck_in <= not(clk25);
+      mosi_in <= '0';
       new_debug <= "10001000";
       new_opcode <= "00000000";
+      startup_done <= '0';
       
       if (clkcount = 7) then
         new_state <= idle_unprotect;
@@ -122,10 +146,11 @@ begin
       end if;
       
     when idle_unprotect =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in <= '0';
+      mosi_in <= '0';
       new_debug <= "10010000";
+      startup_done <= '1';
       
       if (clkcount = 10) then
         new_opcode <= "00000110";

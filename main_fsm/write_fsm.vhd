@@ -13,8 +13,9 @@ entity write_fsm is
         miso      : in  std_logic;
         
         debug_leds : out std_logic_vector(7 downto 0);
-        frame_full : out std_logic;
-        frame_begin : in std_logic
+        frame_full : out std_logic; 
+        write_done      : out std_logic;            
+        start_write     : in std_logic
     );
 end write_fsm;
 
@@ -29,9 +30,15 @@ architecture behavioural of write_fsm is
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
+  signal cs_in, sck_in, mosi_in : std_logic; 
   
   
 begin
+
+
+
+
+
   statereg: process (clk25)
   begin
     if (clk25'event and clk25 = '1') then
@@ -55,19 +62,35 @@ begin
     end if;
   end process;
 
+
+  process (start_write, cs_in, sck_in, mosi_in)
+  begin
+     if (start_write = '1') then
+        cs <= cs_in;
+        sck <= sck_in;
+        mosi <= mosi_in;
+     else
+        cs <= 'Z';
+        sck <= 'Z';
+        mosi <= 'Z';
+     end if;
+  end process;
+
+
   combinatorial: process (state, clk25, clkcount, opcode, debug)
   begin
     case state is
     when write_idle =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in <= '0';
+      mosi_in <= '0';
       new_debug <= "00000001";
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
-      if (clkcount = 10) then
+      write_done <= '1';
+      if (start_write = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
         new_clkcount <= 0;
@@ -79,15 +102,16 @@ begin
       
     
     when opcode_wel =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= opcode(7-clkcount);
+      cs_in <=  '0';
+      sck_in  <= not(clk25);
+      mosi_in <= opcode(7-clkcount);
       new_debug <= "00000010";
       new_opcode <= opcode;
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 7) then
         new_state <= idle_wel;
         new_clkcount <= 0;
@@ -97,14 +121,15 @@ begin
       end if;
     
     when idle_wel =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in<=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
       new_debug <= "00000100";
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 10) then
         new_opcode <= "00000010";
         new_state <= opcode_write;
@@ -117,15 +142,16 @@ begin
     
       
     when opcode_write =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= opcode(7-clkcount);
+      cs_in<=  '0';
+      sck_in  <= not(clk25);
+      mosi_in <= opcode(7-clkcount);
       new_debug <= "00001000";
       new_opcode <= opcode;
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 7) then
         new_state <= address_write;
         new_clkcount <= 0;
@@ -135,15 +161,16 @@ begin
       end if;
       
     when address_write =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= address(23-clkcount);
+      cs_in<=  '0';
+      sck_in  <= not(clk25);
+      mosi_in <= address(23-clkcount);
       new_debug <= "00010000";
       new_opcode <= "00000000";
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 23) then
         new_state <= data_write;
         new_clkcount <= 0;
@@ -153,14 +180,15 @@ begin
       end if;
       
     when data_write =>
-      cs <=  '0';
-      sck <= not(clk25);
-      mosi <= color_buffer(bitcount);
+      cs_in <=  '0';
+      sck_in  <= not(clk25);
+      mosi_in <= color_buffer(bitcount);
       new_debug <= "00100000";
       new_opcode <= "00000000";
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 647) then
 		    new_opcode <= "00000000";
         new_state <= idle_write;
@@ -178,12 +206,13 @@ begin
       
       
     when idle_write =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
       new_debug <= "01000000";
       new_bitcount <= 0;
-      frame_full <= '0';
+      frame_full <= '0'; 
+      write_done <= '0';
       if (clkcount = 525) then
         new_opcode <= "00000101";
         
@@ -212,23 +241,17 @@ begin
       end if;
     
     when idle_frame_full =>
-      cs <=  '1';
-      sck <= '0';
-      mosi <= '0';
+      cs_in <=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
       new_debug <= "00000100";
       new_bitcount <= 0;
       frame_full <= '1'; 
       new_clkcount <= 0;
       new_opcode <= "00000000";
-      if (frame_begin = '1') then
-        new_state <= idle_write;
-        new_address <= ( others => '0');
-        new_pagecount <= 0;
-      else
-        new_state <= idle_frame_full;
-        new_address <= address;
-        new_pagecount <= pagecount;
-      end if;   
+      new_state <= idle_frame_full;
+      new_address <= address;
+      new_pagecount <= pagecount;  
     
     end case;
   end process;
