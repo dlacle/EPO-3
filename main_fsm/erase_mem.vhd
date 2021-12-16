@@ -61,7 +61,7 @@ reg: process (clk25)
        end if;
     end process;
 
-comb: process (state, clkcount, clk25, miso, opcode,start_erase)
+comb: process (state, clkcount, clk25, miso, opcode,start_erase, address, e_count)
     begin
         case state is
         when idle_state =>

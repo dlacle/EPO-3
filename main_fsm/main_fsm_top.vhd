@@ -129,7 +129,7 @@ architecture structural of main_fsm_top is
 
 
     signal clk : std_logic;
-    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write,e_count  : std_logic;
+    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write, e_count  : std_logic;
     signal color : std_logic_vector(2 downto 0);
   
 begin

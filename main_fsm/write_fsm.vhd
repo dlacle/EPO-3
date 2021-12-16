@@ -73,7 +73,7 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode)
+  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer)
   begin
     case state is
     when write_idle =>

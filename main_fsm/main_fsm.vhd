@@ -59,7 +59,7 @@ begin
         end if;
     end process;   
 
-    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full)
+    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full, start_bit)
     begin
       case state is
 
