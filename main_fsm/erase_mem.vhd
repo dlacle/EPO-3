@@ -158,7 +158,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
         new_state<= idle_state;
         new_address<=std_logic_vector(unsigned(address) + 64000);
         else
-	new_address <= address;
+	      new_address <= address;
         new_state<=idle_erase;
         end if;
 

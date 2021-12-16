@@ -35,7 +35,6 @@ begin
         clkcount <= 0;
         opcode <= "00000000";
         debug <= "00000000";
-        startup_done <= '0';
       else
         clkcount <= new_clkcount;
         state <= new_state;
@@ -71,6 +70,7 @@ begin
       new_debug <= "10000000";
       new_clkcount <= 0;
       startup_done <= '1';
+      
       if (start_startup = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
@@ -150,7 +150,7 @@ begin
       sck_in <= '0';
       mosi_in <= '0';
       new_debug <= "10010000";
-      startup_done <= '1';
+      startup_done <= '0';
       
       if (clkcount = 10) then
         new_opcode <= "00000110";
