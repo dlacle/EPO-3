@@ -16,14 +16,6 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Compiling entity read_fsm
 -- Compiling architecture behavioural of read_fsm
 
-} {} {}} C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd
-QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity main_tb
--- Compiling architecture structural of main_tb
-
 } {} {}} C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package STANDARD
@@ -32,6 +24,15 @@ QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
 -- Loading package NUMERIC_STD
 -- Compiling entity main_fsm
 -- Compiling architecture behavioural of main_fsm
+
+} {} {}} C:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd
+QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity erase_fsm
+-- Compiling architecture behavioural of erase_fsm
 
 } {} {}} C:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd
 QuestaSim-64 vcom 10.6g Compiler 2019.08 Aug  3 2019

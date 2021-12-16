@@ -72,6 +72,7 @@ architecture structural of main_fsm_top is
             sck       : out std_logic;
             mosi      : out std_logic;
             miso      : in  std_logic;
+            e_count		 : in std_logic;
             start_erase : in std_logic;
             chip_erase_done : out std_logic
         );

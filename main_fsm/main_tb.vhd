@@ -16,8 +16,6 @@ architecture structural of main_tb  is
             mosi      : out std_logic;
             miso      : in  std_logic;
             
-            debug_leds : out std_logic_vector(7 downto 0);
-    
             h_sync     : out std_logic;
             v_sync     : out std_logic;
             red       : out std_logic;
@@ -27,7 +25,6 @@ architecture structural of main_tb  is
     end component;
     
 signal clk50,reset,cs,sck,mosi,miso,h_sync,v_sync,red,green,blue:std_logic;
-signal debug_leds:std_logic_vector(7 downto 0);
 
 begin
 
@@ -39,7 +36,6 @@ begin
                     miso => miso,
                     h_sync => h_sync,
                     v_sync => v_sync,
-                    debug_leds => debug_leds,
                     red => red, 
                     green => green,
                     blue => blue                         
