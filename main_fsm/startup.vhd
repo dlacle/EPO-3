@@ -69,7 +69,7 @@ begin
       mosi_in <= '0';
       new_debug <= "10000000";
       new_clkcount <= 0;
-      startup_done <= '1';
+      startup_done <= '0';
       
       if (start_startup = '1') then
         new_opcode <= "00000110";
