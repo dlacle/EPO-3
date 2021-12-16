@@ -83,8 +83,13 @@ begin
                     new_state     <= read_state;
                 end if;  
             else 
-                new_start_bit <= '0';
-                new_state  <= idle;
+                new_start_bit <= '1';
+					 if start_read = '1' then
+                    new_state     <= read_state;
+					 else 
+						  new_state  <= idle;
+                end if;
+                
             end if;
 
         when startup_state =>

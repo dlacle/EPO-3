@@ -1,4 +1,4 @@
-library IEEE;
+  library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.numeric_std.all;
@@ -24,11 +24,11 @@ architecture behavioural of write_fsm is
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
-  signal color_buffer, new_color_buffer : std_logic_vector(23 downto 0) := "111110101100011010001000";
+  signal color_buffer, new_color_buffer : std_logic_vector(23 downto 0) := "000000000000000000000000";
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
-  signal cs_in, sck_in, mosi_in : std_logic;
+  signal cs_in, sck_in, mosi_in : std_logic; 
   
   
 begin
@@ -73,7 +73,7 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount)
+  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer)
   begin
     case state is
     when write_idle =>
@@ -235,7 +235,6 @@ begin
       mosi_in <= '0';
       new_bitcount <= 0;
       frame_full <= '1'; 
-      write_done <= '1';
       new_clkcount <= 0;
       new_opcode <= "00000000";
       new_state <= idle_frame_full;

@@ -29,6 +29,7 @@ architecture behavioural of read_fsm is
     signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
     signal inbuf0, inbuf1,new_inbuf,inbuf  :  std_logic_vector(2 downto 0) := "000";
     signal doublecount, new_doublecount : integer range 0 to 1;
+    signal pagecount, new_pagecount : integer range 0 to 255;
     signal cs_in, sck_in, mosi_in : std_logic;
     
 
@@ -43,6 +44,7 @@ reg: process (clk25)
 				bitcount<=0;
 				inbuf<="000";
                 doublecount <= 0;
+                pagecount <= 0;
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
@@ -50,6 +52,7 @@ reg: process (clk25)
                 inbuf      <= new_inbuf;
                 address  <= new_address;
                 doublecount <=new_doublecount;
+                pagecount <= new_pagecount;
             end if;
         end if;
     end process;
@@ -68,7 +71,7 @@ reg: process (clk25)
     end process;
 
 
-comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,inbuf0, address, doublecount)
+comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,inbuf0, address, doublecount, pagecount)
     begin
         case state is
         when idle_state =>
@@ -82,6 +85,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 			new_address <= address;
             read_done <= '0';
             new_doublecount <= doublecount;
+            new_pagecount <= pagecount;
 				    
             if begin_read = '1' then
                 new_state <= opcode_state;
@@ -94,6 +98,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 			new_inbuf <= inbuf;
 			new_bitcount<= bitcount;
             new_doublecount <= doublecount;
+            new_pagecount <= pagecount;
             cs_in      <= '0';
             sck_in     <= not(clk25);
             mosi_in    <= opcode(7-clkcount);
@@ -113,6 +118,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 		  	inbuf0	<= "000";
 		    new_inbuf <= inbuf;
             new_doublecount <= doublecount;
+            new_pagecount <= pagecount;
             cs_in      <= '0';
             sck_in     <= not(clk25);
             mosi_in    <= address(23-clkcount);
@@ -146,9 +152,17 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 				    
             if clkcount = 640 then
                 new_clkcount <= 0;
-                if(address = std_logic_vector(to_unsigned( 38718 ,24))) then
-                    new_address <= ( others => '0');
-                    new_doublecount <= 0;
+                
+                if(address = std_logic_vector(to_unsigned((pagecount * 256) + 243,24)))then
+                    if (pagecount = 79)then
+                        new_pagecount <= 0;
+                        new_address <= ( others => '0');
+                        new_doublecount <= 0;
+                    else
+                        new_pagecount <= pagecount + 1;
+                        new_doublecount <= 0;
+                        new_address <= std_logic_vector(to_unsigned(((pagecount + 1) * 256) ,24)); 
+                    end if;
                 else
                     if(doublecount = 1) then
                         new_address <= std_logic_vector(unsigned(address) + 81);
@@ -157,11 +171,14 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                         new_address <= address;
                         new_doublecount <= doublecount + 1;
                     end if;
+                    new_pagecount <= pagecount; 
                 end if;
+                
                 new_state    <= read_done_state;
             else
                 new_state    <= data_state;
-				new_address <= address;
+					 new_address <= address;
+					 new_pagecount <= pagecount; 
             end if;
 
         when read_done_state => 
@@ -169,6 +186,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 		  	inbuf0	<= "000";
 		    new_inbuf <= inbuf;
             new_doublecount <= doublecount;
+            new_pagecount <= pagecount;
             cs_in      <= '0';
             sck_in     <= not(clk25);
             mosi_in    <= '0';
