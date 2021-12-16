@@ -19,7 +19,7 @@ end startup_fsm;
 
 
 architecture behavioural of startup_fsm is
-  type state_type is (idle_startup, opcode_wel, idle_wel, opcode_unprotect, data_unprotect, idle_unprotect);
+  type state_type is (idle_startup, opcode_wel, idle_wel, opcode_unprotect, data_unprotect, idle_unprotect, startup_done_state);
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
@@ -154,6 +154,23 @@ begin
       
       if (clkcount = 10) then
         new_opcode <= "00000110";
+        new_state <= startup_done_state;
+        new_clkcount <= 0;
+      else
+        new_opcode <= "00000000";
+        new_state <= idle_unprotect;
+        new_clkcount <= clkcount + 1;
+      end if; 
+
+    when startup_done_state =>
+      cs_in <=  '1';
+      sck_in <= '0';
+      mosi_in <= '0';
+      new_debug <= "10010000";
+      startup_done <= '1';
+      
+      if (clkcount = 10) then
+        new_opcode <= "00000110";
         new_state <= idle_startup;
         new_clkcount <= 0;
       else
@@ -161,6 +178,7 @@ begin
         new_state <= idle_unprotect;
         new_clkcount <= clkcount + 1;
       end if;    
+
     end case;
   end process;
   debug_leds <= debug;
