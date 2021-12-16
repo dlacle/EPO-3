@@ -17,7 +17,7 @@ end entity erase_fsm;
 
 architecture behavioural of erase_fsm is
 
-    type state_type is (idle_state,address_opcode,opcode_wel_e,idle_wel_e,opcode_erase,idle_erase);
+    type state_type is (idle_state,address_opcode,opcode_wel_e,idle_wel_e,opcode_erase,idle_erase,chip_erase_done_state);
 
     signal state, new_state       : state_type;
     signal clkcount, new_clkcount : integer range 0 to 800;
@@ -37,7 +37,6 @@ reg: process (clk25)
                 clkcount <= 0;
 		            opcode	<= (others => '0');
 		            address <= (others => '0');
-                chip_erase_done <= '0';
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
@@ -71,7 +70,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
             new_opcode <= "00000110";
   	        new_address <= address;
 		        new_clkcount<=0;
-            chip_erase_done <= '1';
+            chip_erase_done <= '0';
 
             if start_erase = '1' then
                 new_state <= opcode_wel_e;
@@ -143,24 +142,38 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
         new_state <= address_opcode;
         end if;
 
-        when idle_erase =>--
-	      cs_in      <= '1';
-        sck_in     <= not(clk25);
-        chip_erase_done <= '0';
+        when idle_erase =>
+          cs_in      <= '1';
+          sck_in     <= not(clk25);
+          chip_erase_done <= '0';
 
-        if start_erase = '1' then
-        new_clkcount <= clkcount + 1;
-        else 
-        new_clkcount <= clkcount;
-        end if;
+          if start_erase = '1' then
+            new_clkcount <= clkcount + 1;
+          else 
+            new_clkcount <= clkcount;
+          end if;
 
-        if clkcount >= 60 then
-        new_state<= idle_state;
-        new_address<=std_logic_vector(unsigned(address) + 64000);
-        else
-	      new_address <= address;
-        new_state<=idle_erase;
-        end if;
+          if clkcount >= 60 then
+            new_state<= chip_erase_done_state;
+            new_address<=std_logic_vector(unsigned(address) + 64000);
+          else
+            new_address <= address;
+            new_state<=idle_erase;
+          end if;
+
+        when chip_erase_done_state =>
+          cs_in      <= '1';
+          sck_in     <= not(clk25);
+          chip_erase_done <= '1';
+          new_clkcount <= clkcount + 1;
+          if (clkcount = 10) then
+            new_state<= idle_state;
+          else
+            new_address <= address;
+            new_state<=chip_erase_done_state;
+          end if;
+
+
 
        end case;
     end process;

@@ -8,28 +8,69 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/David/Desktop/TU delft/mem
-Eerase_test
-Z0 w1639649156
+Eerase_fsm
+Z0 w1639650378
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dC:/Users/David/Documents/GitHub/EPO-3/questa sim
-Z5 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd
-Z6 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd
+Z5 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd
+Z6 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd
+l0
+L5
+V8kLQmbSVYWkhmFUlzjbZ?0
+!s100 i^2:@LDNI4aj[8YBDO@B<2
+Z7 OL;C;10.6g;65
+32
+Z8 !s110 1639650763
+!i10b 1
+Z9 !s108 1639650763.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd|
+Z11 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/erase_mem.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioural
+R1
+R2
+R3
+DEx4 work 9 erase_fsm 0 22 8kLQmbSVYWkhmFUlzjbZ?0
+32
+R8
+l30
+L18
+VFKE9ZM<89Fc2QDTe]]5f30
+!s100 8S9PTQZGfbPKIdFTCnQCS0
+R7
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eerase_test
+Z14 w1639649156
+R1
+R2
+R3
+R4
+Z15 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd
+Z16 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd
 l0
 L5
 V<`=zMQ73];7zcJAJ^D@`d3
 !s100 _?SF1aSLHURWSYU?]LKFJ0
-Z7 OL;C;10.6g;65
+R7
 32
-Z8 !s110 1639650636
+Z17 !s110 1639650636
 !i10b 1
-Z9 !s108 1639650636.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd|
-Z11 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd|
+Z18 !s108 1639650636.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd|
+Z20 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/erase_mem.vhd|
 !i113 0
-Z12 o-work work -2002 -explicit
-Z13 tExplicit 1 CvgOpt 0
+R12
+R13
 Abehavioural
 R1
 R2
@@ -41,32 +82,192 @@ V^6o>Y2S_S;USSF@[FK<470
 !s100 CLR[VnmnoXQ;PCXjZPZa13
 R7
 32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R12
+R13
+Egen25mhz
+R14
+R1
+R2
+R3
+R4
+Z21 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/gen25mhz.vhd
+Z22 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/gen25mhz.vhd
+l0
+L5
+VzJ<P>SbNgE_7GJ[cMgQ;Y1
+!s100 OYcRB4KfF;0SOio8;`M;;1
+R7
+32
 R8
 !i10b 1
 R9
-R10
-R11
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/gen25mhz.vhd|
+Z24 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/gen25mhz.vhd|
+!i113 0
+R12
+R13
+Abhv
+R1
+R2
+R3
+DEx4 work 8 gen25mhz 0 22 zJ<P>SbNgE_7GJ[cMgQ;Y1
+32
+R8
+l15
+L10
+VfmP>^OG23UORNf=iikD=:3
+!s100 41ea2hhH:`^8_U_kAFlN:0
+R7
+!i10b 1
+R9
+R23
+R24
+!i113 0
+R12
+R13
+Emain_fsm
+R14
+R1
+R2
+R3
+R4
+Z25 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd
+Z26 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd
+l0
+L5
+VzEhfDXFFF`l1oU4]Y;^ND0
+!s100 <A2g;;4:7oIXNWdJlXBFV1
+R7
+32
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd|
+Z28 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm.vhd|
+!i113 0
+R12
+R13
+Abehavioural
+R1
+R2
+R3
+DEx4 work 8 main_fsm 0 22 zEhfDXFFF`l1oU4]Y;^ND0
+32
+R8
+l29
+L24
+VOS39Yg9GNiLlC<laPe:?12
+!s100 BZ_^Mc@2EIBAA?eL:GnM^0
+R7
+!i10b 1
+R9
+R27
+R28
+!i113 0
+R12
+R13
+Emain_fsm_top
+R14
+R2
+R3
+R4
+Z29 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm_top.vhd
+Z30 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm_top.vhd
+l0
+L4
+Vh?O7VGLgka:_aYTIo_2LW0
+!s100 RaXQ?M]UmLPY:ikn40Xa[1
+R7
+32
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm_top.vhd|
+Z32 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_fsm_top.vhd|
+!i113 0
+R12
+R13
+Astructural
+R2
+R3
+DEx4 work 12 main_fsm_top 0 22 h?O7VGLgka:_aYTIo_2LW0
+32
+R8
+l133
+L26
+VG8g>ON^C^7ZfK7Meg:VD>3
+!s100 OOPhXQAm7n_QMRmNoO6`X2
+R7
+!i10b 1
+R9
+R31
+R32
+!i113 0
+R12
+R13
+Emain_tb
+R14
+R2
+R3
+R4
+Z33 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd
+Z34 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd
+l0
+L4
+V4^i>I9LRfNjL^U@JbiXzM2
+!s100 06YF43M?5lj^4Q9m9X^0W3
+R7
+32
+R8
+!i10b 1
+R9
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd|
+Z36 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/main_tb.vhd|
+!i113 0
+R12
+R13
+Astructural
+R2
+R3
+DEx4 work 7 main_tb 0 22 4^i>I9LRfNjL^U@JbiXzM2
+32
+R8
+l32
+L7
+V:MGhRMj48l=fIHdM^HX@l3
+!s100 M^UooCnL5h_aU::14ma493
+R7
+!i10b 1
+R9
+R35
+R36
 !i113 0
 R12
 R13
 Emem_test_top_tb
-Z14 w1639165925
+Z37 w1639165925
 R2
 R3
 R4
-Z15 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd
-Z16 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd
+Z38 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd
+Z39 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd
 l0
 L4
 VK@9ah;`i]0YY[D57zHW6n1
 !s100 I_MHS4MEW_73OY5cnCZHL2
 R7
 32
-R8
+R17
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd|
-Z18 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd|
+R18
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd|
+Z41 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_tb.vhd|
 !i113 0
 R12
 R13
@@ -80,33 +281,119 @@ VZJR^WZ;3mhIH[AIOa:L?W0
 !s100 89:>ZCILDW6OYE;oXGJl;3
 R7
 32
-R8
-!i10b 1
-R9
 R17
+!i10b 1
 R18
+R40
+R41
 !i113 0
 R12
 R13
-Etop_m
-Z19 w1639156231
+Eread_fsm
+R14
 R1
 R2
 R3
 R4
-Z20 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd
-Z21 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd
+Z42 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/mem_test.vhd
+Z43 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/mem_test.vhd
+l0
+L6
+V8JGVl>EdA10decG1=L<R81
+!s100 UJ0l=a_]i851^PB[hQdP<0
+R7
+32
+R8
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/mem_test.vhd|
+Z45 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/mem_test.vhd|
+!i113 0
+R12
+R13
+Abehavioural
+R1
+R2
+R3
+DEx4 work 8 read_fsm 0 22 8JGVl>EdA10decG1=L<R81
+32
+R8
+l35
+L21
+VDPl577Y;_HD0>;];DdE[K0
+!s100 1K7e3EblJO_BOOfQoF>bW3
+R7
+!i10b 1
+R9
+R44
+R45
+!i113 0
+R12
+R13
+Estartup_fsm
+Z46 w1639650679
+R1
+Z47 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z48 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R4
+Z49 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd
+Z50 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd
+l0
+L6
+V6nc`4:Qo`KKU`OLNzGf=E3
+!s100 1Edk;IZL1j;<Plm:84Nf@3
+R7
+32
+R8
+!i10b 1
+R9
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd|
+Z52 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/startup.vhd|
+!i113 0
+R12
+R13
+Abehavioural
+R1
+R47
+R48
+R2
+R3
+DEx4 work 11 startup_fsm 0 22 6nc`4:Qo`KKU`OLNzGf=E3
+32
+R8
+l29
+L21
+VSBf`S;DgkfQFO_BBeXi>m3
+!s100 nhH=N1l8QIlThJzXkU2gn2
+R7
+!i10b 1
+R9
+R51
+R52
+!i113 0
+R12
+R13
+Etop_m
+Z53 w1639156231
+R1
+R2
+R3
+R4
+Z54 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd
+Z55 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd
 l0
 L5
 V;[A=jNZCF2K1O;I`[BJJE0
 !s100 <2Wk4=o7^5i07ISEmRX:L3
 R7
 32
-R8
+R17
 !i10b 1
-R9
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd|
-Z23 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd|
+R18
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd|
+Z57 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/top_m.vhd|
 !i113 0
 R12
 R13
@@ -121,33 +408,33 @@ VB@nAa3UOMOVXL0aUlZ[]91
 !s100 f_0lfBhfibm5Y[b1oIGJ;0
 R7
 32
-R8
+R17
 !i10b 1
-R9
-R22
-R23
+R18
+R56
+R57
 !i113 0
 R12
 R13
 Evga_driver
-Z24 w1639165977
+R14
 R1
 R2
 R3
 R4
-Z25 8C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd
-Z26 FC:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd
+Z58 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/VGA_driver.vhd
+Z59 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/VGA_driver.vhd
 l0
 L5
-Vb><0=jEl<ioRA6O:KJG1<2
-!s100 ?B=7fVeYfU:lbY]VQK9dH0
+V:m_Z20imjZSKnRGf6fQgA3
+!s100 5OdgZiiJ8JFQ0mQ^SmiPo1
 R7
 32
 R8
 !i10b 1
 R9
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd|
-!s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd|
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/VGA_driver.vhd|
+Z61 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/VGA_driver.vhd|
 !i113 0
 R12
 R13
@@ -155,18 +442,63 @@ Avga_behavioral
 R1
 R2
 R3
-Z28 DEx4 work 10 vga_driver 0 22 b><0=jEl<ioRA6O:KJG1<2
+DEx4 work 10 vga_driver 0 22 :m_Z20imjZSKnRGf6fQgA3
+32
+R8
 l24
 L19
-Z29 V83n?5^TK7[N1M0W0JJMJ=2
-Z30 !s100 83GhkCe@;bhbkPC`<3cQz3
+V4nD?9YI]Z2dU=E:9JMFR`3
+!s100 Xk[7nkoGI^;X@XjblXCIE0
+R7
+!i10b 1
+R9
+R60
+R61
+!i113 0
+R12
+R13
+Ewrite_fsm
+R14
+R1
+R47
+R48
+R2
+R3
+R4
+Z62 8C:/Users/David/Documents/GitHub/EPO-3/main_fsm/write_fsm.vhd
+Z63 FC:/Users/David/Documents/GitHub/EPO-3/main_fsm/write_fsm.vhd
+l0
+L6
+VN`fSa35o7Y7WL9`e=hCU40
+!s100 z?nZh^f;J8cF3FIN9og@d1
 R7
 32
 R8
 !i10b 1
 R9
-R27
-Z31 !s107 C:/Users/David/Documents/GitHub/EPO-3/erase_fsm/vga_d.vhd|
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/David/Documents/GitHub/EPO-3/main_fsm/write_fsm.vhd|
+Z65 !s107 C:/Users/David/Documents/GitHub/EPO-3/main_fsm/write_fsm.vhd|
+!i113 0
+R12
+R13
+Abehavioural
+R1
+R47
+R48
+R2
+R3
+DEx4 work 9 write_fsm 0 22 N`fSa35o7Y7WL9`e=hCU40
+32
+R8
+l36
+L23
+VZ?`eiUZ]E6kM_AcG9YQ330
+!s100 6cBWYMNafM>0@Z;?_TZ;O0
+R7
+!i10b 1
+R9
+R64
+R65
 !i113 0
 R12
 R13
