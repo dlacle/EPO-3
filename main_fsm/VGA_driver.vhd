@@ -9,6 +9,7 @@ entity vga_driver is
         start_read	 : out std_logic;
 		dead_time	 : out std_logic;
 		color		 : in std_logic_vector(2 downto 0);
+		e_count		 : out std_logic;
         red          : out std_logic;
         green        : out std_logic;
         blue         : out std_logic;
@@ -55,12 +56,16 @@ L2:		process(hcount, vcount)
 			end if;
 
 			if(hcount  = 799) then --inc_v
+				e_count<='0';
 				if(vcount = 524) then --end_v
 					new_vcount <= (others => '0');
+					e_count<='1';
 				else
 					new_vcount <= vcount + 1;
+					e_count<='0';
 				end if;
-			else
+			else	
+				e_count<='0';
 				new_vcount <= vcount;
 			end if;
 		end process;
@@ -96,7 +101,7 @@ L31:		process( hcount, vcount, in_h_sync, in_v_sync)
 					start_read <= '0';
 			end if;
 			--Dead time.
-			if ((vcount>0 and vcount<32) or (vcount>512)) then 
+			if ((vcount>=0 and vcount<32) or (vcount>512)) then 
 					dead_time <= '1';
 			else 
 					dead_time <= '0';

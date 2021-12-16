@@ -12,8 +12,7 @@ entity startup_fsm is
         mosi      : out std_logic;
         miso      : in  std_logic;
         start_startup : in std_logic;
-        startup_done : out std_logic;
-        debug_leds : out std_logic_vector(7 downto 0)
+        startup_done : out std_logic
     );
 end startup_fsm;
 
@@ -23,7 +22,6 @@ architecture behavioural of startup_fsm is
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
-  signal debug, new_debug : std_logic_vector(7 downto 0) := "00000000";
   signal cs_in, sck_in, mosi_in : std_logic;
   
 begin
@@ -34,12 +32,10 @@ begin
         state <= idle_startup; 
         clkcount <= 0;
         opcode <= "00000000";
-        debug <= "00000000";
       else
         clkcount <= new_clkcount;
         state <= new_state;
         opcode <= new_opcode;
-        debug <= new_debug;
       end if;
     end if;
   end process;
@@ -60,14 +56,13 @@ begin
 
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, debug, start_startup)
+  combinatorial: process (state, clk25, clkcount, opcode, start_startup)
   begin
     case state is
     when idle_startup =>
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_debug <= "10000000";
       new_clkcount <= 0;
       startup_done <= '0';
       
@@ -84,7 +79,6 @@ begin
       cs_in <=  '0';
       sck_in <= not(clk25);
       mosi_in <= opcode(7-clkcount);
-      new_debug <= "10000001";
       new_opcode <= opcode;
       startup_done <= '0';
       
@@ -100,7 +94,6 @@ begin
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_debug <= "10000010";
       startup_done <= '0';
       
       if (clkcount = 10) then
@@ -117,7 +110,6 @@ begin
       cs_in <=  '0';
       sck_in <= not(clk25);
       mosi_in <= opcode(7-clkcount);
-      new_debug <= "10000100";
       new_opcode <= opcode;
       startup_done <= '0';
       
@@ -133,7 +125,6 @@ begin
       cs_in <=  '0';
       sck_in <= not(clk25);
       mosi_in <= '0';
-      new_debug <= "10001000";
       new_opcode <= "00000000";
       startup_done <= '0';
       
@@ -149,7 +140,6 @@ begin
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_debug <= "10010000";
       startup_done <= '0';
       
       if (clkcount = 10) then
@@ -166,7 +156,6 @@ begin
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_debug <= "10010000";
       startup_done <= '1';
       
       if (clkcount = 10) then
@@ -175,13 +164,12 @@ begin
         new_clkcount <= 0;
       else
         new_opcode <= "00000000";
-        new_state <= idle_unprotect;
+        new_state <= startup_done_state;
         new_clkcount <= clkcount + 1;
       end if;    
 
     end case;
   end process;
-  debug_leds <= debug;
 end architecture behavioural;
 
 

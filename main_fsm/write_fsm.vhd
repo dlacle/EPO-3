@@ -12,7 +12,6 @@ entity write_fsm is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
-        debug_leds : out std_logic_vector(7 downto 0);
         frame_full : out std_logic; 
         write_done      : out std_logic;            
         start_write     : in std_logic
@@ -21,12 +20,11 @@ end write_fsm;
 
 
 architecture behavioural of write_fsm is
-  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full);
+  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state);
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
   signal color_buffer, new_color_buffer : std_logic_vector(23 downto 0) := "111110101100011010001000";
-  signal debug, new_debug : std_logic_vector(7 downto 0) := "00000000";
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
@@ -46,7 +44,6 @@ begin
         state <= write_idle;
         clkcount <= 0; 
         opcode <= "00000000";
-        debug <= "00000000";
         bitcount <= 0; 
         address <= "000000000000000000000000";
         pagecount <= 0;
@@ -54,7 +51,6 @@ begin
         clkcount <= new_clkcount;
         state <= new_state;
         opcode <= new_opcode;
-        debug <= new_debug;
         bitcount <= new_bitcount;
         address <= new_address;
         pagecount <= new_pagecount; 
@@ -77,19 +73,18 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, debug)
+  combinatorial: process (state, clk25, clkcount, opcode)
   begin
     case state is
     when write_idle =>
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_debug <= "00000001";
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       frame_full <= '0'; 
-      write_done <= '1';
+      write_done <= '0';
       if (start_write = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
@@ -97,7 +92,7 @@ begin
       else
         new_opcode <= "00000000";
         new_state <= write_idle;
-        new_clkcount <= clkcount + 1; 
+        new_clkcount <= clkcount; 
       end if;
       
     
@@ -105,7 +100,6 @@ begin
       cs_in <=  '0';
       sck_in  <= not(clk25);
       mosi_in <= opcode(7-clkcount);
-      new_debug <= "00000010";
       new_opcode <= opcode;
       new_bitcount <= 0;
       new_address <= address;
@@ -124,7 +118,6 @@ begin
       cs_in<=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_debug <= "00000100";
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
@@ -145,7 +138,6 @@ begin
       cs_in<=  '0';
       sck_in  <= not(clk25);
       mosi_in <= opcode(7-clkcount);
-      new_debug <= "00001000";
       new_opcode <= opcode;
       new_bitcount <= 0;
       new_address <= address;
@@ -164,7 +156,6 @@ begin
       cs_in<=  '0';
       sck_in  <= not(clk25);
       mosi_in <= address(23-clkcount);
-      new_debug <= "00010000";
       new_opcode <= "00000000";
       new_bitcount <= 0;
       new_address <= address;
@@ -183,7 +174,6 @@ begin
       cs_in <=  '0';
       sck_in  <= not(clk25);
       mosi_in <= color_buffer(bitcount);
-      new_debug <= "00100000";
       new_opcode <= "00000000";
       new_address <= address;
       new_pagecount <= pagecount;
@@ -209,7 +199,6 @@ begin
       cs_in <=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_debug <= "01000000";
       new_bitcount <= 0;
       frame_full <= '0'; 
       write_done <= '0';
@@ -225,12 +214,12 @@ begin
           else
             new_pagecount <= pagecount + 1;
             new_address <= std_logic_vector(to_unsigned(((pagecount + 1) * 256) ,24));
-            new_state <= write_idle; 
+            new_state <= write_done_state; 
           end if;
         else
           new_address <= std_logic_vector(unsigned(address) + 3);
           new_pagecount <= pagecount;
-          new_state <= write_idle; 
+          new_state <= write_done_state; 
         end if;
       else
         new_opcode <= "00000000";
@@ -244,7 +233,6 @@ begin
       cs_in <=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_debug <= "00000100";
       new_bitcount <= 0;
       frame_full <= '1'; 
       new_clkcount <= 0;
@@ -253,9 +241,22 @@ begin
       new_address <= address;
       new_pagecount <= pagecount;  
     
+    when write_done_state => 
+      cs_in<=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
+      new_bitcount <= 0;
+      new_address <= address;
+      new_pagecount <= pagecount;
+      frame_full <= '0'; 
+      write_done <= '1';
+      new_opcode <= "00000010";
+      new_state <= write_idle;
+      new_clkcount <= 0;
+      
+
     end case;
   end process;
-  debug_leds <= debug;
 end architecture behavioural;
 
 

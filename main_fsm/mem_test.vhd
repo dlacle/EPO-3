@@ -20,7 +20,7 @@ end entity read_fsm;
 
 architecture behavioural of read_fsm is
 
-    type state_type is (idle_state, opcode_state,address_state, data_state);
+    type state_type is (idle_state, opcode_state,address_state, data_state, read_done_state);
 
     signal state, new_state       : state_type;
     signal clkcount, new_clkcount : integer range 0 to 800;
@@ -42,7 +42,6 @@ reg: process (clk25)
                 clkcount <= 0;
 				bitcount<=0;
 				inbuf<="000";
-                read_done <= '0';
                 doublecount <= 0;
             else
                 state    <= new_state;
@@ -81,7 +80,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
             mosi_in    <= '0';
 			new_clkcount<=0;
 			new_address <= address;
-            read_done <= '1';
+            read_done <= '0';
             new_doublecount <= doublecount;
 				    
             if begin_read = '1' then
@@ -159,11 +158,24 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                         new_doublecount <= doublecount + 1;
                     end if;
                 end if;
-                new_state    <= idle_state;
+                new_state    <= read_done_state;
             else
                 new_state    <= data_state;
 				new_address <= address;
             end if;
+
+        when read_done_state => 
+            new_bitcount<= bitcount;
+		  	inbuf0	<= "000";
+		    new_inbuf <= inbuf;
+            new_doublecount <= doublecount;
+            cs_in      <= '0';
+            sck_in     <= not(clk25);
+            mosi_in    <= '0';
+			new_address <= address;
+            read_done <= '1';
+            new_state <= idle_state;
+            
 	
         end case;
 		        

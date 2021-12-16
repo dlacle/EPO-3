@@ -10,6 +10,7 @@ entity erase_fsm is
         sck       : out std_logic;
         mosi      : out std_logic;
         miso      : in  std_logic;
+        e_count		 : in std_logic;
         start_erase : in std_logic;
         chip_erase_done : out std_logic
     );
@@ -147,7 +148,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
           sck_in     <= not(clk25);
           chip_erase_done <= '0';
 
-          if start_erase = '1' then
+          if e_count = '1' then
             new_clkcount <= clkcount + 1;
           else 
             new_clkcount <= clkcount;
@@ -155,6 +156,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase)
 
           if clkcount >= 60 then
             new_state<= chip_erase_done_state;
+            new_clkcount <= 0;
             new_address<=std_logic_vector(unsigned(address) + 64000);
           else
             new_address <= address;

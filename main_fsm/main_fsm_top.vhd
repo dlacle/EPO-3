@@ -11,7 +11,6 @@ entity main_fsm_top is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
-        debug_leds : out std_logic_vector(7 downto 0);
 
         h_sync     : out std_logic;
         v_sync     : out std_logic;
@@ -33,6 +32,9 @@ architecture structural of main_fsm_top is
     component main_fsm is
         port (  clk25           : in std_logic;
                 reset           : in std_logic;
+                cs              : out std_logic;
+                sck             : out std_logic;
+                mosi            : out std_logic;
                 start_read      : in std_logic;
                 dead_time       : in std_logic;
                 begin_read      : out std_logic;
@@ -57,8 +59,7 @@ architecture structural of main_fsm_top is
             mosi      : out std_logic;
             miso      : in  std_logic;
             start_startup : in std_logic;
-            startup_done : out std_logic; 
-            debug_leds : out std_logic_vector(7 downto 0)
+            startup_done : out std_logic
         );
     end component startup_fsm;
 
@@ -85,7 +86,6 @@ architecture structural of main_fsm_top is
             mosi      : out std_logic;
             miso      : in  std_logic;
             
-            debug_leds : out std_logic_vector(7 downto 0);
             frame_full : out std_logic; 
             write_done      : out std_logic;            
             start_write     : in std_logic
@@ -118,6 +118,7 @@ architecture structural of main_fsm_top is
             start_read	 : out std_logic;
             dead_time    : out std_logic;
             color		: in std_logic_vector(2 downto 0);
+            e_count		 : out std_logic;
             red          : out std_logic;
             green        : out std_logic;
             blue         : out std_logic;
@@ -127,7 +128,7 @@ architecture structural of main_fsm_top is
 
 
     signal clk : std_logic;
-    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write  : std_logic;
+    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write,e_count  : std_logic;
     signal color : std_logic_vector(2 downto 0);
   
 begin
@@ -140,6 +141,9 @@ begin
 
     u2: main_fsm port map(clk25 => clk,
                             reset => reset,
+                            cs => cs, 
+                            sck => sck, 
+                            mosi => mosi, 
                             start_read => start_read, 
                             dead_time => dead_time,
                             begin_read => begin_read,
@@ -161,8 +165,7 @@ begin
                              mosi => mosi, 
                              miso => miso, 
                              start_startup => start_startup, 
-                             startup_done => startup_done,
-                             debug_leds => debug_leds
+                             startup_done => startup_done
                             );
 
 
@@ -171,7 +174,8 @@ begin
                            cs => cs, 
                            sck => sck, 
                            mosi => mosi, 
-                           miso => miso, 
+                           miso => miso,
+                           e_count => e_count, 
                            start_erase => start_erase,
                            chip_erase_done => chip_erase_done
                           );                        
@@ -181,8 +185,7 @@ begin
                             cs => cs, 
                             sck => sck, 
                             mosi => mosi, 
-                            miso => miso, 
-                            debug_leds => debug_leds, 
+                            miso => miso,  
                             frame_full => frame_full,
                             write_done => write_done,
                             start_write => start_write
@@ -204,6 +207,7 @@ begin
                             start_read => start_read,
                             dead_time => dead_time,
                             color => color,
+                            e_count => e_count,
                             red => red, 
                             green => green,
                             blue => blue,
