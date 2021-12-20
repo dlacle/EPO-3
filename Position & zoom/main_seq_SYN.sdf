@@ -1,0 +1,3165 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "main_seq")
+  (DATE        "Thu Dec 16 11:10:21 CET 2021")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "17.11-s014_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::1.62)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::125.0)
+  (TIMESCALE   1ps)
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g1)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g10)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g6)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1198) (::721))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g9)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g7)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g4)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g11)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1199) (::721))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g3)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1208) (::729))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g8)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g5)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g13)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1217) (::742))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g12)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1200) (::722))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE g2)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1197) (::719))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_11)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::407) (::435))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::86) (::42))
+        (SETUPHOLD (posedge D) (posedge CP) (::90) (::-4))
+     )
+  )
+  (CELL
+     (CELLTYPE "AO21D0BWP7T")
+     (INSTANCE K1_g647)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B Z (::206) (::288)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B Z (::214) (::320)))
+          (IOPATH B Z (::216) (::320))
+          (IOPATH A1 Z (::204) (::242))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B Z (::216) (::254)))
+          (IOPATH A2 Z (::202) (::261))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_9)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI32D1BWP7T")
+     (INSTANCE K1_g649)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B1 (::0.0))
+          (PORT B2 (::0.0))
+          (IOPATH A2 ZN (::278) (::157))
+          (IOPATH B2 ZN (::252) (::166))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::226) (::114)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::228) (::130)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::228) (::138)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A2 ZN (::278) (::157)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A2 ZN (::276) (::137)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::243) (::98)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::243) (::98)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::245) (::110)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A2 ZN (::274) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::258) (::94)))
+          (IOPATH A1 ZN (::279) (::145))
+          (IOPATH B1 ZN (::258) (::138))
+          (IOPATH A3 ZN (::209) (::104))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::220) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::222) (::156)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::222) (::166)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A3 ZN (::206) (::89)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A1 ZN (::279) (::145)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A1 ZN (::276) (::127)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A3 ZN (::209) (::104)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::237) (::126)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::237) (::126)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::239) (::145)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A1 ZN (::275) (::111)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A3 ZN (::205) (::79)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::252) (::124)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g650)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::124) (::148)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::123) (::126)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::131) (::119)))
+          (IOPATH B ZN (::131) (::148))
+          (IOPATH A1 ZN (::193) (::129))
+          (IOPATH A2 ZN (::177) (::118))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_8)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g652)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::282) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::350) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE K1_g653)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::288) (::101))
+          (IOPATH A4 ZN (::313) (::130))
+          (IOPATH A1 ZN (::167) (::86))
+          (IOPATH A2 ZN (::265) (::140))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g654)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::146) (::79))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_7)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g656)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::282) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::350) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AOI21D0BWP7T")
+     (INSTANCE K1_g657)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::291) (::130)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::322) (::131)))
+          (IOPATH B ZN (::322) (::138))
+          (IOPATH A1 ZN (::242) (::123))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B ZN (::243) (::138)))
+          (IOPATH A2 ZN (::279) (::132))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_6)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g659)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::146) (::79))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g660)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::282) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::350) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g661)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::178) (::208))
+          (IOPATH B1 ZN (::112) (::117))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_5)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K1_g663)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::148))
+          (IOPATH A2 Z (::177) (::178))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g664)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::146) (::79))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g665)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::330) (::114))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K1_g666)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::148))
+          (IOPATH A2 Z (::177) (::178))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_4)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g668)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::146) (::79))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g669)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::330) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g670)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::200))
+          (IOPATH B1 ZN (::102) (::109))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g671)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::200))
+          (IOPATH B1 ZN (::102) (::109))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_3)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K1_g673)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::148))
+          (IOPATH A2 Z (::177) (::178))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g674)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::154) (::90))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g675)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::330) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K1_g676)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::149))
+          (IOPATH A2 Z (::177) (::178))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_2)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::420) (::442))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g678)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::154) (::90))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g679)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::330) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g680)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::200))
+          (IOPATH B1 ZN (::102) (::109))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g681)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::170) (::202))
+          (IOPATH B1 ZN (::103) (::111))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K1_count_reg_1)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::415) (::439))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K1_g683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::185) (::168))
+          (IOPATH B1 ZN (::147) (::67))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g684)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::154) (::90))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g685)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::146))
+          (IOPATH A2 ZN (::330) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K1_g686)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::185) (::168))
+          (IOPATH B1 ZN (::147) (::67))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g688)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::122) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::154) (::90))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K1_g689)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::311) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::351) (::144))
+          (IOPATH A2 ZN (::321) (::102))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g690)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::171) (::204))
+          (IOPATH B1 ZN (::104) (::112))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g691)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::171) (::204))
+          (IOPATH B1 ZN (::104) (::112))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K1_g692)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::185) (::168))
+          (IOPATH B1 ZN (::147) (::67))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K1_g693)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::121) (::131)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::120) (::113)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::128) (::105)))
+          (IOPATH B ZN (::128) (::131))
+          (IOPATH A1 ZN (::154) (::90))
+          (IOPATH A2 ZN (::187) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K1_g694)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::186) (::168))
+          (IOPATH B1 ZN (::147) (::67))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g695)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::172) (::203))
+          (IOPATH B1 ZN (::104) (::112))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE K1_g696)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::103) (::110))
+          (IOPATH A2 ZN (::123) (::113))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD0BWP7T")
+     (INSTANCE K1_g697)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::145) (::95))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2D1BWP7T")
+     (INSTANCE K1_g698)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::147) (::67))
+          (IOPATH A2 ZN (::131) (::78))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD1BWP7T")
+     (INSTANCE K1_g706)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::183) (::146))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K1_g2)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::312) (::316))
+          (IOPATH B1 ZN (::226) (::199))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFD1BWP7T")
+     (INSTANCE K1_count_reg_10)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::415) (::444))
+          (IOPATH CP QN (::502) (::441))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::95) (::34))
+        (SETUPHOLD (posedge D) (posedge CP) (::121) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFXD1BWP7T")
+     (INSTANCE K1_count_reg_0)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT DA (::0.0))
+          (PORT DB (::0.0))
+          (PORT SA (::0.0))
+          (IOPATH CP Q (::453) (::457))
+          (IOPATH CP QN (::476) (::417))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge DA) (posedge CP) (::473) (::-253))
+        (SETUPHOLD (posedge DA) (posedge CP) (::318) (::-216))
+        (SETUPHOLD (negedge DB) (posedge CP) (::320) (::-170))
+        (SETUPHOLD (posedge DB) (posedge CP) (::203) (::-129))
+        (SETUPHOLD (negedge SA) (posedge CP) (::301) (::-125))
+        (SETUPHOLD (posedge SA) (posedge CP) (::526) (::-205))
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g222)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1151) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE CONVERTER_g223)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::195) (::212))
+          (IOPATH B1 ZN (::113) (::120))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g224)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::240) (::229))
+          (IOPATH A2 Z (::257) (::243))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g225)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::143) (::152))
+          (IOPATH A2 ZN (::149) (::141))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2XD0BWP7T")
+     (INSTANCE CONVERTER_g227)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::186) (::123))
+          (IOPATH A2 ZN (::203) (::168))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g230)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1151) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE CONVERTER_g231)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::213) (::227))
+          (IOPATH B1 ZN (::128) (::134))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g232)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::240) (::228))
+          (IOPATH A2 Z (::261) (::244))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g233)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::143) (::152))
+          (IOPATH A2 ZN (::150) (::144))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2XD0BWP7T")
+     (INSTANCE CONVERTER_g237)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::186) (::123))
+          (IOPATH A2 ZN (::203) (::166))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g238)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1151) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g239)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::240) (::228))
+          (IOPATH A2 Z (::259) (::243))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g240)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::142) (::151))
+          (IOPATH A2 ZN (::149) (::142))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE CONVERTER_g241)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::212) (::226))
+          (IOPATH B1 ZN (::128) (::134))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g242)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1150) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g243)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::139) (::147))
+          (IOPATH A2 ZN (::150) (::144))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g244)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::236) (::226))
+          (IOPATH A2 Z (::262) (::244))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2XD0BWP7T")
+     (INSTANCE CONVERTER_g245)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::271) (::243))
+          (IOPATH B1 ZN (::185) (::145))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g246)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1150) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2XD0BWP7T")
+     (INSTANCE CONVERTER_g247)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::260) (::238))
+          (IOPATH B1 ZN (::173) (::137))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g248)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::236) (::226))
+          (IOPATH A2 Z (::259) (::243))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g249)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::140) (::148))
+          (IOPATH A2 ZN (::149) (::143))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2XD0BWP7T")
+     (INSTANCE CONVERTER_g251)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::175) (::117))
+          (IOPATH A2 ZN (::192) (::160))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D4BWP7T")
+     (INSTANCE CONVERTER_g254)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::1151) (::1044))
+          (IOPATH A2 ZN (::1155) (::1048))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE CONVERTER_g255)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::212) (::226))
+          (IOPATH B1 ZN (::132) (::135))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE CONVERTER_g256)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::146) (::152))
+          (IOPATH A2 ZN (::149) (::142))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONVERTER_g257)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::241) (::231))
+          (IOPATH A2 Z (::259) (::243))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D4BWP7T")
+     (INSTANCE CONVERTER_g258)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A1==1'b0 (IOPATH A2 Z (::1366) (::1216)))
+          (COND A2==1'b0 (IOPATH A1 Z (::1362) (::1196)))
+          (COND A1==1'b1 (IOPATH A2 Z (::1409) (::1314)))
+          (COND A2==1'b1 (IOPATH A1 Z (::1355) (::1295)))
+          (IOPATH A1 Z (::1400) (::1241))
+          (IOPATH A2 Z (::1366) (::1247))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2XD0BWP7T")
+     (INSTANCE CONVERTER_g259)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::201) (::169))
+          (IOPATH A2 ZN (::203) (::167))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D4BWP7T")
+     (INSTANCE CONVERTER_g2)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A1==1'b0 (IOPATH A2 Z (::1353) (::1209)))
+          (COND A2==1'b0 (IOPATH A1 Z (::1305) (::1176)))
+          (COND A1==1'b1 (IOPATH A2 Z (::1402) (::1303)))
+          (COND A2==1'b1 (IOPATH A1 Z (::1333) (::1234)))
+          (IOPATH A1 Z (::1335) (::1177))
+          (IOPATH A2 Z (::1353) (::1232))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D4BWP7T")
+     (INSTANCE CONVERTER_g260)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A1==1'b0 (IOPATH A2 Z (::1367) (::1216)))
+          (COND A2==1'b0 (IOPATH A1 Z (::1311) (::1180)))
+          (COND A1==1'b1 (IOPATH A2 Z (::1409) (::1315)))
+          (COND A2==1'b1 (IOPATH A1 Z (::1338) (::1241)))
+          (IOPATH A1 Z (::1342) (::1184))
+          (IOPATH A2 Z (::1367) (::1247))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D4BWP7T")
+     (INSTANCE CONVERTER_g261)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A1==1'b0 (IOPATH A2 Z (::1365) (::1215)))
+          (COND A2==1'b0 (IOPATH A1 Z (::1311) (::1180)))
+          (COND A1==1'b1 (IOPATH A2 Z (::1408) (::1313)))
+          (COND A2==1'b1 (IOPATH A1 Z (::1338) (::1241)))
+          (IOPATH A1 Z (::1342) (::1184))
+          (IOPATH A2 Z (::1365) (::1245))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D4BWP7T")
+     (INSTANCE CONVERTER_g262)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A1==1'b0 (IOPATH A2 Z (::1365) (::1215)))
+          (COND A2==1'b0 (IOPATH A1 Z (::1311) (::1180)))
+          (COND A1==1'b1 (IOPATH A2 Z (::1408) (::1313)))
+          (COND A2==1'b1 (IOPATH A1 Z (::1338) (::1241)))
+          (IOPATH A1 Z (::1342) (::1184))
+          (IOPATH A2 Z (::1365) (::1245))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_11)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::408) (::436))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::86) (::42))
+        (SETUPHOLD (posedge D) (posedge CP) (::91) (::-5))
+     )
+  )
+  (CELL
+     (CELLTYPE "AO21D0BWP7T")
+     (INSTANCE K2_g655)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B Z (::206) (::288)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B Z (::214) (::320)))
+          (IOPATH B Z (::216) (::320))
+          (IOPATH A1 Z (::222) (::287))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B Z (::216) (::254)))
+          (IOPATH A2 Z (::202) (::262))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_9)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::443) (::456))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::30))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI32D1BWP7T")
+     (INSTANCE K2_g657)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B1 (::0.0))
+          (PORT B2 (::0.0))
+          (IOPATH A2 ZN (::280) (::157))
+          (IOPATH B2 ZN (::257) (::167))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::226) (::114)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::228) (::130)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::228) (::138)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A2 ZN (::280) (::157)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A2 ZN (::277) (::137)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::243) (::98)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::243) (::98)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0&&B2==1'b0 (IOPATH B1 ZN (::245) (::110)))
+          (COND A1==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A2 ZN (::276) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1&&B2==1'b0 (IOPATH B1 ZN (::258) (::94)))
+          (IOPATH A1 ZN (::280) (::148))
+          (IOPATH B1 ZN (::258) (::138))
+          (IOPATH A3 ZN (::210) (::104))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::224) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::226) (::156)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::226) (::167)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A3 ZN (::208) (::89)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A1 ZN (::280) (::148)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A1 ZN (::277) (::129)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A3 ZN (::210) (::104)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::241) (::126)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::241) (::126)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0&&B1==1'b0 (IOPATH B2 ZN (::243) (::145)))
+          (COND A2==1'b0&&A3==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A1 ZN (::276) (::113)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&B2==1'b1 (IOPATH A3 ZN (::206) (::79)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1&&B1==1'b0 (IOPATH B2 ZN (::257) (::124)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g658)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::129) (::148)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::128) (::127)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::136) (::120)))
+          (IOPATH B ZN (::136) (::148))
+          (IOPATH A1 ZN (::334) (::147))
+          (IOPATH A2 ZN (::178) (::120))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_8)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::426) (::446))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g660)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::134)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::282) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::354) (::155))
+          (IOPATH A2 ZN (::352) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE K2_g661)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::288) (::101))
+          (IOPATH A4 ZN (::313) (::131))
+          (IOPATH A1 ZN (::169) (::86))
+          (IOPATH A2 ZN (::266) (::140))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g662)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::128) (::138)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::127) (::119)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::135) (::112)))
+          (IOPATH B ZN (::135) (::138))
+          (IOPATH A1 ZN (::147) (::80))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_7)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::438) (::453))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::30))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g664)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::134)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::283) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::353) (::149))
+          (IOPATH A2 ZN (::352) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AOI21D0BWP7T")
+     (INSTANCE K2_g665)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::289) (::130)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::321) (::130)))
+          (IOPATH B ZN (::321) (::138))
+          (IOPATH A1 ZN (::243) (::123))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B ZN (::242) (::138)))
+          (IOPATH A2 ZN (::332) (::152))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_6)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::421) (::444))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g667)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::124) (::134)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::123) (::116)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::131) (::108)))
+          (IOPATH B ZN (::131) (::134))
+          (IOPATH A1 ZN (::147) (::80))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g668)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::134)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::282) (::102))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::354) (::154))
+          (IOPATH A2 ZN (::352) (::155))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g669)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::178) (::208))
+          (IOPATH B1 ZN (::117) (::125))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_5)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::428) (::447))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K2_g671)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::149))
+          (IOPATH A2 Z (::195) (::231))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g672)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::127) (::137)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::126) (::118)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::134) (::111)))
+          (IOPATH B ZN (::134) (::137))
+          (IOPATH A1 ZN (::147) (::80))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g673)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::134)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::352) (::147))
+          (IOPATH A2 ZN (::330) (::114))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K2_g674)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::150))
+          (IOPATH A2 Z (::195) (::231))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_4)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::423) (::444))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g676)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::123) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::147) (::80))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g677)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::134)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::159)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::121)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::134)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::117)))
+          (IOPATH B ZN (::168) (::159))
+          (IOPATH A1 ZN (::353) (::150))
+          (IOPATH A2 ZN (::330) (::114))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g678)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::202))
+          (IOPATH B1 ZN (::104) (::111))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g679)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::200))
+          (IOPATH B1 ZN (::106) (::114))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_3)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::438) (::453))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::30))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K2_g681)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::148))
+          (IOPATH A2 Z (::195) (::231))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g682)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::124) (::134)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::124) (::116)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::132) (::108)))
+          (IOPATH B ZN (::132) (::134))
+          (IOPATH A1 ZN (::147) (::80))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g683)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::160)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::135)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::118)))
+          (IOPATH B ZN (::168) (::160))
+          (IOPATH A1 ZN (::352) (::147))
+          (IOPATH A2 ZN (::331) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K2_g684)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::149))
+          (IOPATH A2 Z (::195) (::231))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_2)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::421) (::444))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::31))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g686)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::123) (::133)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::115)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::107)))
+          (IOPATH B ZN (::130) (::133))
+          (IOPATH A1 ZN (::188) (::104))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g687)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::160)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::135)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::118)))
+          (IOPATH B ZN (::168) (::160))
+          (IOPATH A1 ZN (::354) (::154))
+          (IOPATH A2 ZN (::330) (::115))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g688)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::168) (::201))
+          (IOPATH B1 ZN (::103) (::109))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g689)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::169) (::202))
+          (IOPATH B1 ZN (::104) (::113))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE K2_count_reg_1)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::442) (::456))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::98) (::30))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D0BWP7T")
+     (INSTANCE K2_g691)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::164) (::149))
+          (IOPATH A2 Z (::195) (::231))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g692)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::127) (::137)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::126) (::118)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::134) (::111)))
+          (IOPATH B ZN (::134) (::137))
+          (IOPATH A1 ZN (::188) (::104))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g693)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::160)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::135)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::118)))
+          (IOPATH B ZN (::168) (::160))
+          (IOPATH A1 ZN (::352) (::147))
+          (IOPATH A2 ZN (::332) (::116))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K2_g694)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::185) (::170))
+          (IOPATH B1 ZN (::267) (::24))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g696)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::123) (::132)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::122) (::114)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::130) (::106)))
+          (IOPATH B ZN (::130) (::132))
+          (IOPATH A1 ZN (::188) (::104))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE K2_g697)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::152) (::135)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::153) (::151)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::153) (::160)))
+          (IOPATH A3 ZN (::313) (::139))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::161) (::122)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::162) (::135)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::168) (::118)))
+          (IOPATH B ZN (::168) (::160))
+          (IOPATH A1 ZN (::354) (::155))
+          (IOPATH A2 ZN (::321) (::102))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g698)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::170) (::204))
+          (IOPATH B1 ZN (::103) (::112))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g699)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::171) (::204))
+          (IOPATH B1 ZN (::108) (::118))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K2_g700)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::185) (::168))
+          (IOPATH B1 ZN (::267) (::24))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI21D0BWP7T")
+     (INSTANCE K2_g701)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::128) (::138)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::127) (::119)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B ZN (::135) (::112)))
+          (IOPATH B ZN (::135) (::138))
+          (IOPATH A1 ZN (::188) (::104))
+          (IOPATH A2 ZN (::186) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE K2_g702)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::187) (::172))
+          (IOPATH B1 ZN (::267) (::24))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g703)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::173) (::207))
+          (IOPATH B1 ZN (::105) (::112))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND2D1BWP7T")
+     (INSTANCE K2_g704)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::109) (::118))
+          (IOPATH A2 ZN (::136) (::120))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD0BWP7T")
+     (INSTANCE K2_g705)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::148) (::95))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2D1BWP7T")
+     (INSTANCE K2_g706)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::267) (::24))
+          (IOPATH A2 ZN (::139) (::83))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD1BWP7T")
+     (INSTANCE K2_g729)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::347) (::218))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE K2_g2)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::312) (::313))
+          (IOPATH B1 ZN (::284) (::233))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFD1BWP7T")
+     (INSTANCE K2_count_reg_10)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::421) (::448))
+          (IOPATH CP QN (::502) (::441))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::95) (::34))
+        (SETUPHOLD (posedge D) (posedge CP) (::121) (::-24))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFXD1BWP7T")
+     (INSTANCE K2_count_reg_0)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT DA (::0.0))
+          (PORT DB (::0.0))
+          (PORT SA (::0.0))
+          (IOPATH CP Q (::508) (::488))
+          (IOPATH CP QN (::476) (::417))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge DA) (posedge CP) (::471) (::-252))
+        (SETUPHOLD (posedge DA) (posedge CP) (::318) (::-216))
+        (SETUPHOLD (negedge DB) (posedge CP) (::320) (::-170))
+        (SETUPHOLD (posedge DB) (posedge CP) (::203) (::-129))
+        (SETUPHOLD (negedge SA) (posedge CP) (::313) (::-136))
+        (SETUPHOLD (posedge SA) (posedge CP) (::529) (::-213))
+     )
+  )
+  (CELL
+     (CELLTYPE "AO21D0BWP7T")
+     (INSTANCE CONTROL_g412)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B Z (::518) (::571)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B Z (::541) (::608)))
+          (IOPATH B Z (::543) (::608))
+          (IOPATH A1 Z (::410) (::363))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B Z (::543) (::550)))
+          (IOPATH A2 Z (::405) (::387))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AN2D4BWP7T")
+     (INSTANCE CONTROL_g413)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::1290) (::758))
+          (IOPATH A2 Z (::1269) (::763))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OR2D1BWP7T")
+     (INSTANCE CONTROL_g414)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::272) (::259))
+          (IOPATH A2 Z (::282) (::269))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKAN2D1BWP7T")
+     (INSTANCE CONTROL_g415)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 Z (::200) (::194))
+          (IOPATH A2 Z (::206) (::199))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD1BWP7T")
+     (INSTANCE CONTROL_g416)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::207) (::160))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2XD0BWP7T")
+     (INSTANCE CONTROL_g417)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::186) (::124))
+          (IOPATH A2 ZN (::200) (::128))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AO221D0BWP7T")
+     (INSTANCE CONTROL_g1338)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B1 (::0.0))
+          (PORT B2 (::0.0))
+          (PORT C (::0.0))
+          (IOPATH A2 Z (::228) (::416))
+          (IOPATH B2 Z (::280) (::555))
+          (COND A1==1'b0&&A2==1'b0&&B2==1'b1&&C==1'b0 (IOPATH B1 Z (::315) (::433)))
+          (COND A1==1'b1&&B1==1'b0&&B2==1'b0&&C==1'b0 (IOPATH A2 Z (::218) (::323)))
+          (COND A1==1'b0&&A2==1'b1&&B1==1'b1&&C==1'b0 (IOPATH B2 Z (::267) (::509)))
+          (COND A1==1'b1&&A2==1'b0&&B1==1'b1&&C==1'b0 (IOPATH B2 Z (::277) (::555)))
+          (COND A2==1'b1&&B1==1'b1&&B2==1'b0&&C==1'b0 (IOPATH A1 Z (::257) (::378)))
+          (COND A2==1'b1&&B1==1'b0&&B2==1'b1&&C==1'b0 (IOPATH A1 Z (::247) (::332)))
+          (IOPATH A1 Z (::257) (::378))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b0&&B2==1'b0 (IOPATH C Z (::197) (::397)))
+          (IOPATH C Z (::200) (::596))
+          (IOPATH B1 Z (::315) (::526))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH C Z (::193) (::456)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH C Z (::200) (::496)))
+          (COND A1==1'b0&&A2==1'b1&&B1==1'b0&&B2==1'b0 (IOPATH C Z (::184) (::446)))
+          (COND A1==1'b1&&A2==1'b0&&B1==1'b0&&B2==1'b0 (IOPATH C Z (::191) (::485)))
+          (COND A1==1'b0&&A2==1'b0&&B1==1'b1&&C==1'b0 (IOPATH B2 Z (::280) (::454)))
+          (COND A2==1'b1&&B1==1'b0&&B2==1'b0&&C==1'b0 (IOPATH A1 Z (::247) (::293)))
+          (COND A1==1'b0&&A2==1'b1&&B1==1'b0&&B2==1'b1 (IOPATH C Z (::182) (::503)))
+          (COND A1==1'b0&&A2==1'b1&&B1==1'b1&&B2==1'b0 (IOPATH C Z (::188) (::549)))
+          (COND A1==1'b1&&A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH C Z (::189) (::549)))
+          (COND A1==1'b1&&A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH C Z (::195) (::596)))
+          (COND A1==1'b1&&B1==1'b1&&B2==1'b0&&C==1'b0 (IOPATH A2 Z (::228) (::416)))
+          (COND A1==1'b1&&B1==1'b0&&B2==1'b1&&C==1'b0 (IOPATH A2 Z (::219) (::370)))
+          (COND A1==1'b1&&A2==1'b0&&B2==1'b1&&C==1'b0 (IOPATH B1 Z (::312) (::526)))
+          (COND A1==1'b0&&A2==1'b1&&B2==1'b1&&C==1'b0 (IOPATH B1 Z (::301) (::480)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "DFQD1BWP7T")
+     (INSTANCE CONTROL_state_reg_2)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::356) (::404))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::93) (::35))
+        (SETUPHOLD (posedge D) (posedge CP) (::91) (::-5))
+     )
+  )
+  (CELL
+     (CELLTYPE "AO211D0BWP7T")
+     (INSTANCE CONTROL_g1341)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&B==1'b0 (IOPATH C Z (::191) (::412)))
+          (COND A1==1'b0&&A2==1'b0&&C==1'b0 (IOPATH B Z (::244) (::418)))
+          (IOPATH B Z (::244) (::506))
+          (IOPATH A1 Z (::239) (::321))
+          (COND A1==1'b0&&A2==1'b1&&B==1'b0 (IOPATH C Z (::182) (::455)))
+          (COND A1==1'b1&&A2==1'b0&&B==1'b0 (IOPATH C Z (::188) (::501)))
+          (IOPATH C Z (::191) (::501))
+          (COND A1==1'b0&&A2==1'b1&&C==1'b0 (IOPATH B Z (::233) (::461)))
+          (COND A1==1'b1&&A2==1'b0&&C==1'b0 (IOPATH B Z (::242) (::506)))
+          (IOPATH A2 Z (::198) (::349))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OAI31D0BWP7T")
+     (INSTANCE CONTROL_g1342)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::139) (::115)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::140) (::130)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::140) (::137)))
+          (IOPATH A3 ZN (::278) (::94))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::148) (::98)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::148) (::98)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::149) (::109)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::155) (::94)))
+          (IOPATH B ZN (::155) (::137))
+          (IOPATH A1 ZN (::344) (::120))
+          (IOPATH A2 ZN (::325) (::113))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IOA21D1BWP7T")
+     (INSTANCE CONTROL_g1343)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B ZN (::64) (::76)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B ZN (::64) (::76)))
+          (IOPATH B ZN (::64) (::76))
+          (IOPATH A1 ZN (::203) (::207))
+          (COND A1==1'b0&&A2==1'b0 (IOPATH B ZN (::64) (::76)))
+          (IOPATH A2 ZN (::214) (::201))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OA21D0BWP7T")
+     (INSTANCE CONTROL_g1344)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b1 (IOPATH B Z (::219) (::180)))
+          (COND A1==1'b1&&A2==1'b0 (IOPATH B Z (::200) (::174)))
+          (COND A1==1'b1&&A2==1'b1 (IOPATH B Z (::189) (::182)))
+          (IOPATH B Z (::219) (::180))
+          (IOPATH A1 Z (::184) (::245))
+          (IOPATH A2 Z (::178) (::239))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AOI31D0BWP7T")
+     (INSTANCE CONTROL_g1345)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT B (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::229) (::101)))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::229) (::101)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::252) (::102)))
+          (IOPATH A3 ZN (::272) (::172))
+          (COND A1==1'b0&&A2==1'b1&&A3==1'b1 (IOPATH B ZN (::278) (::93)))
+          (COND A1==1'b1&&A2==1'b0&&A3==1'b1 (IOPATH B ZN (::309) (::94)))
+          (COND A1==1'b1&&A2==1'b1&&A3==1'b0 (IOPATH B ZN (::337) (::94)))
+          (IOPATH B ZN (::337) (::107))
+          (IOPATH A1 ZN (::218) (::147))
+          (COND A1==1'b0&&A2==1'b0&&A3==1'b0 (IOPATH B ZN (::213) (::107)))
+          (IOPATH A2 ZN (::252) (::178))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND3D0BWP7T")
+     (INSTANCE CONTROL_g1346)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (IOPATH A3 ZN (::150) (::177))
+          (IOPATH A1 ZN (::129) (::179))
+          (IOPATH A2 ZN (::140) (::181))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "AOI211XD0BWP7T")
+     (INSTANCE CONTROL_g1347)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (COND A1==1'b0&&A2==1'b0&&B==1'b0 (IOPATH C ZN (::201) (::112)))
+          (COND A1==1'b0&&A2==1'b0&&C==1'b0 (IOPATH B ZN (::210) (::130)))
+          (IOPATH B ZN (::253) (::130))
+          (IOPATH A1 ZN (::143) (::143))
+          (COND A1==1'b0&&A2==1'b1&&B==1'b0 (IOPATH C ZN (::223) (::95)))
+          (COND A1==1'b1&&A2==1'b0&&B==1'b0 (IOPATH C ZN (::244) (::96)))
+          (IOPATH C ZN (::244) (::112))
+          (COND A1==1'b0&&A2==1'b1&&C==1'b0 (IOPATH B ZN (::232) (::116)))
+          (COND A1==1'b1&&A2==1'b0&&C==1'b0 (IOPATH B ZN (::253) (::117)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "OA211D0BWP7T")
+     (INSTANCE CONTROL_g1348)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B (::0.0))
+          (PORT C (::0.0))
+          (COND A1==1'b0&&A2==1'b1&&B==1'b1 (IOPATH C Z (::250) (::203)))
+          (COND A1==1'b1&&A2==1'b0&&B==1'b1 (IOPATH C Z (::275) (::208)))
+          (COND A1==1'b0&&A2==1'b1&&C==1'b1 (IOPATH B Z (::287) (::202)))
+          (COND A1==1'b1&&A2==1'b0&&C==1'b1 (IOPATH B Z (::314) (::208)))
+          (COND A1==1'b1&&A2==1'b1&&B==1'b1 (IOPATH C Z (::232) (::212)))
+          (COND A1==1'b1&&A2==1'b1&&C==1'b1 (IOPATH B Z (::275) (::211)))
+          (IOPATH B Z (::314) (::208))
+          (IOPATH C Z (::275) (::208))
+          (IOPATH A2 Z (::254) (::269))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE CONTROL_g1349)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::285) (::96))
+          (IOPATH A4 ZN (::303) (::95))
+          (IOPATH A1 ZN (::157) (::73))
+          (IOPATH A2 ZN (::235) (::89))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "ND4D0BWP7T")
+     (INSTANCE CONTROL_g1350)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::135) (::176))
+          (IOPATH A4 ZN (::143) (::183))
+          (IOPATH A1 ZN (::113) (::146))
+          (IOPATH A2 ZN (::124) (::162))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE CONTROL_g1351)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::286) (::133))
+          (IOPATH A4 ZN (::299) (::95))
+          (IOPATH A1 ZN (::153) (::72))
+          (IOPATH A2 ZN (::231) (::89))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE CONTROL_g1352)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::294) (::99))
+          (IOPATH A4 ZN (::312) (::98))
+          (IOPATH A1 ZN (::166) (::76))
+          (IOPATH A2 ZN (::244) (::92))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR4D0BWP7T")
+     (INSTANCE CONTROL_g1353)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (PORT A4 (::0.0))
+          (IOPATH A3 ZN (::286) (::97))
+          (IOPATH A4 ZN (::305) (::96))
+          (IOPATH A1 ZN (::158) (::73))
+          (IOPATH A2 ZN (::237) (::90))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD0BWP7T")
+     (INSTANCE CONTROL_g1354)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::90) (::74))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR3D0BWP7T")
+     (INSTANCE CONTROL_g1355)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT A3 (::0.0))
+          (IOPATH A3 ZN (::262) (::144))
+          (IOPATH A1 ZN (::202) (::101))
+          (IOPATH A2 ZN (::238) (::130))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1356)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::227) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::280)))
+          (IOPATH A1 Z (::305) (::217))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1357)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::226) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::273) (::278)))
+          (IOPATH A1 Z (::304) (::214))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1358)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::253) (::205)))
+          (COND A2==1'b1 (IOPATH A1 Z (::291) (::280)))
+          (IOPATH A1 Z (::346) (::245))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1359)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::227) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::278)))
+          (IOPATH A1 Z (::305) (::216))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1360)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::224) (::187)))
+          (COND A2==1'b1 (IOPATH A1 Z (::269) (::276)))
+          (IOPATH A1 Z (::302) (::213))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1361)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::229) (::192)))
+          (COND A2==1'b1 (IOPATH A1 Z (::274) (::280)))
+          (IOPATH A1 Z (::308) (::219))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2D1BWP7T")
+     (INSTANCE CONTROL_g1362)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::104) (::50))
+          (IOPATH A2 ZN (::128) (::77))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1363)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::236) (::195)))
+          (COND A2==1'b1 (IOPATH A1 Z (::279) (::282)))
+          (IOPATH A1 Z (::318) (::226))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1364)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::224) (::189)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::278)))
+          (IOPATH A1 Z (::301) (::212))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1365)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::227) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::278)))
+          (IOPATH A1 Z (::305) (::216))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1366)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::219) (::184)))
+          (COND A2==1'b1 (IOPATH A1 Z (::266) (::274)))
+          (IOPATH A1 Z (::295) (::208))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INR2D1BWP7T")
+     (INSTANCE CONTROL_g1367)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::239) (::172))
+          (IOPATH B1 ZN (::144) (::77))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MOAI22D0BWP7T")
+     (INSTANCE CONTROL_g1368)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B1 (::0.0))
+          (PORT B2 (::0.0))
+          (COND A2==1'b0&&B1==1'b0&&B2==1'b0 (IOPATH A1 ZN (::160) (::106)))
+          (COND A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A1 ZN (::160) (::106)))
+          (COND A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A1 ZN (::160) (::106)))
+          (COND A1==1'b0&&A2==1'b1&&B2==1'b1 (IOPATH B1 ZN (::228) (::213)))
+          (IOPATH A1 ZN (::160) (::106))
+          (COND A1==1'b1&&A2==1'b0&&B2==1'b1 (IOPATH B1 ZN (::227) (::198)))
+          (IOPATH B1 ZN (::236) (::213))
+          (COND A1==1'b1&&A2==1'b1&&B2==1'b1 (IOPATH B1 ZN (::236) (::187)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1369)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::230) (::192)))
+          (COND A2==1'b1 (IOPATH A1 Z (::274) (::280)))
+          (IOPATH A1 Z (::309) (::220))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "XNR2D1BWP7T")
+     (INSTANCE CONTROL_g1370)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 ZN (::282) (::226)))
+          (COND A2==1'b1 (IOPATH A1 ZN (::171) (::258)))
+          (IOPATH A1 ZN (::311) (::284))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "XNR2D1BWP7T")
+     (INSTANCE CONTROL_g1371)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 ZN (::283) (::227)))
+          (COND A2==1'b1 (IOPATH A1 ZN (::172) (::259)))
+          (IOPATH A1 ZN (::313) (::286))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "XNR2D1BWP7T")
+     (INSTANCE CONTROL_g1372)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 ZN (::283) (::226)))
+          (COND A2==1'b1 (IOPATH A1 ZN (::171) (::258)))
+          (IOPATH A1 ZN (::312) (::285))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "XNR2D1BWP7T")
+     (INSTANCE CONTROL_g1373)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 ZN (::286) (::233)))
+          (COND A2==1'b1 (IOPATH A1 ZN (::177) (::261)))
+          (IOPATH A1 ZN (::320) (::292))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1374)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::239) (::197)))
+          (COND A2==1'b1 (IOPATH A1 Z (::280) (::283)))
+          (IOPATH A1 Z (::322) (::230))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "MOAI22D0BWP7T")
+     (INSTANCE CONTROL_g1375)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (PORT B1 (::0.0))
+          (PORT B2 (::0.0))
+          (COND A2==1'b0&&B1==1'b0&&B2==1'b0 (IOPATH A1 ZN (::179) (::112)))
+          (COND A2==1'b0&&B1==1'b1&&B2==1'b0 (IOPATH A1 ZN (::179) (::112)))
+          (COND A2==1'b0&&B1==1'b0&&B2==1'b1 (IOPATH A1 ZN (::179) (::112)))
+          (COND A1==1'b0&&A2==1'b1&&B2==1'b1 (IOPATH B1 ZN (::233) (::218)))
+          (IOPATH A1 ZN (::179) (::112))
+          (COND A1==1'b1&&A2==1'b0&&B2==1'b1 (IOPATH B1 ZN (::232) (::203)))
+          (IOPATH B1 ZN (::241) (::218))
+          (COND A1==1'b1&&A2==1'b1&&B2==1'b1 (IOPATH B1 ZN (::241) (::190)))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1376)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::227) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::278)))
+          (IOPATH A1 Z (::305) (::216))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "XNR2D1BWP7T")
+     (INSTANCE CONTROL_g1377)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 ZN (::281) (::222)))
+          (COND A2==1'b1 (IOPATH A1 ZN (::167) (::257)))
+          (IOPATH A1 ZN (::307) (::280))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1378)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::224) (::187)))
+          (COND A2==1'b1 (IOPATH A1 Z (::269) (::276)))
+          (IOPATH A1 Z (::302) (::213))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1379)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::227) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::272) (::280)))
+          (IOPATH A1 Z (::305) (::217))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "CKXOR2D1BWP7T")
+     (INSTANCE CONTROL_g1380)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (COND A2==1'b0 (IOPATH A1 Z (::228) (::190)))
+          (COND A2==1'b1 (IOPATH A1 Z (::273) (::279)))
+          (IOPATH A1 Z (::306) (::216))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "IND2D1BWP7T")
+     (INSTANCE CONTROL_g1381)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT B1 (::0.0))
+          (IOPATH A1 ZN (::182) (::191))
+          (IOPATH B1 ZN (::94) (::85))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "NR2D1BWP7T")
+     (INSTANCE CONTROL_g1382)
+     (DELAY
+        (ABSOLUTE
+          (PORT A1 (::0.0))
+          (PORT A2 (::0.0))
+          (IOPATH A1 ZN (::138) (::62))
+          (IOPATH A2 ZN (::163) (::79))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD0BWP7T")
+     (INSTANCE CONTROL_g1383)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I ZN (::86) (::72))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "INVD1BWP7T")
+     (INSTANCE CONTROL_g1384)
+  )
+  (CELL
+     (CELLTYPE "DFD1BWP7T")
+     (INSTANCE CONTROL_state_reg_0)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::337) (::395))
+          (IOPATH CP QN (::506) (::444))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::96) (::33))
+        (SETUPHOLD (posedge D) (posedge CP) (::93) (::-7))
+     )
+  )
+  (CELL
+     (CELLTYPE "DFD1BWP7T")
+     (INSTANCE CONTROL_state_reg_1)
+     (DELAY
+        (ABSOLUTE
+          (PORT CP (::0.0))
+          (PORT D (::0.0))
+          (IOPATH CP Q (::338) (::395))
+          (IOPATH CP QN (::540) (::468))
+        )
+     )
+     (TIMINGCHECK
+        (SETUPHOLD (negedge D) (posedge CP) (::96) (::33))
+        (SETUPHOLD (posedge D) (posedge CP) (::122) (::-24))
+     )
+  )
+)

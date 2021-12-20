@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+architecture behaviour of unsignedto2_tb is
+   component unsignedto2
+   	port( count_y : in std_logic_vector(11 downto 0);
+   	      count_y_2s: out std_logic_vector(11 downto 0)
+   		);
+   end component;
+   signal count_y : std_logic_vector(11 downto 0);
+   signal count_y_2s: std_logic_vector(11 downto 0);
+begin
+   test: unsignedto2 port map (count_y, count_y_2s);
+
+   count_y <= (others => '0') after 0 ns, "110111000000" after 100ns;
+end behaviour;
+

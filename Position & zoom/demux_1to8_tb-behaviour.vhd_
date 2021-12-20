@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+architecture behaviour of demux_1to8_tb is
+   component demux_1to8
+    port(
+    
+    Signal_in : in STD_LOGIC_vector(11 downto 0);
+    S_in: in STD_LOGIC_VECTOR(2 downto 0);
+    A,B,C,D,E,F,G, H: out STD_LOGIC_vector(11 downto 0)
+    );
+   end component;
+   signal Signal_in : STD_LOGIC_vector(11 downto 0);
+   signal S_in: STD_LOGIC_VECTOR(2 downto 0);
+   signal A,B,C,D,E,F,G, H: STD_LOGIC_vector(11 downto 0);
+begin
+   test: demux_1to8 port map (Signal_in, S_in, A,B,C,D,E,F,G, H);
+   Signal_in <= '0' after 0 ns,
+		
+   S_in <= '0' after 0 ns;
+end behaviour;
+

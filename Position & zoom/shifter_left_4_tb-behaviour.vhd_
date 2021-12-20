@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+architecture behaviour of shifter_left_4_tb is
+   component shifter_left_4
+   port ( pixel_in : in std_logic_vector(11 downto 0);
+   s_out : out std_logic_vector(11 downto 0)
+   );
+   end component;
+   signal pixel_in : std_logic_vector(11 downto 0);
+   signal s_out : std_logic_vector(11 downto 0);
+begin
+   test: shifter_left_4 port map (pixel_in, s_out);
+   pixel_in <= (others => '0') after 0 ns,
+   	       (others => '1') after 100 ns,
+ 		"110011001100" after 200 ns,
+		"001100110011" after 300 ns,
+		"000000001100" after 400 ns;
+end behaviour;
+

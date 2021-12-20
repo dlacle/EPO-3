@@ -1,0 +1,77 @@
+(DELAYFILE
+  (SDFVERSION  "OVI 3.0")
+  (DESIGN      "shifter_right6")
+  (DATE        "Mon Dec 13 13:39:37 CET 2021")
+  (VENDOR      "Cadence, Inc.")
+  (PROGRAM     "Genus(TM) Synthesis Solution")
+  (VERSION     "17.11-s014_1")
+  (DIVIDER     .)
+  (VOLTAGE     ::1.62)
+  (PROCESS     "::1.0")
+  (TEMPERATURE ::125.0)
+  (TIMESCALE   1ps)
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs3)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs6)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs9)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs12)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "BUFFD4BWP7T")
+     (INSTANCE drc_bufs15)
+     (DELAY
+        (ABSOLUTE
+          (PORT I (::0.0))
+          (IOPATH I Z (::1194) (::712))
+        )
+     )
+  )
+  (CELL
+     (CELLTYPE "TIELBWP7T")
+     (INSTANCE tie_0_cell)
+  )
+)

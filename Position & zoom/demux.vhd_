@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+ 
+entity demux_1to8 is
+ port(
+ 
+ Signal_in : in STD_LOGIC_vector(11 downto 0);
+ S_in: in STD_LOGIC_VECTOR(2 downto 0);
+ A,B,C,D,E,F,G, H: out STD_LOGIC_vector(11 downto 0)
+ );
+end demux_1to8;
+ 
+architecture bhv of demux_1to8 is
+begin
+process (F,S_in) is
+begin
+ A <= (others => '0');
+ B <= (others => '0');
+ C <= (others => '0');
+ D <= (others => '0');
+ E <= (others => '0');
+ G <= (others => '0');
+ H <= (others => '0');
+ F <= (others => '0');
+ if (S0 ='0' and S1 = '0' and s2 ='0') then
+ 	A <= signal_in;
+ elsif (S_in(2) ='0' and S_in(1) = '0' and S_in(0) = '1') then
+ 	B <= signal_in;
+  elsif (S_in(2) ='0' and S_in(1) = '1' and S_in(0) = '0') then
+ 	C <= signal_in;
+  elsif (S_in(2) ='0' and S_in(1) = '1' and S_in(0) = '1') then
+ 	D <= signal_in;
+ elsif (S_in(2) ='1' and S_in(1) = '0' and S_in(0) = '0') then
+ 	E <= signal_in;
+ elsif (S_in(2) ='1' and S_in(1) = '0' and S_in(0) = '1') then
+ 	F <= signal_in;
+ elsif (S_in(2) ='1' and S_in(1) = '1' and S_in(0) = '0') then
+ 	G <= signal_in;
+ else
+ 	H <= signal_in;
+ end if;
+end process;
+end bhv;

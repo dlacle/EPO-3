@@ -1,0 +1,24 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+architecture behaviour of shift_sright_tb is
+   component shift_sright
+      port(s     : in  std_logic_vector(2 downto 0);
+           s_in : in  std_logic_vector(11 downto 0);
+   	s_out : out std_logic_vector(11 downto 0)
+   );
+   end component;
+   signal s     : std_logic_vector(2 downto 0);
+   signal s_in : std_logic_vector(11 downto 0);
+   signal s_out : std_logic_vector(11 downto 0);
+begin
+   test: shift_sright port map (s, s_in, s_out);
+   s <= (others => '0') after 0 ns,
+	"011" after 100 ns, "010" after 1000 ns;
+   s_in <= (others => '0') after 0 ns,
+  	   (others => '1') after 200 ns,
+		"000001000000" after 500 ns,
+		"100001000000" after 1400 ns,
+
+end behaviour;
+
