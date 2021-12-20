@@ -179,7 +179,7 @@ begin
             start_write     <= '0';
             output_enable   <= '0';  
             new_start_bit   <= start_bit;
-			new_write_bit <= write_bit;
+				    new_write_bit <= write_bit;
             new_count <= 0;
             if read_done = '1' then
                 new_state   <= idle;
