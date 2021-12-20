@@ -1,0 +1,534 @@
+Analysis & Synthesis report for top_de1
+Mon Dec 20 14:27:55 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_de1|main_fsm_top:inst2|read_fsm:u6|state
+  9. State Machine - |top_de1|main_fsm_top:inst2|write_fsm:u5|state
+ 10. State Machine - |top_de1|main_fsm_top:inst2|erase_fsm:u4|state
+ 11. State Machine - |top_de1|main_fsm_top:inst2|startup_fsm:u3|state
+ 12. State Machine - |top_de1|main_fsm_top:inst2|main_fsm:u2|state
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 20 14:27:55 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; top_de1                                         ;
+; Top-level Entity Name              ; top_de1                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 623                                             ;
+;     Total combinational functions  ; 623                                             ;
+;     Dedicated logic registers      ; 249                                             ;
+; Total registers                    ; 249                                             ;
+; Total pins                         ; 21                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; top_de1            ; top_de1            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++-------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++-------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; ../Memory/main_fsm/write_fsm.vhd    ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/write_fsm.vhd    ;         ;
+; ../Memory/main_fsm/VGA_driver.vhd   ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/VGA_driver.vhd   ;         ;
+; ../Memory/main_fsm/startup.vhd      ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/startup.vhd      ;         ;
+; ../Memory/main_fsm/mem_test.vhd     ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/mem_test.vhd     ;         ;
+; ../Memory/main_fsm/main_fsm_top.vhd ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/main_fsm_top.vhd ;         ;
+; ../Memory/main_fsm/main_fsm.vhd     ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/main_fsm.vhd     ;         ;
+; ../Memory/main_fsm/gen25mhz.vhd     ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/gen25mhz.vhd     ;         ;
+; ../Memory/main_fsm/erase_mem.vhd    ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/Memory/main_fsm/erase_mem.vhd    ;         ;
+; top_de1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/David/Documents/GitHub/EPO-3/de 1 board/top_de1.bdf           ;         ;
+; pre_vga_dac_4.vhd                   ; yes             ; User VHDL File                     ; C:/Users/David/Documents/GitHub/EPO-3/de 1 board/pre_vga_dac_4.vhd     ;         ;
++-------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimated Total logic elements              ; 623                                ;
+;                                             ;                                    ;
+; Total combinational functions               ; 623                                ;
+; Logic element usage by number of LUT inputs ;                                    ;
+;     -- 4 input functions                    ; 273                                ;
+;     -- 3 input functions                    ; 73                                 ;
+;     -- <=2 input functions                  ; 277                                ;
+;                                             ;                                    ;
+; Logic elements by mode                      ;                                    ;
+;     -- normal mode                          ; 440                                ;
+;     -- arithmetic mode                      ; 183                                ;
+;                                             ;                                    ;
+; Total registers                             ; 249                                ;
+;     -- Dedicated logic registers            ; 249                                ;
+;     -- I/O registers                        ; 0                                  ;
+;                                             ;                                    ;
+; I/O pins                                    ; 21                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                                  ;
+; Maximum fan-out node                        ; main_fsm_top:inst2|gen25mhz:u1|tmp ;
+; Maximum fan-out                             ; 222                                ;
+; Total fan-out                               ; 2562                               ;
+; Average fan-out                             ; 2.87                               ;
++---------------------------------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; |top_de1                   ; 623 (0)           ; 249 (0)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top_de1                                   ; work         ;
+;    |main_fsm_top:inst2|    ; 623 (0)           ; 249 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2                ; work         ;
+;       |erase_fsm:u4|       ; 70 (70)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|erase_fsm:u4   ; work         ;
+;       |gen25mhz:u1|        ; 45 (45)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|gen25mhz:u1    ; work         ;
+;       |main_fsm:u2|        ; 46 (46)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|main_fsm:u2    ; work         ;
+;       |read_fsm:u6|        ; 144 (144)         ; 53 (53)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|read_fsm:u6    ; work         ;
+;       |startup_fsm:u3|     ; 38 (38)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|startup_fsm:u3 ; work         ;
+;       |vga_driver:u7|      ; 52 (52)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|vga_driver:u7  ; work         ;
+;       |write_fsm:u5|       ; 228 (228)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de1|main_fsm_top:inst2|write_fsm:u5   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_de1|main_fsm_top:inst2|read_fsm:u6|state                                                                  ;
++-----------------------+-----------------------+------------------+---------------------+--------------------+------------------+
+; Name                  ; state.read_done_state ; state.data_state ; state.address_state ; state.opcode_state ; state.idle_state ;
++-----------------------+-----------------------+------------------+---------------------+--------------------+------------------+
+; state.idle_state      ; 0                     ; 0                ; 0                   ; 0                  ; 0                ;
+; state.opcode_state    ; 0                     ; 0                ; 0                   ; 1                  ; 1                ;
+; state.address_state   ; 0                     ; 0                ; 1                   ; 0                  ; 1                ;
+; state.data_state      ; 0                     ; 1                ; 0                   ; 0                  ; 1                ;
+; state.read_done_state ; 1                     ; 0                ; 0                   ; 0                  ; 1                ;
++-----------------------+-----------------------+------------------+---------------------+--------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_de1|main_fsm_top:inst2|write_fsm:u5|state                                                                                                                                                  ;
++------------------------+------------------------+-----------------------+------------------+------------------+---------------------+--------------------+----------------+------------------+------------------+
+; Name                   ; state.write_done_state ; state.idle_frame_full ; state.idle_write ; state.data_write ; state.address_write ; state.opcode_write ; state.idle_wel ; state.opcode_wel ; state.write_idle ;
++------------------------+------------------------+-----------------------+------------------+------------------+---------------------+--------------------+----------------+------------------+------------------+
+; state.write_idle       ; 0                      ; 0                     ; 0                ; 0                ; 0                   ; 0                  ; 0              ; 0                ; 0                ;
+; state.opcode_wel       ; 0                      ; 0                     ; 0                ; 0                ; 0                   ; 0                  ; 0              ; 1                ; 1                ;
+; state.idle_wel         ; 0                      ; 0                     ; 0                ; 0                ; 0                   ; 0                  ; 1              ; 0                ; 1                ;
+; state.opcode_write     ; 0                      ; 0                     ; 0                ; 0                ; 0                   ; 1                  ; 0              ; 0                ; 1                ;
+; state.address_write    ; 0                      ; 0                     ; 0                ; 0                ; 1                   ; 0                  ; 0              ; 0                ; 1                ;
+; state.data_write       ; 0                      ; 0                     ; 0                ; 1                ; 0                   ; 0                  ; 0              ; 0                ; 1                ;
+; state.idle_write       ; 0                      ; 0                     ; 1                ; 0                ; 0                   ; 0                  ; 0              ; 0                ; 1                ;
+; state.idle_frame_full  ; 0                      ; 1                     ; 0                ; 0                ; 0                   ; 0                  ; 0              ; 0                ; 1                ;
+; state.write_done_state ; 1                      ; 0                     ; 0                ; 0                ; 0                   ; 0                  ; 0              ; 0                ; 1                ;
++------------------------+------------------------+-----------------------+------------------+------------------+---------------------+--------------------+----------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_de1|main_fsm_top:inst2|erase_fsm:u4|state                                                                                                                      ;
++-----------------------------+-----------------------------+------------------+--------------------+------------------+--------------------+----------------------+------------------+
+; Name                        ; state.chip_erase_done_state ; state.idle_erase ; state.opcode_erase ; state.idle_wel_e ; state.opcode_wel_e ; state.address_opcode ; state.idle_state ;
++-----------------------------+-----------------------------+------------------+--------------------+------------------+--------------------+----------------------+------------------+
+; state.idle_state            ; 0                           ; 0                ; 0                  ; 0                ; 0                  ; 0                    ; 0                ;
+; state.address_opcode        ; 0                           ; 0                ; 0                  ; 0                ; 0                  ; 1                    ; 1                ;
+; state.opcode_wel_e          ; 0                           ; 0                ; 0                  ; 0                ; 1                  ; 0                    ; 1                ;
+; state.idle_wel_e            ; 0                           ; 0                ; 0                  ; 1                ; 0                  ; 0                    ; 1                ;
+; state.opcode_erase          ; 0                           ; 0                ; 1                  ; 0                ; 0                  ; 0                    ; 1                ;
+; state.idle_erase            ; 0                           ; 1                ; 0                  ; 0                ; 0                  ; 0                    ; 1                ;
+; state.chip_erase_done_state ; 1                           ; 0                ; 0                  ; 0                ; 0                  ; 0                    ; 1                ;
++-----------------------------+-----------------------------+------------------+--------------------+------------------+--------------------+----------------------+------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_de1|main_fsm_top:inst2|startup_fsm:u3|state                                                                                                                    ;
++--------------------------+--------------------------+----------------------+----------------------+------------------------+----------------+------------------+--------------------+
+; Name                     ; state.startup_done_state ; state.idle_unprotect ; state.data_unprotect ; state.opcode_unprotect ; state.idle_wel ; state.opcode_wel ; state.idle_startup ;
++--------------------------+--------------------------+----------------------+----------------------+------------------------+----------------+------------------+--------------------+
+; state.idle_startup       ; 0                        ; 0                    ; 0                    ; 0                      ; 0              ; 0                ; 0                  ;
+; state.opcode_wel         ; 0                        ; 0                    ; 0                    ; 0                      ; 0              ; 1                ; 1                  ;
+; state.idle_wel           ; 0                        ; 0                    ; 0                    ; 0                      ; 1              ; 0                ; 1                  ;
+; state.opcode_unprotect   ; 0                        ; 0                    ; 0                    ; 1                      ; 0              ; 0                ; 1                  ;
+; state.data_unprotect     ; 0                        ; 0                    ; 1                    ; 0                      ; 0              ; 0                ; 1                  ;
+; state.idle_unprotect     ; 0                        ; 1                    ; 0                    ; 0                      ; 0              ; 0                ; 1                  ;
+; state.startup_done_state ; 1                        ; 0                    ; 0                    ; 0                      ; 0              ; 0                ; 1                  ;
++--------------------------+--------------------------+----------------------+----------------------+------------------------+----------------+------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_de1|main_fsm_top:inst2|main_fsm:u2|state                                                     ;
++---------------------+-------------------+------------------+-------------------+------------+---------------------+
+; Name                ; state.write_state ; state.read_state ; state.erase_state ; state.idle ; state.startup_state ;
++---------------------+-------------------+------------------+-------------------+------------+---------------------+
+; state.startup_state ; 0                 ; 0                ; 0                 ; 0          ; 0                   ;
+; state.idle          ; 0                 ; 0                ; 0                 ; 1          ; 1                   ;
+; state.erase_state   ; 0                 ; 0                ; 1                 ; 0          ; 1                   ;
+; state.read_state    ; 0                 ; 1                ; 0                 ; 0          ; 1                   ;
+; state.write_state   ; 1                 ; 0                ; 0                 ; 0          ; 1                   ;
++---------------------+-------------------+------------------+-------------------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                              ;
++----------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Latch Name                                                     ; Latch Enable Signal                                    ; Free of Timing Hazards ;
++----------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; main_fsm_top:inst2|read_fsm:u6|inbuf0[2]                       ; main_fsm_top:inst2|read_fsm:u6|Equal2                  ; yes                    ;
+; main_fsm_top:inst2|read_fsm:u6|inbuf0[1]                       ; main_fsm_top:inst2|read_fsm:u6|Selector3               ; yes                    ;
+; main_fsm_top:inst2|read_fsm:u6|inbuf0[0]                       ; main_fsm_top:inst2|read_fsm:u6|Selector4               ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.opcode_wel_1050      ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.opcode_write_1034    ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.address_write_1026   ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.data_write_1018      ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[3]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[1]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[0]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[2]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[4]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.idle_frame_full_1002 ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[5]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[6]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[7]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[8]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[9]                ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[10]               ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[11]               ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[12]               ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[13]               ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_clkcount[14]               ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.idle_write_1010      ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.write_idle_1058      ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.write_done_state_994 ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; main_fsm_top:inst2|write_fsm:u5|new_state.idle_wel_1042        ; main_fsm_top:inst2|write_fsm:u5|state.write_done_state ; yes                    ;
+; Number of user-specified and inferred latches = 27             ;                                                        ;                        ;
++----------------------------------------------------------------+--------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++------------------------------------------------------+---------------------------------------------------------+
+; Register name                                        ; Reason for Removal                                      ;
++------------------------------------------------------+---------------------------------------------------------+
+; main_fsm_top:inst2|read_fsm:u6|opcode[0,1]           ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|read_fsm:u6|opcode[2..8]          ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[0..2]   ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[3]      ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[4..6]   ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[7]      ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[8]      ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[9,10]   ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[11..13] ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[14,15]  ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[16]     ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[17]     ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[18]     ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|color_buffer[19..23] ; Stuck at VCC due to stuck port data_in                  ;
+; main_fsm_top:inst2|erase_fsm:u4|address[0..8]        ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|write_fsm:u5|opcode[4..7]         ; Merged with main_fsm_top:inst2|write_fsm:u5|opcode[3]   ;
+; main_fsm_top:inst2|erase_fsm:u4|opcode[0]            ; Merged with main_fsm_top:inst2|erase_fsm:u4|opcode[5]   ;
+; main_fsm_top:inst2|startup_fsm:u3|opcode[3..6]       ; Merged with main_fsm_top:inst2|startup_fsm:u3|opcode[7] ;
+; main_fsm_top:inst2|erase_fsm:u4|opcode[4,6,7]        ; Merged with main_fsm_top:inst2|erase_fsm:u4|opcode[3]   ;
+; main_fsm_top:inst2|erase_fsm:u4|opcode[2]            ; Merged with main_fsm_top:inst2|erase_fsm:u4|opcode[1]   ;
+; main_fsm_top:inst2|startup_fsm:u3|opcode[2]          ; Merged with main_fsm_top:inst2|startup_fsm:u3|opcode[1] ;
+; main_fsm_top:inst2|write_fsm:u5|opcode[3]            ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|erase_fsm:u4|opcode[5]            ; Stuck at GND due to stuck port data_in                  ;
+; main_fsm_top:inst2|startup_fsm:u3|opcode[7]          ; Stuck at GND due to stuck port data_in                  ;
+; Total Number of Removed Registers = 59               ;                                                         ;
++------------------------------------------------------+---------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 249   ;
+; Number of registers using Synchronous Clear  ; 119   ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 58    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; main_fsm_top:inst2|gen25mhz:u1|count[0] ; 2       ;
+; Total number of inverted registers = 1  ;         ;
++-----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de1|main_fsm_top:inst2|vga_driver:u7|in_blue       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|vga_driver:u7|hcount[4]     ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|read_fsm:u6|address[17]     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de1|main_fsm_top:inst2|read_fsm:u6|address[10]     ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|vga_driver:u7|vcount[5]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|erase_fsm:u4|address[12]    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|main_fsm:u2|count[5]        ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|write_fsm:u5|bitcount[1]    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|read_fsm:u6|pagecount[3]    ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|write_fsm:u5|address[3]     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|write_fsm:u5|pagecount[7]   ;
+; 6:1                ; 9 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|write_fsm:u5|address[15]    ;
+; 9:1                ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|read_fsm:u6|clkcount[9]     ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|startup_fsm:u3|clkcount[12] ;
+; 12:1               ; 10 bits   ; 80 LEs        ; 10 LEs               ; 70 LEs                 ; Yes        ; |top_de1|main_fsm_top:inst2|erase_fsm:u4|clkcount[6]    ;
+; 11:1               ; 15 bits   ; 105 LEs       ; 45 LEs               ; 60 LEs                 ; No         ; |top_de1|main_fsm_top:inst2|write_fsm:u5|Selector30     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 20 14:27:52 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de1 -c top_de1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/write_fsm.vhd
+    Info (12022): Found design unit 1: write_fsm-behavioural
+    Info (12023): Found entity 1: write_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/vga_driver.vhd
+    Info (12022): Found design unit 1: vga_driver-vga_behavioral
+    Info (12023): Found entity 1: vga_driver
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/startup.vhd
+    Info (12022): Found design unit 1: startup_fsm-behavioural
+    Info (12023): Found entity 1: startup_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/mem_test.vhd
+    Info (12022): Found design unit 1: read_fsm-behavioural
+    Info (12023): Found entity 1: read_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/main_tb.vhd
+    Info (12022): Found design unit 1: main_tb-structural
+    Info (12023): Found entity 1: main_tb
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/main_fsm_top.vhd
+    Info (12022): Found design unit 1: main_fsm_top-structural
+    Info (12023): Found entity 1: main_fsm_top
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/main_fsm.vhd
+    Info (12022): Found design unit 1: main_fsm-behavioural
+    Info (12023): Found entity 1: main_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/gen25mhz.vhd
+    Info (12022): Found design unit 1: gen25mhz-bhv
+    Info (12023): Found entity 1: gen25mhz
+Info (12021): Found 2 design units, including 1 entities, in source file /users/david/documents/github/epo-3/memory/main_fsm/erase_mem.vhd
+    Info (12022): Found design unit 1: erase_fsm-behavioural
+    Info (12023): Found entity 1: erase_fsm
+Info (12021): Found 1 design units, including 1 entities, in source file top_de1.bdf
+    Info (12023): Found entity 1: top_de1
+Info (12021): Found 2 design units, including 1 entities, in source file pre_vga_dac_4.vhd
+    Info (12022): Found design unit 1: pre_vga_dac_4-signal_flow
+    Info (12023): Found entity 1: pre_vga_dac_4
+Info (12127): Elaborating entity "top_de1" for the top level hierarchy
+Warning (275009): Pin "sw" not connected
+Info (12128): Elaborating entity "main_fsm_top" for hierarchy "main_fsm_top:inst2"
+Info (12128): Elaborating entity "gen25mhz" for hierarchy "main_fsm_top:inst2|gen25mhz:u1"
+Info (12128): Elaborating entity "main_fsm" for hierarchy "main_fsm_top:inst2|main_fsm:u2"
+Info (12128): Elaborating entity "startup_fsm" for hierarchy "main_fsm_top:inst2|startup_fsm:u3"
+Info (12128): Elaborating entity "erase_fsm" for hierarchy "main_fsm_top:inst2|erase_fsm:u4"
+Info (12128): Elaborating entity "write_fsm" for hierarchy "main_fsm_top:inst2|write_fsm:u5"
+Warning (10631): VHDL Process Statement warning at write_fsm.vhd(78): inferring latch(es) for signal or variable "new_state", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at write_fsm.vhd(78): inferring latch(es) for signal or variable "new_clkcount", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "new_clkcount[0]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[1]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[2]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[3]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[4]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[5]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[6]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[7]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[8]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[9]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[10]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[11]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[12]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[13]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_clkcount[14]" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.write_done_state" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.idle_frame_full" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.idle_write" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.data_write" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.address_write" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.opcode_write" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.idle_wel" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.opcode_wel" at write_fsm.vhd(78)
+Info (10041): Inferred latch for "new_state.write_idle" at write_fsm.vhd(78)
+Info (12128): Elaborating entity "read_fsm" for hierarchy "main_fsm_top:inst2|read_fsm:u6"
+Warning (10631): VHDL Process Statement warning at mem_test.vhd(75): inferring latch(es) for signal or variable "inbuf0", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "inbuf0[0]" at mem_test.vhd(75)
+Info (10041): Inferred latch for "inbuf0[1]" at mem_test.vhd(75)
+Info (10041): Inferred latch for "inbuf0[2]" at mem_test.vhd(75)
+Info (12128): Elaborating entity "vga_driver" for hierarchy "main_fsm_top:inst2|vga_driver:u7"
+Info (12128): Elaborating entity "pre_vga_dac_4" for hierarchy "pre_vga_dac_4:inst"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw"
+Info (21057): Implemented 645 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 624 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Mon Dec 20 14:27:55 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,48 @@
+
+State Machine - |top_de1|main_fsm_top:inst2|read_fsm:u6|state
+Name state.read_done_state state.data_state state.address_state state.opcode_state state.idle_state 
+state.idle_state 0 0 0 0 0 
+state.opcode_state 0 0 0 1 1 
+state.address_state 0 0 1 0 1 
+state.data_state 0 1 0 0 1 
+state.read_done_state 1 0 0 0 1 
+
+State Machine - |top_de1|main_fsm_top:inst2|write_fsm:u5|state
+Name state.write_done_state state.idle_frame_full state.idle_write state.data_write state.address_write state.opcode_write state.idle_wel state.opcode_wel state.write_idle 
+state.write_idle 0 0 0 0 0 0 0 0 0 
+state.opcode_wel 0 0 0 0 0 0 0 1 1 
+state.idle_wel 0 0 0 0 0 0 1 0 1 
+state.opcode_write 0 0 0 0 0 1 0 0 1 
+state.address_write 0 0 0 0 1 0 0 0 1 
+state.data_write 0 0 0 1 0 0 0 0 1 
+state.idle_write 0 0 1 0 0 0 0 0 1 
+state.idle_frame_full 0 1 0 0 0 0 0 0 1 
+state.write_done_state 1 0 0 0 0 0 0 0 1 
+
+State Machine - |top_de1|main_fsm_top:inst2|erase_fsm:u4|state
+Name state.chip_erase_done_state state.idle_erase state.opcode_erase state.idle_wel_e state.opcode_wel_e state.address_opcode state.idle_state 
+state.idle_state 0 0 0 0 0 0 0 
+state.address_opcode 0 0 0 0 0 1 1 
+state.opcode_wel_e 0 0 0 0 1 0 1 
+state.idle_wel_e 0 0 0 1 0 0 1 
+state.opcode_erase 0 0 1 0 0 0 1 
+state.idle_erase 0 1 0 0 0 0 1 
+state.chip_erase_done_state 1 0 0 0 0 0 1 
+
+State Machine - |top_de1|main_fsm_top:inst2|startup_fsm:u3|state
+Name state.startup_done_state state.idle_unprotect state.data_unprotect state.opcode_unprotect state.idle_wel state.opcode_wel state.idle_startup 
+state.idle_startup 0 0 0 0 0 0 0 
+state.opcode_wel 0 0 0 0 0 1 1 
+state.idle_wel 0 0 0 0 1 0 1 
+state.opcode_unprotect 0 0 0 1 0 0 1 
+state.data_unprotect 0 0 1 0 0 0 1 
+state.idle_unprotect 0 1 0 0 0 0 1 
+state.startup_done_state 1 0 0 0 0 0 1 
+
+State Machine - |top_de1|main_fsm_top:inst2|main_fsm:u2|state
+Name state.write_state state.read_state state.erase_state state.idle state.startup_state 
+state.startup_state 0 0 0 0 0 
+state.idle 0 0 0 1 1 
+state.erase_state 0 0 1 0 1 
+state.read_state 0 1 0 0 1 
+state.write_state 1 0 0 0 1 
