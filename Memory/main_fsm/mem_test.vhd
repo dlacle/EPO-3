@@ -45,6 +45,7 @@ reg: process (clk25)
 				inbuf<="000";
                 doublecount <= 0;
                 pagecount <= 0;
+                opcode <= "000000011";
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
@@ -81,7 +82,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
             cs_in     <= '1';
             sck_in     <= '0';
             mosi_in    <= '0';
-			new_clkcount<=0;
+			new_clkcount <= 0;
 			new_address <= address;
             read_done <= '0';
             new_doublecount <= doublecount;
@@ -105,12 +106,13 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
             new_address <= address;
             read_done <= '0';
             
-            new_clkcount <= clkcount + 1;
+            
             if clkcount = 7 then
                 new_state <= address_state;
                 new_clkcount <= 0;
             else
                 new_state <= opcode_state;
+                new_clkcount <= clkcount + 1;
             end if;
 
         when address_state =>
@@ -125,20 +127,22 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 			new_address <= address;
             read_done <= '0';
 				    
-            new_clkcount <= clkcount + 1;
+            
             if clkcount = 23 then
                 new_state <= data_state;
                 new_clkcount <= 0;
             else
                 new_state <= address_state;
+                new_clkcount <= clkcount + 1;
             end if;
 
         when data_state =>
             cs_in      <= '0';
             sck_in     <= clk25;
             mosi_in    <= '0';
+            inbuf0 <= inbuf0;
 			inbuf0(bitcount) <= miso;
-		    new_clkcount <= clkcount + 1;
+		    
             read_done <= '0';		    
             new_doublecount <= doublecount;
 				
@@ -177,8 +181,9 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                 new_state    <= read_done_state;
             else
                 new_state    <= data_state;
-					 new_address <= address;
-					 new_pagecount <= pagecount; 
+				new_address <= address;
+				new_pagecount <= pagecount;
+                new_clkcount <= clkcount + 1;
             end if;
 
         when read_done_state => 
@@ -193,6 +198,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
 			new_address <= address;
             read_done <= '1';
             new_state <= idle_state;
+            new_clkcount <= clkcount + 1;
             
 	
         end case;

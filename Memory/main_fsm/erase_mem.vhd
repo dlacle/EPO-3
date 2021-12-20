@@ -41,8 +41,8 @@ reg: process (clk25)
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;
-		opcode <= new_opcode;
-		address <= new_address;
+		            opcode <= new_opcode;
+		            address <= new_address;
             end if;
         end if;
     end process;
@@ -146,7 +146,9 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase, address, e_coun
         when idle_erase =>
           cs_in      <= '1';
           sck_in     <= not(clk25);
+          mosi_in    <= '0';
           chip_erase_done <= '0';
+          new_opcode <= opcode;
 
           if e_count = '1' then
             new_clkcount <= clkcount + 1;
@@ -166,10 +168,13 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase, address, e_coun
         when chip_erase_done_state =>
           cs_in      <= '1';
           sck_in     <= not(clk25);
+          mosi_in    <= '0';
           chip_erase_done <= '1';
+          new_opcode <= opcode;
           new_clkcount <= clkcount + 1;
           if (clkcount = 10) then
             new_state<= idle_state;
+            new_address <= address;
           else
             new_address <= address;
             new_state<=chip_erase_done_state;

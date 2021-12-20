@@ -47,13 +47,15 @@ begin
         bitcount <= 0; 
         address <= "000000000000000000000000";
         pagecount <= 0;
+        color_buffer <= "111110101100011010001000";
       else
         clkcount <= new_clkcount;
         state <= new_state;
         opcode <= new_opcode;
         bitcount <= new_bitcount;
         address <= new_address;
-        pagecount <= new_pagecount; 
+        pagecount <= new_pagecount;
+        color_buffer <= new_color_buffer; 
       end if;
     end if;
   end process;
@@ -85,6 +87,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (start_write = '1') then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
@@ -106,6 +109,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 7) then
         new_state <= idle_wel;
         new_clkcount <= 0;
@@ -123,6 +127,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 10) then
         new_opcode <= "00000010";
         new_state <= opcode_write;
@@ -144,6 +149,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 7) then
         new_state <= address_write;
         new_clkcount <= 0;
@@ -162,6 +168,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 23) then
         new_state <= data_write;
         new_clkcount <= 0;
@@ -179,6 +186,7 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 23) then
 		    new_opcode <= "00000000";
         new_state <= idle_write;
@@ -202,6 +210,7 @@ begin
       new_bitcount <= 0;
       frame_full <= '0'; 
       write_done <= '0';
+      new_color_buffer <= color_buffer;
       if (clkcount = 525) then
         new_opcode <= "00000101";
         
@@ -236,6 +245,7 @@ begin
       new_bitcount <= 0;
       frame_full <= '1'; 
       write_done <= '1';
+      new_color_buffer <= color_buffer;
       new_clkcount <= 0;
       new_opcode <= "00000000";
       new_state <= idle_frame_full;
@@ -254,6 +264,7 @@ begin
       new_opcode <= "00000010";
       new_state <= write_idle;
       new_clkcount <= 0;
+      new_color_buffer <= color_buffer;
       
 
     end case;

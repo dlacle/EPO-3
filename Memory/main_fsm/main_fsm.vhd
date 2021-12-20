@@ -30,6 +30,7 @@ architecture behavioural of main_fsm is
     signal start_bit, new_start_bit : std_logic;
     signal cs_in, sck_in, mosi_in : std_logic; 
     signal output_enable : std_logic;
+    signal count, new_count : integer range 0 to 255;
 
 begin
 
@@ -39,9 +40,11 @@ begin
         if reset = '1' then
           state <= startup_state;
           start_bit <='0';
+          count <= 0;
         else
           state <= new_state;
           start_bit <= new_start_bit; 
+          count <= new_count;
         end if;
       end if;
     end process;
@@ -59,7 +62,7 @@ begin
         end if;
     end process;   
 
-    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full, start_bit)
+    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full, start_bit, count)
     begin
       case state is
 
@@ -73,6 +76,7 @@ begin
             start_write     <= '0';
             output_enable   <= '1';
             new_start_bit      <= start_bit;
+            new_count <= 0;
 
             if frame_full ='0' then 
                 if start_bit = '0' then
@@ -81,13 +85,15 @@ begin
                     new_state     <= write_state;
                 elsif start_read = '1' then
                     new_state     <= read_state;
+                else
+                    new_state <= idle;
                 end if;  
             else 
                 new_start_bit <= '1';
-					 if start_read = '1' then
+                if start_read = '1' then
                     new_state     <= read_state;
-					 else 
-						  new_state  <= idle;
+                else 
+                    new_state  <= idle;
                 end if;
                 
             end if;
@@ -102,6 +108,7 @@ begin
             start_write     <= '0';
             output_enable   <= '0';
             new_start_bit      <= '1';
+            new_count <= 0;
             if (startup_done = '1') then
                 new_state   <= erase_state;
             else
@@ -119,6 +126,7 @@ begin
             start_write     <= '0';
             output_enable   <= '0';
             new_start_bit   <= start_bit;
+            new_count <= 0;
             if chip_erase_done = '1' then
                 new_state   <= idle;
             else
@@ -135,10 +143,17 @@ begin
             start_write     <= '1';
             output_enable   <= '0';  
             new_start_bit   <= start_bit;
-            if write_done = '1' then
+            if count = 35 then
+                new_count <= 0;
                 new_state   <= idle;
             else
-                new_state   <= write_state;
+                if write_done = '1' then
+                    new_count <= count + 1;
+                    new_state   <= write_state;
+                else
+                    new_count <= count;
+                    new_state <= write_state;
+                end if;
             end if;
 
         when read_state =>
@@ -151,6 +166,7 @@ begin
             start_write     <= '0';
             output_enable   <= '0';  
             new_start_bit   <= start_bit;
+            new_count <= 0;
             if read_done = '1' then
                 new_state   <= idle;
             else
