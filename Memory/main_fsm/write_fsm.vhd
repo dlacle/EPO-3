@@ -262,11 +262,10 @@ begin
       frame_full <= '0'; 
       write_done <= '1';
       new_opcode <= "00000010";
-      new_state <= write_idle;
-      new_clkcount <= 0;
+      
       new_color_buffer <= color_buffer;
       
-
+ 
     end case;
   end process;
 end architecture behavioural;

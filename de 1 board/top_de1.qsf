@@ -68,11 +68,11 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_L22 -to reset
-set_location_assignment PIN_C22 -to si
+set_location_assignment PIN_J20 -to si
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_E22 -to sck
-set_location_assignment PIN_B19 -to so
-set_location_assignment PIN_G22 -to cs
+set_location_assignment PIN_K20 -to sck
+set_location_assignment PIN_F21 -to so
+set_location_assignment PIN_F22 -to cs
 set_location_assignment PIN_U22 -to buf[0]
 set_location_assignment PIN_U21 -to buf[1]
 set_location_assignment PIN_V22 -to buf[2]
@@ -81,11 +81,6 @@ set_location_assignment PIN_W22 -to buf[4]
 set_location_assignment PIN_W21 -to buf[5]
 set_location_assignment PIN_Y22 -to buf[6]
 set_location_assignment PIN_Y21 -to buf[7]
-set_global_assignment -name VHDL_FILE ../../Epo3fractals/VHDL/mem_test/simpel_vga/mem_test.vhd
-set_global_assignment -name VHDL_FILE "mem test/VGA_driver.vhd"
-set_global_assignment -name BDF_FILE top_de1.bdf
-set_global_assignment -name VHDL_FILE pre_vga_dac_4.vhd
-set_global_assignment -name VHDL_FILE gen25mhz.vhd
 set_location_assignment PIN_B5 -to start_read
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to start_read
 set_location_assignment PIN_M2 -to color[0]
@@ -101,4 +96,15 @@ set_location_assignment PIN_L21 -to sw
 set_location_assignment PIN_V12 -to in[1]
 set_location_assignment PIN_M22 -to in[0]
 set_location_assignment PIN_W12 -to in[2]
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/write_fsm.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/VGA_driver.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/startup.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/mem_test.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_tb.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_fsm_top.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_fsm.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/gen25mhz.vhd
+set_global_assignment -name VHDL_FILE ../Memory/main_fsm/erase_mem.vhd
+set_global_assignment -name BDF_FILE top_de1.bdf
+set_global_assignment -name VHDL_FILE pre_vga_dac_4.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

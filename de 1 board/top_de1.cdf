@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/Users/David/Documents/GitHub/EPO-3/") File("top_de1.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/Users/David/Documents/GitHub/EPO-3/de 1 board/") File("top_de1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

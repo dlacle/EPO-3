@@ -1,5 +1,5 @@
 Flow report for top_de1
-Thu Dec 02 16:31:57 2021
+Mon Dec 20 14:28:06 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 02 16:31:55 2021           ;
+; Flow Status                        ; Successful - Mon Dec 20 14:28:04 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_de1                                         ;
 ; Top-level Entity Name              ; top_de1                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 100 / 18,752 ( < 1 % )                          ;
-;     Total combinational functions  ; 99 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 45 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 45                                              ;
-; Total pins                         ; 24 / 315 ( 8 % )                                ;
+; Total logic elements               ; 624 / 18,752 ( 3 % )                            ;
+;     Total combinational functions  ; 623 / 18,752 ( 3 % )                            ;
+;     Dedicated logic registers      ; 249 / 18,752 ( 1 % )                            ;
+; Total registers                    ; 249                                             ;
+; Total pins                         ; 21 / 315 ( 7 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/02/2021 16:31:48 ;
+; Start date & time ; 12/20/2021 14:27:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de1             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 5311873563825.163845910717684         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 5311873563825.164000687318328         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
@@ -91,11 +91,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 4873 MB             ; 00:00:03                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4545 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4652 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 4876 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4558 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4555 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:08                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
