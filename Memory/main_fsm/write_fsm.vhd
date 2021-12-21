@@ -28,7 +28,7 @@ architecture behavioural of write_fsm is
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
-  signal cs_in, sck_in, mosi_in : std_logic;
+  signal cs_in, sck_in, mosi_in : std_logic;								
   
   
 begin

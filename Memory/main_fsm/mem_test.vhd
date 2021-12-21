@@ -52,7 +52,7 @@ reg: process (clk25)
                 bitcount <= new_bitcount;
                 inbuf      <= new_inbuf;
                 address  <= new_address;
-                doublecount <=new_doublecount;
+                doublecount <= new_doublecount;
                 pagecount <= new_pagecount;
             end if;
         end if;
@@ -83,9 +83,9 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
             sck_in     <= '0';
             mosi_in    <= '0';
 			      new_clkcount <= 0;
-			      new_address <= "000000000000000000000000";
+			      new_address <= address;
             read_done <= '0';
-            new_doublecount <= 0;
+            new_doublecount <= doublecount;
             new_pagecount <= pagecount;
 				    
             if begin_read = '1' then
@@ -141,25 +141,23 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
             sck_in     <= clk25;
             mosi_in    <= '0';
             inbuf0 <= inbuf0;
-			inbuf0(bitcount) <= miso;
+			      inbuf0(bitcount) <= miso;
 		    
-            read_done <= '0';		    
-            new_doublecount <= doublecount;
-				
-			if bitcount = 2 then
-				new_inbuf<=inbuf0;
-				new_bitcount <= 0;
-			else
-				new_inbuf <= inbuf;
-				new_bitcount <= bitcount + 1;
-			end if; 
+            read_done <= '0';		
+			      if bitcount = 2 then
+				       new_inbuf<=inbuf0;
+				       new_bitcount <= 0;
+			      else
+				       new_inbuf <= inbuf;
+				       new_bitcount <= bitcount + 1;
+			      end if; 
 				    
             if clkcount = 639 then
                 new_clkcount <= 0;
                 
-                if(address = std_logic_vector(to_unsigned((pagecount * 256) + 243,24)))then
+                if(address = std_logic_vector(to_unsigned((pagecount * 256) + 162,24)))then
                     if(doublecount = 1) then
-                        if (pagecount = 59)then
+                        if (pagecount = 79)then
                             new_pagecount <= 0;
                             new_address <= ( others => '0');
                         else
@@ -168,9 +166,15 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                         end if;
                         new_doublecount <= 0;
                     else
-                        new_address <= address;
-                        new_pagecount <= pagecount;
-                        new_doublecount <= doublecount + 1;
+                        if (address = "000000000100111110100010") then
+                          new_pagecount <= 0;
+                          new_address <= ( others => '0');
+                          new_doublecount <= 0;
+                        else
+                          new_address <= address;
+                          new_pagecount <= pagecount;
+                          new_doublecount <= doublecount + 1;
+                        end if;
                     end if;
                 else
                     if(doublecount = 1) then
@@ -185,6 +189,7 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                 
                 new_state    <= read_done_state;
             else
+                new_doublecount <= doublecount;
                 new_state    <= data_state;
 				        new_address <= address;
 				        new_pagecount <= pagecount;
