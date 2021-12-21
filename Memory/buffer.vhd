@@ -21,6 +21,7 @@ L1:		process(clk, reset)
 		if (rising_edge(clk)) then
 			if (reset = '1') then
 			data <=(others => '0');
+			count<=0;
 			else 
 			data <= new_data;
 			count 	 <= new_count;
@@ -30,7 +31,12 @@ L1:		process(clk, reset)
 
 L2:		process(data_in,data,count)
 		begin
+		new_count <= count+1;	
 		new_data <= data(23-3 downto 0) & data_in;
+		if count=8 then
+		done=1;
+		else
+			done=0;
 		end process;
  
 data_out<= data;
