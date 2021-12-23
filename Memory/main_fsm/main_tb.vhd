@@ -16,6 +16,9 @@ architecture structural of main_tb  is
             mosi      : out std_logic;
             miso      : in  std_logic;
             
+            color_in  : in std_logic_vector(2 downto 0);
+            color_valid : in std_logic;
+            
             h_sync     : out std_logic;
             v_sync     : out std_logic;
             red       : out std_logic;
@@ -24,7 +27,8 @@ architecture structural of main_tb  is
             );
     end component;
     
-signal clk50,reset,cs,sck,mosi,miso,h_sync,v_sync,red,green,blue:std_logic;
+signal clk50,reset,cs,sck,mosi,miso, color_valid, h_sync,v_sync,red,green,blue:std_logic;
+signal color_in : std_logic_vector(2 downto 0);
 
 begin
 
@@ -34,6 +38,8 @@ begin
                     sck => sck,
                     mosi => mosi,
                     miso => miso,
+                    color_in => color_in,
+                    color_valid => color_valid,
                     h_sync => h_sync,
                     v_sync => v_sync,
                     red => red, 
@@ -47,5 +53,26 @@ begin
                     
         reset <= 	'1' after 0 ns,
                     '0' after 50 ns;
+                    
+        color_in <= "111" after 100000 ns, 
+                    "000" after 100400 ns;
+        
+        color_valid <= '1' after 0 ns,
+                       '0' after 100080 ns,
+                       '1' after 100120 ns,
+                       '0' after 100200 ns,
+                       '1' after 100240 ns,
+                       '0' after 100320 ns,
+                       '1' after 100360 ns,
+                       '0' after 100440 ns,
+                       '1' after 100480 ns,
+                       '0' after 100560 ns,
+                       '1' after 100600 ns,
+                       '0' after 100680 ns,
+                       '1' after 100720 ns,
+                       '0' after 100800 ns,
+                       '1' after 100840 ns,
+                       '0' after 100920 ns,
+                       '1' after 100960 ns;
 
 end architecture structural;

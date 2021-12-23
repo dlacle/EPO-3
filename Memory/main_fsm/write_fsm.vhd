@@ -12,6 +12,9 @@ entity write_fsm is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
+        color_valid : in std_logic;
+        color_in :in std_logic_vector(2 downto 0);
+        
         frame_full : out std_logic; 
         write_done      : out std_logic;            
         start_write     : in std_logic
@@ -20,14 +23,15 @@ end write_fsm;
 
 
 architecture behavioural of write_fsm is
-  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state, wait_state);
+  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state, wait_state, buffer_state);
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
-  signal color_buffer, new_color_buffer : std_logic_vector(23 downto 0) := "111110101100011010001000";
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
+  signal color_buffer, new_color_buffer : std_logic_vector(23 downto 0) := "000000000000000000000000";
+  signal buffercount, new_buffercount : integer range 0 to 20;
   signal cs_in, sck_in, mosi_in : std_logic;								
   
   
@@ -46,8 +50,9 @@ begin
         opcode <= "00000000";
         bitcount <= 0; 
         address <= "000000000000000000000000";
+        color_buffer <= "000000000000000000000000";
         pagecount <= 0;
-        color_buffer <= "111110101100011010001000";
+        buffercount <= 0;
       else
         clkcount <= new_clkcount;
         state <= new_state;
@@ -55,11 +60,12 @@ begin
         bitcount <= new_bitcount;
         address <= new_address;
         pagecount <= new_pagecount;
-        color_buffer <= new_color_buffer; 
+        color_buffer <= new_color_buffer;
+        buffercount <= new_buffercount;
       end if;
     end if;
   end process;
-
+ 
 
   process (start_write, cs_in, sck_in, mosi_in)
   begin
@@ -75,7 +81,7 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount)
+  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount, color_valid, buffercount, color_in)
   begin
     case state is
     when write_idle =>
@@ -87,17 +93,41 @@ begin
       new_pagecount <= pagecount;
       frame_full <= '0'; 
       write_done <= '0';
-      new_color_buffer <= color_buffer;
-      if (start_write = '1') then
+      new_clkcount <= 0;
+		new_color_buffer <= color_buffer;
+      new_buffercount <= buffercount;
+      if (start_write = '1') and (buffercount = 8) then
         new_opcode <= "00000110";
         new_state <= opcode_wel;
-        new_clkcount <= 0;
       else
         new_opcode <= "00000000";
-        new_state <= write_idle;
-        new_clkcount <= clkcount; 
+        if(color_valid = '0') then 
+			 new_state <= buffer_state;
+        else
+			 new_state <= write_idle;
+        end if;
       end if;
       
+	 when buffer_state => 
+		cs_in<=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
+      new_bitcount <= 0;
+      new_address <= address;
+      new_pagecount <= pagecount;
+      frame_full <= '0'; 
+      write_done <= '0';
+		new_clkcount <= 0;
+		new_opcode <= opcode;
+      if (color_valid = '1') then
+        new_state <= write_idle;
+		  new_color_buffer <= color_buffer(23-3 downto 0) & color_in;
+		  new_buffercount <= buffercount + 1;
+      else
+        new_state <= buffer_state;
+		  new_color_buffer <= color_buffer;
+		  new_buffercount <= buffercount;
+      end if;
     
     when opcode_wel =>
       cs_in <=  '0';
@@ -110,6 +140,7 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_color_buffer <= color_buffer;
+      new_buffercount <= 0;
       if (clkcount = 7) then
         new_state <= idle_wel;
         new_clkcount <= 0;
@@ -128,6 +159,7 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_color_buffer <= color_buffer;
+      new_buffercount <= 0;
       if (clkcount = 10) then
         new_opcode <= "00000010";
         new_state <= opcode_write;
@@ -150,6 +182,7 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_color_buffer <= color_buffer;
+      new_buffercount <= 0;
       if (clkcount = 7) then
         new_state <= address_write;
         new_clkcount <= 0;
@@ -169,6 +202,7 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_color_buffer <= color_buffer;
+      new_buffercount <= 0;
       if (clkcount = 23) then
         new_state <= data_write;
         new_clkcount <= 0;
@@ -187,6 +221,7 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_color_buffer <= color_buffer;
+      new_buffercount <= 0;
       if (clkcount = 23) then
 		    new_opcode <= "00000000";
         new_state <= idle_write;
@@ -210,7 +245,8 @@ begin
       new_bitcount <= 0;
       frame_full <= '0'; 
       write_done <= '0';
-      new_color_buffer <= color_buffer;
+      new_color_buffer <= "000000000000000000000000";
+      new_buffercount <= 0;
       if (clkcount = 525) then
         new_opcode <= "00000101";
         
@@ -245,12 +281,13 @@ begin
       new_bitcount <= 0;
       frame_full <= '1'; 
       write_done <= '1';
-      new_color_buffer <= color_buffer;
       new_clkcount <= 0;
       new_opcode <= "00000000";
       new_state <= idle_frame_full;
       new_address <= address;
-      new_pagecount <= pagecount;  
+      new_pagecount <= pagecount;
+      new_color_buffer <= "000000000000000000000000";
+      new_buffercount <= 0;  
     
     when wait_state => 
       cs_in<=  '1';
@@ -262,7 +299,8 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       new_opcode <= "00000010";
-      new_color_buffer <= color_buffer;
+      new_color_buffer <= "000000000000000000000000";
+      new_buffercount <= 0;
 		  
 		  if clkcount = 2 then
 		    new_clkcount <= 0;
@@ -284,7 +322,8 @@ begin
       frame_full <= '0'; 
       write_done <= '1';
       new_opcode <= "00000010";
-      new_color_buffer <= color_buffer;
+      new_color_buffer <= "000000000000000000000000";
+      new_buffercount <= 0;
       new_state <= wait_state;
 		  new_clkcount <= 0;
 

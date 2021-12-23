@@ -11,6 +11,8 @@ entity main_fsm_top is
         mosi      : out std_logic;
         miso      : in  std_logic;
         
+        color_in  : in std_logic_vector(2 downto 0);
+        color_valid : in std_logic;
 
         h_sync     : out std_logic;
         v_sync     : out std_logic;
@@ -86,11 +88,14 @@ architecture structural of main_fsm_top is
             sck       : out std_logic;
             mosi      : out std_logic;
             miso      : in  std_logic;
-            
+        
+            color_valid : in std_logic;
+            color_in :in std_logic_vector(2 downto 0);
+        
             frame_full : out std_logic; 
             write_done      : out std_logic;            
             start_write     : in std_logic
-        );
+            );
     end component write_fsm;
 
 
@@ -186,7 +191,9 @@ begin
                             cs => cs, 
                             sck => sck, 
                             mosi => mosi, 
-                            miso => miso,  
+                            miso => miso,
+                            color_valid => color_valid,  
+                            color_in => color_in,
                             frame_full => frame_full,
                             write_done => write_done,
                             start_write => start_write
@@ -215,5 +222,6 @@ begin
                             h_sync => h_sync,
                             v_sync => v_sync
                             );
+        
 
 end architecture structural;
