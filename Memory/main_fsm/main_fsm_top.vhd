@@ -47,7 +47,8 @@ architecture structural of main_fsm_top is
                 chip_erase_done : in std_logic;
                 frame_full      : in std_logic;    
                 write_done      : in std_logic;            
-                start_write     : out std_logic
+                start_write     : out std_logic;
+                buff_full       : in std_logic
             );
     end component main_fsm;
   
@@ -88,10 +89,8 @@ architecture structural of main_fsm_top is
             sck       : out std_logic;
             mosi      : out std_logic;
             miso      : in  std_logic;
-        
-            color_valid : in std_logic;
-            color_in :in std_logic_vector(2 downto 0);
-        
+            color_buffer : in std_logic_vector(23 downto 0);
+            buff_done   : out std_logic;
             frame_full : out std_logic; 
             write_done      : out std_logic;            
             start_write     : in std_logic
@@ -133,9 +132,22 @@ architecture structural of main_fsm_top is
     end component vga_driver;
 
 
+    component gen_buffer is
+        port(	clk :in std_logic;
+            reset: in std_logic;
+            done: in std_logic;
+            buff_full: out std_logic;
+            color_valid: in std_logic;
+            data_in	:in std_logic_vector(2 downto 0);
+            data_out: out std_logic_vector(23 downto 0)
+        );
+    end component gen_buffer;
+
+
     signal clk : std_logic;
-    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write, e_count  : std_logic;
+    signal start_read, dead_time, begin_read, read_done, start_startup, startup_done, start_erase, chip_erase_done, frame_full, write_done, start_write, e_count, buff_full, buff_done  : std_logic;
     signal color : std_logic_vector(2 downto 0);
+    signal color_buffer : std_logic_vector(23 downto 0);
   
 begin
     u1: gen25mhz port map(clk50mhz => clk50,
@@ -192,8 +204,8 @@ begin
                             sck => sck, 
                             mosi => mosi, 
                             miso => miso,
-                            color_valid => color_valid,  
-                            color_in => color_in,
+                            color_buffer => color_buffer,
+                            buff_done => buff_done,
                             frame_full => frame_full,
                             write_done => write_done,
                             start_write => start_write
@@ -222,6 +234,16 @@ begin
                             h_sync => h_sync,
                             v_sync => v_sync
                             );
+
+    u8: gen_buffer port map(clk => clk,
+                            reset => reset, 
+                            done => buff_done,
+                            buff_full => buff_full, 
+                            color_valid => color_valid,
+                            data_in => color_in, 
+                            data_out => color_buffer
+                            );
+
         
 
 end architecture structural;

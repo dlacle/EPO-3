@@ -34,9 +34,9 @@ L2:		process(data_in,data,count)
 		new_count <= count+1;	
 		new_data <= data(23-3 downto 0) & data_in;
 		if count=8 then
-		done=1;
+		done='1';
 		else
-			done=0;
+			done='0';
 		end process;
  
 data_out<= data;

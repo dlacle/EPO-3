@@ -18,7 +18,8 @@ entity main_fsm is
             chip_erase_done : in std_logic;
             frame_full      : in std_logic;    
             write_done      : in std_logic;            
-            start_write     : out std_logic
+            start_write     : out std_logic;
+            buff_full       : in std_logic
     );
 end main_fsm;
 
@@ -87,7 +88,10 @@ begin
                     new_state   <= startup_state;
                 elsif dead_time = '1' then
                     if write_bit = '1' then
-                        new_state <= write_state;
+                        if buff_full = '1' then
+                            new_state <= write_state;
+                        else 
+                            new_state <= idle;
                     else
                         new_state <= idle;
                     end if;
