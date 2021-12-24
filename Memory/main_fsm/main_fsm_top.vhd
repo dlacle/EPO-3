@@ -172,7 +172,8 @@ begin
                             chip_erase_done => chip_erase_done,
                             frame_full => frame_full,
                             write_done => write_done,
-                            start_write => start_write
+                            start_write => start_write, 
+                            buff_full => buff_full
                             );
 
     

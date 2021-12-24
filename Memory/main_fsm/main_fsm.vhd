@@ -66,7 +66,7 @@ begin
         end if;
     end process;   
 
-    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full, start_bit, count, write_bit)
+    combinatorial: process (state, clk25, start_read, dead_time, read_done, startup_done, chip_erase_done, write_done,frame_full, start_bit, count, write_bit, buff_full)
     begin
       case state is
 
@@ -92,6 +92,7 @@ begin
                             new_state <= write_state;
                         else 
                             new_state <= idle;
+                        end if;
                     else
                         new_state <= idle;
                     end if;

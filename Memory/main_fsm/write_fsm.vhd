@@ -23,19 +23,16 @@ end write_fsm;
 architecture behavioural of write_fsm is
   type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state, wait_state);
   signal state, new_state: state_type;
-  signal clkcount, new_clkcount : integer range 0 to 30000;
+  signal clkcount, new_clkcount : integer range 0 to 512;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
   signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
+  signal addresscount, new_addresscount : integer range 0 to 30;
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
   signal cs_in, sck_in, mosi_in : std_logic;
   
   
 begin
-
-
-
-
 
   statereg: process (clk25)
   begin
@@ -47,6 +44,7 @@ begin
         bitcount <= 0; 
         address <= "000000000000000000000000";
         pagecount <= 0;
+        addresscount <= 0;
       else
         clkcount <= new_clkcount;
         state <= new_state;
@@ -54,6 +52,7 @@ begin
         bitcount <= new_bitcount;
         address <= new_address;
         pagecount <= new_pagecount;
+        addresscount <= new_addresscount;
       end if;
     end if;
   end process;
@@ -73,7 +72,7 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount)
+  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount, addresscount)
   begin
     case state is
     when write_idle =>
@@ -83,6 +82,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -105,6 +105,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -123,6 +124,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -145,6 +147,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -164,6 +167,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -182,6 +186,7 @@ begin
       new_opcode <= "00000000";
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '0';
@@ -209,22 +214,24 @@ begin
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '1';
-      if (clkcount = 525) then
+      if (clkcount = 512) then
         new_opcode <= "00000101";
-        
         new_clkcount <= 0;
-        if(address = std_logic_vector(to_unsigned((pagecount * 256) + 243,24)))then
-          if (pagecount = 79)then
+        
+        if(addresscount = 27)then
+          new_addresscount <= 0;
+          if (pagecount = 240)then
             new_pagecount <= pagecount;
             new_address <= address;
             new_state <= idle_frame_full;
           else
             new_pagecount <= pagecount + 1;
-            new_address <= std_logic_vector(to_unsigned(((pagecount + 1) * 256) ,24));
+            new_address <= std_logic_vector(unsigned(address) + 175);
             new_state <= write_done_state; 
           end if;
         else
           new_address <= std_logic_vector(unsigned(address) + 3);
+          new_addresscount <= addresscount + 1;
           new_pagecount <= pagecount;
           new_state <= write_done_state; 
         end if;
@@ -234,6 +241,7 @@ begin
         new_clkcount <= clkcount + 1;
         new_address <= address;
         new_pagecount <= pagecount;
+        new_addresscount <= addresscount;
       end if;
     
     when idle_frame_full =>
@@ -249,6 +257,7 @@ begin
       new_state <= idle_frame_full;
       new_address <= address;
       new_pagecount <= pagecount;  
+      new_addresscount <= addresscount;
     
     when wait_state => 
       cs_in<=  '1';
@@ -257,6 +266,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '0';
       new_opcode <= "00000010";
@@ -279,6 +289,7 @@ begin
       new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
+      new_addresscount <= addresscount;
       frame_full <= '0'; 
       write_done <= '1';
       new_opcode <= "00000010";

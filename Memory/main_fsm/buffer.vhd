@@ -37,12 +37,12 @@ L1:		process(clk, reset)
 		end if;
 		end process; 
 
-L2:		process(data_in,data,count,done,state,count,color_valid)
+L2:		process(data_in,data,count,done,state,color_valid)
 		begin
 		case state is
 
 		when count_state =>
-		if color_valid = '1' then 
+		if color_valid = '0' then 
 		new_count <= count+1;	
 		new_data <= data(23-3 downto 0) & data_in;
 			if count=8 then
