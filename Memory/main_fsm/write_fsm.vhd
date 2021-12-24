@@ -25,7 +25,6 @@ architecture behavioural of write_fsm is
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 512;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
-  signal bitcount, new_bitcount : integer range 0 to 32;
   signal pagecount, new_pagecount : integer range 0 to 255; 
   signal addresscount, new_addresscount : integer range 0 to 30;
   signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
@@ -41,7 +40,6 @@ begin
         state <= write_idle;
         clkcount <= 0; 
         opcode <= "00000000";
-        bitcount <= 0; 
         address <= "000000000000000000000000";
         pagecount <= 0;
         addresscount <= 0;
@@ -49,7 +47,6 @@ begin
         clkcount <= new_clkcount;
         state <= new_state;
         opcode <= new_opcode;
-        bitcount <= new_bitcount;
         address <= new_address;
         pagecount <= new_pagecount;
         addresscount <= new_addresscount;
@@ -72,14 +69,13 @@ begin
   end process;
 
 
-  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, bitcount, addresscount)
+  combinatorial: process (state, clk25, clkcount, opcode, address, pagecount, start_write, color_buffer, addresscount)
   begin
     case state is
     when write_idle =>
       cs_in <=  '1';
       sck_in <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -102,7 +98,6 @@ begin
       sck_in  <= not(clk25);
       mosi_in <= opcode(7-clkcount);
       new_opcode <= opcode;
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -121,7 +116,6 @@ begin
       cs_in<=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -144,7 +138,6 @@ begin
       sck_in  <= not(clk25);
       mosi_in <= opcode(7-clkcount);
       new_opcode <= opcode;
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -164,7 +157,6 @@ begin
       sck_in  <= not(clk25);
       mosi_in <= address(23-clkcount);
       new_opcode <= "00000000";
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -182,7 +174,7 @@ begin
     when data_write =>
       cs_in <=  '0';
       sck_in  <= not(clk25);
-      mosi_in <= color_buffer(bitcount);
+      mosi_in <= color_buffer(clkcount);
       new_opcode <= "00000000";
       new_address <= address;
       new_pagecount <= pagecount;
@@ -194,15 +186,9 @@ begin
 		    new_opcode <= "00000000";
         new_state <= idle_write;
         new_clkcount <= 0;
-        new_bitcount <= 0;
       else
         new_state <= data_write;
         new_clkcount <= clkcount + 1;
-        if (bitcount = 23) then
-          new_bitcount <= 0; 
-        else
-          new_bitcount <= bitcount + 1;
-        end if;
       end if;
       
       
@@ -210,7 +196,6 @@ begin
       cs_in <=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       frame_full <= '0'; 
       write_done <= '0';
       buff_done <= '1';
@@ -248,7 +233,6 @@ begin
       cs_in <=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       frame_full <= '1'; 
       write_done <= '1';
       buff_done <= '0';
@@ -263,7 +247,6 @@ begin
       cs_in<=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;
@@ -286,7 +269,6 @@ begin
       cs_in<=  '1';
       sck_in  <= '0';
       mosi_in <= '0';
-      new_bitcount <= 0;
       new_address <= address;
       new_pagecount <= pagecount;
       new_addresscount <= addresscount;

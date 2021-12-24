@@ -156,15 +156,9 @@ comb: process (state, clkcount, clk25, begin_read, miso, opcode,bitcount,inbuf,i
                 new_clkcount <= 0;
                 
                 if (address = "000000001110111100000000") then
-                    if(doublecount = 1) then
-                        new_pagecount <= 0;
-                        new_address <= ( others => '0');
-                        new_doublecount <= 0;
-                    else
-                        new_pagecount <= pagecount;
-                        new_address <= address;
-                        new_doublecount <= doublecount + 1;
-                    end if;
+                    new_pagecount <= 0;
+                    new_address <= ( others => '0');
+                    new_doublecount <= 0;
                 else
                     if(doublecount = 1) then
                         if (pagecount = 240)then

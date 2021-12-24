@@ -22,7 +22,6 @@ architecture behavioural of erase_fsm is
 
     signal state, new_state       : state_type;
     signal clkcount, new_clkcount : integer range 0 to 800;
-    signal bitcount, new_bitcount : integer range 0 to 2;
     signal opcode,new_opcode : std_logic_vector(7 downto 0) := "00000000";
     signal address, new_address : std_logic_vector(23 downto 0) := "000000000000000000000000";
     signal cs_in, sck_in, mosi_in : std_logic; 
