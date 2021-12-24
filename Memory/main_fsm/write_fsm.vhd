@@ -16,12 +16,12 @@ entity write_fsm is
         frame_full : out std_logic; 
         write_done      : out std_logic;            
         start_write     : in std_logic
-    );
+        );
 end write_fsm;
 
 
 architecture behavioural of write_fsm is
-  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state);
+  type state_type is (write_idle, opcode_wel, idle_wel, opcode_write, address_write, data_write, idle_write, idle_frame_full, write_done_state, wait_state);
   signal state, new_state: state_type;
   signal clkcount, new_clkcount : integer range 0 to 30000;
   signal opcode, new_opcode : std_logic_vector(7 downto 0) := "00000000";
@@ -32,6 +32,10 @@ architecture behavioural of write_fsm is
   
   
 begin
+
+
+
+
 
   statereg: process (clk25)
   begin
@@ -239,12 +243,34 @@ begin
       new_bitcount <= 0;
       frame_full <= '1'; 
       write_done <= '1';
+      buff_done <= '0';
       new_clkcount <= 0;
       new_opcode <= "00000000";
       new_state <= idle_frame_full;
       new_address <= address;
-      new_pagecount <= pagecount; 
-      buff_done <= '0'; 
+      new_pagecount <= pagecount;  
+    
+    when wait_state => 
+      cs_in<=  '1';
+      sck_in  <= '0';
+      mosi_in <= '0';
+      new_bitcount <= 0;
+      new_address <= address;
+      new_pagecount <= pagecount;
+      frame_full <= '0'; 
+      write_done <= '0';
+      new_opcode <= "00000010";
+      buff_done <= '0';
+		  
+		  if clkcount = 2 then
+		    new_clkcount <= 0;
+		    new_state <= write_idle;
+		  else 
+		    new_clkcount <= clkcount + 1;
+		    new_state <= wait_state;
+		  end if;
+  
+    
     
     when write_done_state => 
       cs_in<=  '1';
@@ -256,10 +282,9 @@ begin
       frame_full <= '0'; 
       write_done <= '1';
       new_opcode <= "00000010";
-      new_state <= write_idle;
-      new_clkcount <= 0;
       buff_done <= '0';
-      
+      new_state <= wait_state;
+		  new_clkcount <= 0;
 
     end case;
   end process;
