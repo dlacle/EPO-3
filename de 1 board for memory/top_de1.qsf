@@ -96,15 +96,36 @@ set_location_assignment PIN_L21 -to sw
 set_location_assignment PIN_V12 -to in[1]
 set_location_assignment PIN_M22 -to in[0]
 set_location_assignment PIN_W12 -to in[2]
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/write_fsm.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/VGA_driver.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/startup.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/mem_test.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_tb.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_fsm_top.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/main_fsm.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/gen25mhz.vhd
-set_global_assignment -name VHDL_FILE ../Memory/main_fsm/erase_mem.vhd
+set_global_assignment -name VHDL_FILE gen25mhz.vhd
+set_global_assignment -name VHDL_FILE top_de1.vhd
+set_global_assignment -name VHDL_FILE "../Position & zoom/ycounter.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/unsignedto2-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/unsignedto2.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right7.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right6.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right5.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right4.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right3.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right2.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_right.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_left_4.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_left_2.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shifter_left.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shift_sright-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/shift_sright.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main_ytob-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main_ytob.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main_xtoa-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main_xtoa.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main_seq-behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/main.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/half_adder.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/ha_behavioral_cfg.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/full_adder_3x.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/fsm.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/fa.vhd"
+set_global_assignment -name VHDL_FILE "../Position & zoom/buffer.vhd"
 set_global_assignment -name BDF_FILE top_de1.bdf
-set_global_assignment -name VHDL_FILE pre_vga_dac_4.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

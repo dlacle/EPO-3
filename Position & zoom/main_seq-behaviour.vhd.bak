@@ -43,10 +43,10 @@ component unsignedto2 is
 		);
 end component;
 
-signal count_y, count_x2: std_logic_vector(11 downto 0);
+signal count_y: std_logic_vector(11 downto 0);
 signal pause_x, pause_y, reset_x, reset_y : std_logic;
 begin
-CONTROL:zoomandposition_control port map(clk,reset,count_x2,count_y,position,zoom,pixel_ready,frame_ready,pause_x, pause_y,reset_x,reset_y);
+CONTROL:zoomandposition_control port map(clk,reset,count_x,count_y,position,zoom,pixel_ready,frame_ready,pause_x, pause_y,reset_x,reset_y);
 K1: ycounter port map(clk, reset_x, pause_x, count_x); 
 K2: ycounter port map(clk, reset_y, pause_y, count_y); 
 CONVERTER: unsignedto2 port map(count_y,count_y_2s);
