@@ -1,0 +1,153 @@
+m255
+K3
+13
+cModel Technology
+dD:\Documenten\AA Electrical Engineering\de0_fpga_projects\write_fsm
+Egen25mhz
+Z0 w1637836417
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\Documenten\AA Electrical Engineering\de0_fpga_projects\startup_fsm
+Z5 8D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd
+Z6 FD:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd
+l0
+L5
+V`HKh>BO`2ZD[d_^QN3Gg10
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1642156739.858000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd|
+Z10 !s107 D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 l4NWY:`zKj4@;ZZ6BzeRR2
+!i10b 1
+Abhv
+R1
+R2
+R3
+DEx4 work 8 gen25mhz 0 22 `HKh>BO`2ZD[d_^QN3Gg10
+l15
+L10
+VUJnbWUJIe;:H]JV0:8g=R3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 8fKfAzBgYE2?aFOVT8_km2
+!i10b 1
+Estartup_fsm
+Z13 w1639156851
+R1
+Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z16 8D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd
+Z17 FD:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd
+l0
+L6
+Vb=g[B3U?4cF9zb@R;FE]e3
+R7
+32
+Z18 !s108 1642156740.188000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd|
+Z20 !s107 D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd|
+R11
+R12
+!s100 z[7OD[Fc9b_Ed=EQ>4iOi3
+!i10b 1
+Abehavioural
+R1
+R14
+R15
+R2
+R3
+DEx4 work 11 startup_fsm 0 22 b=g[B3U?4cF9zb@R;FE]e3
+l27
+L20
+V^5mHFNREG6[X[dNnNTHN`0
+R7
+32
+R18
+R19
+R20
+R11
+R12
+!s100 IR^=Lk=nQLYj:I<=E]HO61
+!i10b 1
+Estartup_fsm_top
+Z21 w1639171209
+R2
+R3
+R4
+Z22 8D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top.vhd
+Z23 FD:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top.vhd
+l0
+L5
+Vh?5:C0f`H?05K9BGU>dlM1
+!s100 N=7@iC=i;S?OH7eYXodi?1
+R7
+32
+!i10b 1
+Z24 !s108 1642156748.534000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top.vhd|
+Z26 !s107 D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top.vhd|
+R11
+R12
+Astructural
+R2
+R3
+Z27 DEx4 work 15 startup_fsm_top 0 22 h?5:C0f`H?05K9BGU>dlM1
+l43
+L19
+Z28 V<I_:RJkARA;ALkDAnfZ5=2
+Z29 !s100 [@>0Zz3gIO6<8;ORVfFdz1
+R7
+32
+!i10b 1
+R24
+R25
+R26
+R11
+R12
+Ewrite_fsm_top_tb
+Z30 w1639171059
+R2
+R3
+R4
+Z31 8D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd
+Z32 FD:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd
+l0
+L4
+VeJPF4ZMZkTW;olf9m@V4m1
+R7
+32
+Z33 !s108 1642156740.731000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd|
+Z35 !s107 D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd|
+R11
+R12
+!s100 FaWFAK:hK2Q><i^a^S]c[2
+!i10b 1
+Astructural
+R2
+R3
+DEx4 work 16 write_fsm_top_tb 0 22 eJPF4ZMZkTW;olf9m@V4m1
+l22
+L7
+Va`0GMe>D0I0CgdHJRW4YO3
+!s100 Pz`^=C7FJUZFnbh8B7_W_2
+R7
+32
+R33
+R34
+R35
+R11
+R12
+!i10b 1
