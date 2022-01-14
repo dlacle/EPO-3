@@ -1,0 +1,29 @@
+{D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup_fsm_top_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity write_fsm_top_tb
+-- Compiling architecture structural of write_fsm_top_tb
+
+} {} {}} {D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/startup.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity startup_fsm
+-- Compiling architecture behavioural of startup_fsm
+
+} {} {}} {D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd} {1 {vcom -work work -2002 -explicit {D:/Documenten/AA Electrical Engineering/de0_fpga_projects/startup_fsm/gen25mhz.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gen25mhz
+-- Compiling architecture bhv of gen25mhz
+
+} {} {}}
