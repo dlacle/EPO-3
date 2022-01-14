@@ -68,15 +68,9 @@ begin
 				frame_ready <= '1';
 				pause_count_x <= '0';
 				pause_count_y <= '0';
-				if ( pixel_ready = '1') then 
-					new_state <= count_x_state;
-					new_coordinate <= '0';
-					new_clkcount <= 0;
-				else 
-					new_state <= reset_state;
-					new_coordinate <= '0';
-					new_clkcount <= 0;
-				end if;
+				new_state <= count_x_state;
+				new_coordinate <= '0';
+				new_clkcount <= 0;
 				
 			when count_x_state =>
 				reset_x <= '0';
