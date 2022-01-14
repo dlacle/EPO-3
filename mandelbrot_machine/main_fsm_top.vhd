@@ -240,7 +240,7 @@ begin
 
     u8: gen_buffer port map(clk => clk,
                             reset => reset, 
-                            done => buff_done,
+                            done => write_done,
                             buff_full => buff_full, 
                             memory_ready => memory_ready,
                             color_valid => color_valid,

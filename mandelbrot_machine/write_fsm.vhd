@@ -174,7 +174,7 @@ begin
     when data_write =>
       cs_in <=  '0';
       sck_in  <= not(clk25);
-      mosi_in <= color_buffer(clkcount);
+      mosi_in <= color_buffer(23-clkcount);
       new_opcode <= "00000000";
       new_address <= address;
       new_pagecount <= pagecount;

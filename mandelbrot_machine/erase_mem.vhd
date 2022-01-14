@@ -155,7 +155,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase, address, e_coun
             new_clkcount <= clkcount;
           end if;
 
-          if clkcount >= 1 then
+          if clkcount >= 60 then
             new_state<= chip_erase_done_state;
             new_clkcount <= 0;
             new_address<=std_logic_vector(unsigned(address) + 64000);

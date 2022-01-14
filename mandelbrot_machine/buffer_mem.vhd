@@ -47,7 +47,7 @@ L2:		process(data_in,data,count,done,state,color_valid)
 		if color_valid = '1' then 
 		new_count <= count+1;	
 		new_data <= data(23-3 downto 0) & data_in;
-			if count=8 then
+			if count=7 then
 			buff_full <= '1';
 			new_state <= wait_state;
 			new_count<=0;

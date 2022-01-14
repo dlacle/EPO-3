@@ -75,7 +75,7 @@ signal color : std_logic_vector (2 downto 0);
 
 begin 
 
-poszoom:top_level port map (
+setcalc:top_level port map (
       reset => reset, 
       clk => clk,
       c => c_tussen, 
@@ -86,7 +86,7 @@ poszoom:top_level port map (
       final_iteration => final_itt
       );
       
-setcalc:main port map (
+poszoom:main port map (
       clk => clk,
       reset=>reset, 
       zoom => zoom, 
