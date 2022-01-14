@@ -24,8 +24,6 @@ begin
 				else
 					count <= new_count; --gives signal 'count' the current count value stored in 'new_count'
 				end if;
-			else
-				count <= count;
 			end if;
 		end if;
 	end process;

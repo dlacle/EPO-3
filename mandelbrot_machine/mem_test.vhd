@@ -41,11 +41,12 @@ reg: process (clk25)
             if reset = '1' then
                 state    <= idle_state;
                 clkcount <= 0;
-				bitcount<=0;
-				inbuf<="000";
+					 bitcount<=0;
+					 inbuf<="000";
                 doublecount <= 0;
                 pagecount <= 0;
                 opcode <= "000000011";
+					 address <= "000000000000000000000000";
             else
                 state    <= new_state;
                 clkcount <= new_clkcount;

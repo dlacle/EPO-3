@@ -88,14 +88,14 @@ L31:		process( hcount, vcount, in_h_sync, in_v_sync)
 			end if;
 			
 			--active video time.
-			if((hcount>140 and hcount<780) and (vcount > 32 and vcount<512)) then
+			if((hcount>166 and hcount<760) and (vcount > 32 and vcount<432)) then
 				in_sync <= '1';
 			else
 				in_sync <= '0';
 			end if;
 
-			--start 32 clk cycle before active video. 106 to 780 and 32 to 512
-			if ((hcount>126 and hcount<760) and (vcount>72 and vcount<472)) then
+			--start 32 clk cycle before active video.
+			if ((hcount>126 and hcount<760) and (vcount>32 and vcount<512)) then
 					start_read <= '1';
  				else
 					start_read <= '0';

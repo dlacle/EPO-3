@@ -58,6 +58,7 @@ architecture behavior of top_top_level is
         color_in  : in std_logic_vector(2 downto 0);
         color_valid : in std_logic;
         memory_ready : out std_logic;
+		  reset_poszoom : out std_logic;
 
         h_sync     : out std_logic;
         v_sync     : out std_logic;
@@ -70,7 +71,7 @@ architecture behavior of top_top_level is
 
 signal c_tussen, d_tussen : std_logic_vector(11 downto 0);
 signal final_itt : std_logic;
-signal new_coordinate_tussen, memory_ready_tussen : std_logic;
+signal new_coordinate_tussen, memory_ready_tussen, reset_poszoom : std_logic;
 signal color : std_logic_vector (2 downto 0);
 
 begin 
@@ -108,6 +109,7 @@ memoryvga:main_fsm_top port map (
       color_in => color,
       color_valid => final_itt, 
       memory_ready => memory_ready_tussen,
+		reset_poszoom => reset_poszoom,
       h_sync => h_sync, 
       v_sync => v_sync, 
       red => red, 

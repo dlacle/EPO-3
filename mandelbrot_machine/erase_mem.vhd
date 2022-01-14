@@ -179,6 +179,7 @@ comb: process (state, clkcount, clk25, miso, opcode,start_erase, address, e_coun
             new_state<=chip_erase_done_state;
           end if;
 
+			
 
 
        end case;

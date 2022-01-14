@@ -14,6 +14,7 @@ entity main_fsm_top is
         color_in  : in std_logic_vector(2 downto 0);
         color_valid : in std_logic;
         memory_ready : out std_logic;
+		  reset_poszoom : out std_logic;
 
         h_sync     : out std_logic;
         v_sync     : out std_logic;
@@ -152,6 +153,9 @@ architecture structural of main_fsm_top is
     signal color_buffer : std_logic_vector(23 downto 0);
   
 begin
+
+	 reset_poszoom <= chip_erase_done;
+
     u1: gen25mhz port map(clk50mhz => clk50,
                             clk25mhz => clk
                             );
