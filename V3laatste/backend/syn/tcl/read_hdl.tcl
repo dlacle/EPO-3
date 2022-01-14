@@ -1,0 +1,14 @@
+read_hdl -vhdl {main.vhd}
+read_hdl -vhdl {main_seq-behaviour.vhd}
+read_hdl -vhdl {main_xtoa.vhd}
+read_hdl -vhdl {main_ytob.vhd}
+read_hdl -vhdl {buffer.vhd}
+read_hdl -vhdl {main-behaviour.vhd}
+read_hdl -vhdl {main_seq_SYN.vhd}
+read_hdl -vhdl {main_xtoa_SYN.vhd}
+read_hdl -vhdl {main_ytob_SYN.vhd}
+read_hdl -vhdl {register_a_structural_cfg.vhd}
+read_hdl -vhdl {main_ytob_synthesised_cfg.vhd}
+read_hdl -vhdl {main_xtoa_synthesised_cfg.vhd}
+read_hdl -vhdl {main_seq_synthesised_cfg.vhd}
+read_hdl -vhdl {main_behaviour_cfg.vhd}

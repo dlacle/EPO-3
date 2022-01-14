@@ -1,0 +1,175 @@
+Unannotated Specify Objects Report:
+===================================
+(UASP) = Unannotated specify path.
+(UATC) = Unannotated timing check.
+(IATE) = Incompltely annotated specify path transition edges.
+-------------------------------------------------------------
+/main_tb/test/oa_state_reg_0: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_state_reg_1: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_0: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_11: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_10: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_9: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_8: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_7: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_6: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_5: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_4: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_3: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_2: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/oa_int_a_out_reg_1: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_state_reg_0: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_state_reg_1: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_0: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_11: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_10: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_9: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_8: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_7: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_6: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_5: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_4: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_3: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_2: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/ob_int_a_out_reg_1: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_control_state_reg_2: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_control_state_reg_3: ( [DFKCNQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5551)]):
+  WIDTH: (negedge CP): 0 : (UATC)
+  WIDTH: (posedge CP): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_1: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_2: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_4: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_5: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_6: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_7: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_8: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_9: ( [DFQD0BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6513)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_11: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_1: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_2: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_3: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_4: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_5: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_6: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_7: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_8: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_9: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_11: ( [DFQD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(6560)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_control_state_reg_0: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_control_state_reg_1: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_0: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_3: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k1_count_reg_10: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_0: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+/main_tb/test/i2s_k2_count_reg_10: ( [DFD1BWP7T(fast):/data/public/common/software/opprog/sim_libs/tcb018gbwp7t.v(5277)]):
+  WIDTH: (negedge CP &&& CP_DEFCHK): 0 : (UATC)
+  WIDTH: (posedge CP &&& CP_DEFCHK): 0 : (UATC)
+Found 56 instances with unannotated or incompletely annotated specify block objects.

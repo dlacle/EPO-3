@@ -1,0 +1,1534 @@
+Library vendor : Model Technology
+Maximum unnamed designs : 3
+OPTIMIZED DESIGN _opt
+    Compile time: Fri Jan 14 15:21:49 2022
+    Version string: jhh0m90>d=L`bLlRKBTNo3
+    Top-level model: work main_tb_behaviour_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work -L TSMCLib
+    Compile defaults: CvgOpt=0
+    Short name: @_opt
+    Opcode format: 10.5b; VCOM/VLOG SE-64 Object version 63
+    Source directory: /home/marickvermeule/V3laatste
+ENTITY fa
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/fa.vhd
+    Source file: VHDL/fa.vhd
+    Start location: VHDL/fa.vhd:6
+    Version string: Z>=MkJnZ<fekASB9WRnf>1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:10 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioral
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work fa Z>=MkJnZ<fekASB9WRnf>1
+    Start location: VHDL/fa.vhd:14
+    Version string: U3QPP>aORdR:LaF]En=`?3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/fa.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/fa.vhd
+VHDL CONFIGURATION fa_behavioral_cfg
+    Configuration applies to entity: fa
+    Block configuration applies to architecture: behavioral
+    Depends on: A work fa behavioral U3QPP>aORdR:LaF]En=`?3
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work fa Z>=MkJnZ<fekASB9WRnf>1
+    Source modified time: Fri Jan 14 09:54:39 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/fa_behavioral_cfg.vhd
+    Source file: VHDL/fa_behavioral_cfg.vhd
+    Start location: VHDL/fa_behavioral_cfg.vhd:1
+    Version string: 4z:9<Y;b?o67E6YQBb^:b3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY full_adder_3x
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/full_adder_3x.vhd
+    Source file: VHDL/full_adder_3x.vhd
+    Start location: VHDL/full_adder_3x.vhd:5
+    Version string: bkOR[li]I`Kb0kWc]HTdX0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioral
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work full_adder_3x bkOR[li]I`Kb0kWc]HTdX0
+    Start location: VHDL/full_adder_3x.vhd:12
+    Version string: 7Yde?<4QGjAzZF0z5Z;mz1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/full_adder_3x.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/full_adder_3x.vhd
+VHDL CONFIGURATION full_adder_3x_behavioral_cfg
+    Configuration applies to entity: full_adder_3x
+    Block configuration applies to architecture: behavioral
+    Depends on: E work fa Z>=MkJnZ<fekASB9WRnf>1
+    Depends on: E work ha inO<@Z@1O[0RWH;Qz]bB^2
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: C work fa_behavioral_cfg 4z:9<Y;b?o67E6YQBb^:b3
+    Depends on: C work ha_behavioral_cfg N0N1VYQl30ngHghLDSY011
+    Depends on: A work full_adder_3x behavioral 7Yde?<4QGjAzZF0z5Z;mz1
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work full_adder_3x bkOR[li]I`Kb0kWc]HTdX0
+    Source modified time: Fri Jan 14 09:54:51 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/full_adder_3x_behavioral_cfg.vhd
+    Source file: VHDL/full_adder_3x_behavioral_cfg.vhd
+    Start location: VHDL/full_adder_3x_behavioral_cfg.vhd:1
+    Version string: ^cXH6F?_dzPgN@IlN29kU2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:12 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY ha
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/half_adder.vhd
+    Source file: VHDL/half_adder.vhd
+    Start location: VHDL/half_adder.vhd:6
+    Version string: inO<@Z@1O[0RWH;Qz]bB^2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioral
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work ha inO<@Z@1O[0RWH;Qz]bB^2
+    Start location: VHDL/half_adder.vhd:14
+    Version string: ZcLCEokan19:_NBnjE<`50
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/half_adder.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/half_adder.vhd
+VHDL CONFIGURATION ha_behavioral_cfg
+    Configuration applies to entity: ha
+    Block configuration applies to architecture: behavioral
+    Depends on: A work ha behavioral ZcLCEokan19:_NBnjE<`50
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work ha inO<@Z@1O[0RWH;Qz]bB^2
+    Source modified time: Fri Jan 14 09:54:47 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/ha_behavioral_cfg.vhd
+    Source file: VHDL/ha_behavioral_cfg.vhd
+    Start location: VHDL/ha_behavioral_cfg.vhd:1
+    Version string: N0N1VYQl30ngHghLDSY011
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main.vhd
+    Source file: VHDL/main.vhd
+    Start location: VHDL/main.vhd:4
+    Version string: >TMeDDz6IbeCUEC_dn5`P2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Jan 14 15:23:22 2022
+    Depends on: E work main >TMeDDz6IbeCUEC_dn5`P2
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_SYN.vhd
+    Source file: VHDL/main_SYN.vhd
+    Start location: VHDL/main_SYN.vhd:7
+    Version string: ^Jk;d3;m]bAH`XAJMN2;[0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:23:30 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+  ARCHITECTURE BODY behaviour
+    Source modified time: Fri Jan 14 15:01:00 2022
+    Depends on: E work main >TMeDDz6IbeCUEC_dn5`P2
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main-behaviour.vhd
+    Source file: VHDL/main-behaviour.vhd
+    Start location: VHDL/main-behaviour.vhd:4
+    Version string: ;[e70]==;[O<<4M163RH82
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+VHDL CONFIGURATION main_behaviour_cfg
+    Configuration applies to entity: main
+    Block configuration applies to architecture: behaviour
+    Depends on: E work register_a 3=1<b0mXMJRdbg[9WY^I42
+    Depends on: E work main_ytob SdEUe1nJ5KInN[P6TMz2T3
+    Depends on: E work main_xtoa ITiUSnBHDQJ3:n4CQaCIE1
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: C work register_a_structural_cfg ff[^kRSdF`h55nAALGh7T2
+    Depends on: C work main_ytob_synthesised_cfg AEoPm[3jX8O_hTTWo=GeQ0
+    Depends on: C work main_xtoa_synthesised_cfg m_8>9=kgXV92XL[<L2zc[0
+    Depends on: C work main_seq_synthesised_cfg PMfRzV0Whln2?1DzRl=SO3
+    Depends on: A work main behaviour ;[e70]==;[O<<4M163RH82
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main >TMeDDz6IbeCUEC_dn5`P2
+    Source modified time: Fri Jan 14 15:20:20 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_behaviour_cfg.vhd
+    Source file: VHDL/main_behaviour_cfg.vhd
+    Start location: VHDL/main_behaviour_cfg.vhd:1
+    Version string: 29<Ujc<dJcXjmgYY`;AfF0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:20:20 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_seq
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_seq-behaviour.vhd
+    Source file: VHDL/main_seq-behaviour.vhd
+    Start location: VHDL/main_seq-behaviour.vhd:3
+    Version string: `[0UUfR<kcAED08`;fX440
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Jan 14 13:58:14 2022
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_seq_SYN.vhd
+    Source file: VHDL/main_seq_SYN.vhd
+    Start location: VHDL/main_seq_SYN.vhd:7
+    Version string: 6:2ADGUh6JjQ]?SFBQSDj3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+  ARCHITECTURE BODY behaviour
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Start location: VHDL/main_seq-behaviour.vhd:16
+    Version string: h6==GHQ4BN0MYK[P3RgTJ1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/main_seq-behaviour.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/main_seq-behaviour.vhd
+VHDL CONFIGURATION main_seq_behaviour_cfg
+    Configuration applies to entity: main_seq
+    Block configuration applies to architecture: behaviour
+    Depends on: E work unsignedto2 CmF8d=nN5XmIR5hXcX4ii0
+    Depends on: E work ycounter f[_zP;ggB1@=OZChlWh2e3
+    Depends on: E work zoomandposition_control kUNVF=aKU<8bCEgLzAgX:0
+    Depends on: C work unsignedto2_behaviour_cfg OEAC?UFOZ5@IB<_59cEY]0
+    Depends on: C work ycounter_behavioural_cfg ^Fb;W_edDk?IcNW@:i0dD3
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: C work zoomandposition_control_behavioural_cfg 7UKGUj==GA;i6`Fo:GH3T0
+    Depends on: A work main_seq behaviour h6==GHQ4BN0MYK[P3RgTJ1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Source modified time: Fri Jan 14 13:56:27 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_seq_behaviour_cfg.vhd
+    Source file: VHDL/main_seq_behaviour_cfg.vhd
+    Start location: VHDL/main_seq_behaviour_cfg.vhd:1
+    Version string: ==80_]10U?YAU88gcV@Gn1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:12 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+VHDL CONFIGURATION main_seq_synthesised_cfg
+    Configuration applies to entity: main_seq
+    Block configuration applies to architecture: synthesised
+    Depends on: A work main_seq synthesised 6:2ADGUh6JjQ]?SFBQSDj3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Source modified time: Fri Jan 14 13:58:35 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_seq_synthesised_cfg.vhd
+    Source file: VHDL/main_seq_synthesised_cfg.vhd
+    Start location: VHDL/main_seq_synthesised_cfg.vhd:1
+    Version string: PMfRzV0Whln2?1DzRl=SO3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_seq_tb
+    Source modified time: Fri Jan 14 13:38:45 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_seq_tb.vhd
+    Source file: VHDL/main_seq_tb.vhd
+    Start location: VHDL/main_seq_tb.vhd:3
+    Version string: ?SXm:`kINPk4<jCh_3R[X3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_seq_tb ?SXm:`kINPk4<jCh_3R[X3
+    Start location: VHDL/main_seq_tb.vhd:6
+    Version string: 3KzD9fTOPWKd7J>CdYXYa3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:06 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/main_seq_tb.vhd
+    Source modified time: Fri Jan 14 13:38:45 2022
+    HDL source file: VHDL/main_seq_tb.vhd
+VHDL CONFIGURATION main_seq_tb_behaviour_cfg
+    Configuration applies to entity: main_seq_tb
+    Block configuration applies to architecture: behaviour
+    Depends on: E work main_seq `[0UUfR<kcAED08`;fX440
+    Depends on: C work main_seq_synthesised_cfg PMfRzV0Whln2?1DzRl=SO3
+    Depends on: A work main_seq_tb behaviour 3KzD9fTOPWKd7J>CdYXYa3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_seq_tb ?SXm:`kINPk4<jCh_3R[X3
+    Source modified time: Fri Jan 14 14:01:54 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_seq_tb_behaviour_cfg.vhd
+    Source file: VHDL/main_seq_tb_behaviour_cfg.vhd
+    Start location: VHDL/main_seq_tb_behaviour_cfg.vhd:1
+    Version string: 4UTILjh];ISYUX66LKoXR3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:12 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+VHDL CONFIGURATION main_synthesised_cfg
+    Configuration applies to entity: main
+    Block configuration applies to architecture: synthesised
+    Depends on: A work main synthesised ^Jk;d3;m]bAH`XAJMN2;[0
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main >TMeDDz6IbeCUEC_dn5`P2
+    Source modified time: Fri Jan 14 15:23:36 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_synthesised_cfg.vhd
+    Source file: VHDL/main_synthesised_cfg.vhd
+    Start location: VHDL/main_synthesised_cfg.vhd:1
+    Version string: NHWRI=DNWURb:g5T;0cXk1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:23:36 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_tb
+    Source modified time: Fri Jan 14 15:10:14 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/test.vhd
+    Source file: VHDL/test.vhd
+    Start location: VHDL/test.vhd:3
+    Version string: jn[U7:]dAW9NAzNYY1cgC2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_tb jn[U7:]dAW9NAzNYY1cgC2
+    Start location: VHDL/test.vhd:7
+    Version string: Ui2EL:AJg_N]zaoPPNFPc0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/test.vhd
+    Source modified time: Fri Jan 14 15:10:14 2022
+    HDL source file: VHDL/test.vhd
+VHDL CONFIGURATION main_tb_behaviour_cfg
+    Configuration applies to entity: main_tb
+    Block configuration applies to architecture: behaviour
+    Depends on: E work main >TMeDDz6IbeCUEC_dn5`P2
+    Depends on: C work main_synthesised_cfg NHWRI=DNWURb:g5T;0cXk1
+    Depends on: A work main_tb behaviour Ui2EL:AJg_N]zaoPPNFPc0
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_tb jn[U7:]dAW9NAzNYY1cgC2
+    Source modified time: Fri Jan 14 15:23:46 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_tb_behaviour_cfg.vhd
+    Source file: VHDL/main_tb_behaviour_cfg.vhd
+    Start location: VHDL/main_tb_behaviour_cfg.vhd:1
+    Version string: RKd08Nho;EAXRcTWeBiKI1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:23:46 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_xtoa
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_xtoa.vhd
+    Source file: VHDL/main_xtoa.vhd
+    Start location: VHDL/main_xtoa.vhd:4
+    Version string: ITiUSnBHDQJ3:n4CQaCIE1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:11 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Jan 14 12:19:26 2022
+    Depends on: E work main_xtoa ITiUSnBHDQJ3:n4CQaCIE1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_xtoa_SYN.vhd
+    Source file: VHDL/main_xtoa_SYN.vhd
+    Start location: VHDL/main_xtoa_SYN.vhd:7
+    Version string: RKRI=C2jbdOj5YQbJ5hNd3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+  ARCHITECTURE BODY behaviour
+    Source modified time: Fri Jan 14 10:00:46 2022
+    Depends on: E work main_xtoa ITiUSnBHDQJ3:n4CQaCIE1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_xtoa-behaviour.vhd
+    Source file: VHDL/main_xtoa-behaviour.vhd
+    Start location: VHDL/main_xtoa-behaviour.vhd:4
+    Version string: nc;oc]2DLVeiKK]WCkdUa3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+VHDL CONFIGURATION main_xtoa_synthesised_cfg
+    Configuration applies to entity: main_xtoa
+    Block configuration applies to architecture: synthesised
+    Depends on: A work main_xtoa synthesised RKRI=C2jbdOj5YQbJ5hNd3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_xtoa ITiUSnBHDQJ3:n4CQaCIE1
+    Source modified time: Fri Jan 14 12:20:11 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_xtoa_synthesised_cfg.vhd
+    Source file: VHDL/main_xtoa_synthesised_cfg.vhd
+    Start location: VHDL/main_xtoa_synthesised_cfg.vhd:1
+    Version string: m_8>9=kgXV92XL[<L2zc[0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_xtoa_tb
+    Source modified time: Fri Jan 14 12:18:38 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_xtoa_tb.vhd
+    Source file: VHDL/main_xtoa_tb.vhd
+    Start location: VHDL/main_xtoa_tb.vhd:4
+    Version string: U[z@SNT@AAj?Zl@n>^7NO0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_xtoa_tb U[z@SNT@AAj?Zl@n>^7NO0
+    Start location: VHDL/main_xtoa_tb.vhd:7
+    Version string: BzKSUWIKXEHTF4hcg97VH1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/main_xtoa_tb.vhd
+    Source modified time: Fri Jan 14 12:18:38 2022
+    HDL source file: VHDL/main_xtoa_tb.vhd
+VHDL CONFIGURATION main_xtoa_tb_behaviour_cfg
+    Configuration applies to entity: main_xtoa_tb
+    Block configuration applies to architecture: behaviour
+    Depends on: E work main_xtoa ITiUSnBHDQJ3:n4CQaCIE1
+    Depends on: C work main_xtoa_synthesised_cfg m_8>9=kgXV92XL[<L2zc[0
+    Depends on: A work main_xtoa_tb behaviour BzKSUWIKXEHTF4hcg97VH1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_xtoa_tb U[z@SNT@AAj?Zl@n>^7NO0
+    Source modified time: Fri Jan 14 12:20:21 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_xtoa_tb_behaviour_cfg.vhd
+    Source file: VHDL/main_xtoa_tb_behaviour_cfg.vhd
+    Start location: VHDL/main_xtoa_tb_behaviour_cfg.vhd:1
+    Version string: lKO:I]Y1kA?aWD=iS3Zl:3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:13 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_ytob
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_ytob.vhd
+    Source file: VHDL/main_ytob.vhd
+    Start location: VHDL/main_ytob.vhd:4
+    Version string: SdEUe1nJ5KInN[P6TMz2T3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Jan 14 12:00:49 2022
+    Depends on: E work main_ytob SdEUe1nJ5KInN[P6TMz2T3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_ytob_SYN.vhd
+    Source file: VHDL/main_ytob_SYN.vhd
+    Start location: VHDL/main_ytob_SYN.vhd:7
+    Version string: 4^7FnB;<FAfB0hkI2[8nh3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+  ARCHITECTURE BODY behaviour
+    Source modified time: Fri Jan 14 10:02:10 2022
+    Depends on: E work main_ytob SdEUe1nJ5KInN[P6TMz2T3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/main_ytob-behaviour.vhd
+    Source file: VHDL/main_ytob-behaviour.vhd
+    Start location: VHDL/main_ytob-behaviour.vhd:4
+    Version string: >2MmMA73K0B3BbIL[MaKV0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+VHDL CONFIGURATION main_ytob_synthesised_cfg
+    Configuration applies to entity: main_ytob
+    Block configuration applies to architecture: synthesised
+    Depends on: A work main_ytob synthesised 4^7FnB;<FAfB0hkI2[8nh3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_ytob SdEUe1nJ5KInN[P6TMz2T3
+    Source modified time: Fri Jan 14 12:01:14 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_ytob_synthesised_cfg.vhd
+    Source file: VHDL/main_ytob_synthesised_cfg.vhd
+    Start location: VHDL/main_ytob_synthesised_cfg.vhd:1
+    Version string: AEoPm[3jX8O_hTTWo=GeQ0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY main_ytob_tb
+    Source modified time: Fri Jan 14 12:13:13 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_ytob_tb.vhd
+    Source file: VHDL/main_ytob_tb.vhd
+    Start location: VHDL/main_ytob_tb.vhd:4
+    Version string: ;U<g>F35onP5^7Z>NM?=o0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_ytob_tb ;U<g>F35onP5^7Z>NM?=o0
+    Start location: VHDL/main_ytob_tb.vhd:7
+    Version string: 5Zz?Qlj8>o[lVNo;@@=iW3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/main_ytob_tb.vhd
+    Source modified time: Fri Jan 14 12:13:13 2022
+    HDL source file: VHDL/main_ytob_tb.vhd
+VHDL CONFIGURATION main_ytob_tb_behaviour_cfg
+    Configuration applies to entity: main_ytob_tb
+    Block configuration applies to architecture: behaviour
+    Depends on: E work main_ytob SdEUe1nJ5KInN[P6TMz2T3
+    Depends on: C work main_ytob_synthesised_cfg AEoPm[3jX8O_hTTWo=GeQ0
+    Depends on: A work main_ytob_tb behaviour 5Zz?Qlj8>o[lVNo;@@=iW3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work main_ytob_tb ;U<g>F35onP5^7Z>NM?=o0
+    Source modified time: Fri Jan 14 12:06:43 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/main_ytob_tb_behaviour_cfg.vhd
+    Source file: VHDL/main_ytob_tb_behaviour_cfg.vhd
+    Start location: VHDL/main_ytob_tb_behaviour_cfg.vhd:1
+    Version string: >cGZ@Y;D:@2kDijdfAhnH0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:13 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY mux_position
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/mux_position.vhd
+    Source file: VHDL/mux_position.vhd
+    Start location: VHDL/mux_position.vhd:5
+    Version string: lfNjP;8=6_;eoJROXW_HC0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work mux_position lfNjP;8=6_;eoJROXW_HC0
+    Start location: VHDL/mux_position.vhd:11
+    Version string: GLEE6<RHVOY>O88cGM6fN1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/mux_position.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/mux_position.vhd
+VHDL CONFIGURATION mux_position_behavioural_cfg
+    Configuration applies to entity: mux_position
+    Block configuration applies to architecture: behavioural
+    Depends on: A work mux_position behavioural GLEE6<RHVOY>O88cGM6fN1
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work mux_position lfNjP;8=6_;eoJROXW_HC0
+    Source modified time: Fri Jan 14 10:04:32 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/mux_position_behavioural_cfg.vhd
+    Source file: VHDL/mux_position_behavioural_cfg.vhd
+    Start location: VHDL/mux_position_behavioural_cfg.vhd:1
+    Version string: MzGhcFj]@FRaVMCRB[ZUI2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY register_a
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/buffer.vhd
+    Source file: VHDL/buffer.vhd
+    Start location: VHDL/buffer.vhd:5
+    Version string: 3=1<b0mXMJRdbg[9WY^I42
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:10 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY structural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work register_a 3=1<b0mXMJRdbg[9WY^I42
+    Start location: VHDL/buffer.vhd:14
+    Version string: 5G^5ZDCJ[d0oB[mianQ@L2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/buffer.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/buffer.vhd
+VHDL CONFIGURATION register_a_structural_cfg
+    Configuration applies to entity: register_a
+    Block configuration applies to architecture: structural
+    Depends on: A work register_a structural 5G^5ZDCJ[d0oB[mianQ@L2
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work register_a 3=1<b0mXMJRdbg[9WY^I42
+    Source modified time: Fri Jan 14 10:02:21 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/register_a_structural_cfg.vhd
+    Source file: VHDL/register_a_structural_cfg.vhd
+    Start location: VHDL/register_a_structural_cfg.vhd:1
+    Version string: ff[^kRSdF`h55nAALGh7T2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY set_calc_sim
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/set_calc_sim.vhd
+    Source file: VHDL/set_calc_sim.vhd
+    Start location: VHDL/set_calc_sim.vhd:6
+    Version string: FoGnUXo8LjfYlj[gdhb;S3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P ieee std_logic_arith [G314=:2zXJ`VORJe1J@Z1
+    Depends on: P ieee std_logic_unsigned ;eZjO2D4ZDz<]0>8AL<ne1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work set_calc_sim FoGnUXo8LjfYlj[gdhb;S3
+    Start location: VHDL/set_calc_sim.vhd:13
+    Version string: @`VRPK:DQ183GM20heRA?1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:07 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/set_calc_sim.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/set_calc_sim.vhd
+ENTITY shift_sright
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shift_sright.vhd
+    Source file: VHDL/shift_sright.vhd
+    Start location: VHDL/shift_sright.vhd:4
+    Version string: lKMWKKSzA^IA@]aJ1?e?M3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: E work shift_sright lKMWKKSzA^IA@]aJ1?e?M3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/shift_sright-behaviour.vhd
+    Source file: VHDL/shift_sright-behaviour.vhd
+    Start location: VHDL/shift_sright-behaviour.vhd:4
+    Version string: jG0dk[M@C[19[kG`RdigX2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source modified time: Thu Jan 13 11:53:48 2022
+ENTITY shifter_left
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_left.vhd
+    Source file: VHDL/shifter_left.vhd
+    Start location: VHDL/shifter_left.vhd:5
+    Version string: =GP;?gU64l;N;JRdCQPc13
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:03 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_left =GP;?gU64l;N;JRdCQPc13
+    Start location: VHDL/shifter_left.vhd:11
+    Version string: YFAN>igNdNmnKTObQUMoY3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_left.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_left.vhd
+ENTITY shifter_left_2
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_left_2.vhd
+    Source file: VHDL/shifter_left_2.vhd
+    Start location: VHDL/shifter_left_2.vhd:5
+    Version string: ^8]kE4Dz;4T13;4Z9]=SF2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_left_2 ^8]kE4Dz;4T13;4Z9]=SF2
+    Start location: VHDL/shifter_left_2.vhd:11
+    Version string: KAgJC<FmlZkO;2D<O3<l[3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_left_2.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_left_2.vhd
+VHDL CONFIGURATION shifter_left_2_behavioural_cfg
+    Configuration applies to entity: shifter_left_2
+    Block configuration applies to architecture: behavioural
+    Depends on: A work shifter_left_2 behavioural KAgJC<FmlZkO;2D<O3<l[3
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_left_2 ^8]kE4Dz;4T13;4Z9]=SF2
+    Source modified time: Fri Jan 14 10:02:30 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_left_2_behavioural_cfg.vhd
+    Source file: VHDL/shifter_left_2_behavioural_cfg.vhd
+    Start location: VHDL/shifter_left_2_behavioural_cfg.vhd:1
+    Version string: 2gkQ`<hIT?RiE]@]d?A@K0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY shifter_left_4
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_left_4.vhd
+    Source file: VHDL/shifter_left_4.vhd
+    Start location: VHDL/shifter_left_4.vhd:5
+    Version string: ]Pa519da67g]m?m06oJMk1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_left_4 ]Pa519da67g]m?m06oJMk1
+    Start location: VHDL/shifter_left_4.vhd:11
+    Version string: jP2NMYD:5d=T8n]G^Dd4^2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_left_4.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_left_4.vhd
+ENTITY shifter_right
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right.vhd
+    Source file: VHDL/shifter_right.vhd
+    Start location: VHDL/shifter_right.vhd:4
+    Version string: 2@O42FL3EebN]79DzT^9e3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Jan 14 11:48:27 2022
+    Depends on: E work shifter_right 2@O42FL3EebN]79DzT^9e3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/shifter_right_SYN.vhd
+    Source file: VHDL/shifter_right_SYN.vhd
+    Start location: VHDL/shifter_right_SYN.vhd:7
+    Version string: ha`28;9X057HHBaoiYaE>0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+  ARCHITECTURE BODY behavioural
+    Source modified time: Fri Jan 14 11:40:22 2022
+    Depends on: E work shifter_right 2@O42FL3EebN]79DzT^9e3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/shifter_right-behaviour.vhd
+    Source file: VHDL/shifter_right-behaviour.vhd
+    Start location: VHDL/shifter_right-behaviour.vhd:4
+    Version string: Y:bFCNE<mh<O3ZA;BK2In3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+ENTITY shifter_right2
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right2.vhd
+    Source file: VHDL/shifter_right2.vhd
+    Start location: VHDL/shifter_right2.vhd:5
+    Version string: Nj_@R8Yf2cQmPcO:z[AS=1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right2 Nj_@R8Yf2cQmPcO:z[AS=1
+    Start location: VHDL/shifter_right2.vhd:11
+    Version string: eGE`GWU4JzKC_D@HQ5l4[0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right2.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right2.vhd
+ENTITY shifter_right3
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right3.vhd
+    Source file: VHDL/shifter_right3.vhd
+    Start location: VHDL/shifter_right3.vhd:5
+    Version string: 0N@JbUV<d3Y@PiV0B0a4?1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right3 0N@JbUV<d3Y@PiV0B0a4?1
+    Start location: VHDL/shifter_right3.vhd:11
+    Version string: _TYm=D`^3gf_3zP9zXdkH3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right3.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right3.vhd
+ENTITY shifter_right4
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right4.vhd
+    Source file: VHDL/shifter_right4.vhd
+    Start location: VHDL/shifter_right4.vhd:5
+    Version string: b?4Tnhn:aJTF_M[L;VEh<3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right4 b?4Tnhn:aJTF_M[L;VEh<3
+    Start location: VHDL/shifter_right4.vhd:11
+    Version string: W:7A[[KDm4FJPQZO05KVf0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:08 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right4.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right4.vhd
+ENTITY shifter_right5
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right5.vhd
+    Source file: VHDL/shifter_right5.vhd
+    Start location: VHDL/shifter_right5.vhd:5
+    Version string: [1N0_19YS_IQAL?W;j9_90
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right5 [1N0_19YS_IQAL?W;j9_90
+    Start location: VHDL/shifter_right5.vhd:11
+    Version string: =8bER`ZKl@C9PS1?W1HK]3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right5.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right5.vhd
+ENTITY shifter_right6
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right6.vhd
+    Source file: VHDL/shifter_right6.vhd
+    Start location: VHDL/shifter_right6.vhd:5
+    Version string: YB1d3>8E5zi_le69Fan]50
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:04 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right6 YB1d3>8E5zi_le69Fan]50
+    Start location: VHDL/shifter_right6.vhd:11
+    Version string: 8zlQm>?aSZ=jLA^b7iSn]1
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right6.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right6.vhd
+ENTITY shifter_right7
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right7.vhd
+    Source file: VHDL/shifter_right7.vhd
+    Start location: VHDL/shifter_right7.vhd:5
+    Version string: :I=:kSfEgzURol<L:AO]91
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right7 :I=:kSfEgzURol<L:AO]91
+    Start location: VHDL/shifter_right7.vhd:11
+    Version string: e3ZV<>o:90a_AaUPJ^4Y<2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/shifter_right7.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/shifter_right7.vhd
+VHDL CONFIGURATION shifter_right_behavioural_cfg
+    Configuration applies to entity: shifter_right
+    Block configuration applies to architecture: behavioural
+    Depends on: A work shifter_right behavioural Y:bFCNE<mh<O3ZA;BK2In3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right 2@O42FL3EebN]79DzT^9e3
+    Source modified time: Fri Jan 14 11:57:19 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right_behavioural_cfg.vhd
+    Source file: VHDL/shifter_right_behavioural_cfg.vhd
+    Start location: VHDL/shifter_right_behavioural_cfg.vhd:1
+    Version string: PTHTMCAI;1EaS1z]0IiBE0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+VHDL CONFIGURATION shifter_right_synthesised_cfg
+    Configuration applies to entity: shifter_right
+    Block configuration applies to architecture: synthesised
+    Depends on: A work shifter_right synthesised ha`28;9X057HHBaoiYaE>0
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work shifter_right 2@O42FL3EebN]79DzT^9e3
+    Source modified time: Fri Jan 14 11:49:13 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right_synthesised_cfg.vhd
+    Source file: VHDL/shifter_right_synthesised_cfg.vhd
+    Start location: VHDL/shifter_right_synthesised_cfg.vhd:1
+    Version string: @a2O5TR6c:hC?^:T3C3:F2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY shifter_right_tb
+    Source modified time: Fri Jan 14 11:23:57 2022
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/shifter_right_tb.vhd
+    Source file: VHDL/shifter_right_tb.vhd
+    Start location: VHDL/shifter_right_tb.vhd:4
+    Version string: _omK@RX>B?T_QEmK6HH4I3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Source modified time: Fri Jan 14 11:26:20 2022
+    Depends on: E work shifter_right_tb _omK@RX>B?T_QEmK6HH4I3
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    HDL source file: VHDL/shifter_right_tb-behaviour.vhd
+    Source file: VHDL/shifter_right_tb-behaviour.vhd
+    Start location: VHDL/shifter_right_tb-behaviour.vhd:4
+    Version string: JMJhC]9C8L?e7d;JBAS@n2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+ENTITY unsignedto2
+    Source modified time: Thu Jan 13 11:53:48 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/unsignedto2.vhd
+    Source file: VHDL/unsignedto2.vhd
+    Start location: VHDL/unsignedto2.vhd:5
+    Version string: CmF8d=nN5XmIR5hXcX4ii0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behaviour
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work unsignedto2 CmF8d=nN5XmIR5hXcX4ii0
+    Start location: VHDL/unsignedto2.vhd:11
+    Version string: lXE]?oj`blk5Y6no<;U=;2
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:09 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/unsignedto2.vhd
+    Source modified time: Thu Jan 13 11:53:48 2022
+    HDL source file: VHDL/unsignedto2.vhd
+VHDL CONFIGURATION unsignedto2_behaviour_cfg
+    Configuration applies to entity: unsignedto2
+    Block configuration applies to architecture: behaviour
+    Depends on: A work unsignedto2 behaviour lXE]?oj`blk5Y6no<;U=;2
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work unsignedto2 CmF8d=nN5XmIR5hXcX4ii0
+    Source modified time: Fri Jan 14 09:56:07 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/unsignedto2_behaviour_cfg.vhd
+    Source file: VHDL/unsignedto2_behaviour_cfg.vhd
+    Start location: VHDL/unsignedto2_behaviour_cfg.vhd:1
+    Version string: OEAC?UFOZ5@IB<_59cEY]0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:11 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY ycounter
+    Source modified time: Fri Jan 14 14:27:33 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/ycounter.vhd
+    Source file: VHDL/ycounter.vhd
+    Start location: VHDL/ycounter.vhd:4
+    Version string: f[_zP;ggB1@=OZChlWh2e3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work ycounter f[_zP;ggB1@=OZChlWh2e3
+    Start location: VHDL/ycounter.vhd:14
+    Version string: IiL@mbG;6F_=e:TT9l;O80
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:10 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/ycounter.vhd
+    Source modified time: Fri Jan 14 14:27:33 2022
+    HDL source file: VHDL/ycounter.vhd
+VHDL CONFIGURATION ycounter_behavioural_cfg
+    Configuration applies to entity: ycounter
+    Block configuration applies to architecture: behavioural
+    Depends on: A work ycounter behavioural IiL@mbG;6F_=e:TT9l;O80
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work ycounter f[_zP;ggB1@=OZChlWh2e3
+    Source modified time: Fri Jan 14 09:55:38 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/ycounter_behavioural_cfg.vhd
+    Source file: VHDL/ycounter_behavioural_cfg.vhd
+    Start location: VHDL/ycounter_behavioural_cfg.vhd:1
+    Version string: ^Fb;W_edDk?IcNW@:i0dD3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:12 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+ENTITY zoomandposition_control
+    Source modified time: Fri Jan 14 14:13:58 2022
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/fsm.vhd
+    Source file: VHDL/fsm.vhd
+    Start location: VHDL/fsm.vhd:5
+    Version string: kUNVF=aKU<8bCEgLzAgX:0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:13:10 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just E -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+  ARCHITECTURE BODY behavioural
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work zoomandposition_control kUNVF=aKU<8bCEgLzAgX:0
+    Start location: VHDL/fsm.vhd:24
+    Version string: kXcDJ<l=?n]eW>>@;_Zgc3
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:05 2022
+    Debug Symbol file exists
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just A -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
+    Source directory: /home/marickvermeule/V3laatste
+    Source file: VHDL/fsm.vhd
+    Source modified time: Fri Jan 14 14:13:58 2022
+    HDL source file: VHDL/fsm.vhd
+VHDL CONFIGURATION zoomandposition_control_behavioural_cfg
+    Configuration applies to entity: zoomandposition_control
+    Block configuration applies to architecture: behavioural
+    Depends on: A work zoomandposition_control behavioural kXcDJ<l=?n]eW>>@;_Zgc3
+    Depends on: P ieee numeric_std :ASDNFgHXf_ih3J@9F3Ze1
+    Depends on: P std textio zE1`LPoLg^DX3Oz^4Fj1K3
+    Depends on: P ieee std_logic_1164 eNV`TJ_GofJTzYa?f<@Oe1
+    Depends on: E work zoomandposition_control kUNVF=aKU<8bCEgLzAgX:0
+    Source modified time: Fri Jan 14 09:55:41 2022
+    Source directory: /home/marickvermeule/V3laatste
+    HDL source file: VHDL/zoomandposition_control_behavioural_cfg.vhd
+    Source file: VHDL/zoomandposition_control_behavioural_cfg.vhd
+    Start location: VHDL/zoomandposition_control_behavioural_cfg.vhd:1
+    Version string: 7UKGUj==GA;i6`Fo:GH3T0
+    Opcode format: 10.5b; VCOM SE-64 Object version 63
+    VHDL language standard: 3 (VHDL-2008)
+    Compile time: Fri Jan 14 15:14:12 2022
+    Compiled in vopt flow
+    Compile options: -quiet -nologo -2008 -just C -lower -explicit -work work
+    Compile defaults: Explicit=1 CvgOpt=0
